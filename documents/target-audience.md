@@ -11,4 +11,5 @@
   - Daily routine represented semantically, like calendar, tracking events, inputting new events, times, coursework, task list etc. Meaningful numeric data can be derived by some math.
 
 3. people who track via traditional / non tech methods
+
 All of the above except users do not track with mobile devices
