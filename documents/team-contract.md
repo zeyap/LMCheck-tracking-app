@@ -14,12 +14,12 @@ You will need to learn to work in groups and resolve conflicts on your own. Thes
        Jack and Coke
     
     Team Members:
-       Daniel Ra / dnr44
-       Zidong Zhang / zz643
-       Cynthia yue /  cy432 
-       Sangmin Kim / sk858
-       Zhiyu Mao /  zm255
-       Zeya Peng / zp82
+    Daniel Ra(dnr44),
+    Zidong Zhang(zz643),
+    Cynthia yue(cy432),
+    Sangmin Kim(sk858),
+    Zhiyu Mao(zm255),
+    Zeya Peng(zp82)
 
 
 2. **To what goals do we all commit?**
