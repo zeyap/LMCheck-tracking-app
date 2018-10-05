@@ -93,7 +93,6 @@ The ability to track a before and after so that it will be able to calculate the
 
 
 
-[PDF version](milestone2-documents/Project Theme-Feature List.pdf)
 
 
 
