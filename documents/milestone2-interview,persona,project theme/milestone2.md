@@ -1,7 +1,7 @@
 # Milestone2: Gathering Information & Planning
 
 
-##Target Audience
+## Target Audience
 
 Before collecting any data for our research phase. We had 3 diffent target audience to find out about needs for different groups of people.
 
@@ -14,7 +14,7 @@ Before collecting any data for our research phase. We had 3 diffent target audie
 
 
 
-##Interview Notes
+## Interview Notes
 
 We collected data from 12 individuals.
 Interview summary and questions are stored in documents folder.
@@ -22,26 +22,39 @@ All interview notes are stored in meeting pics folder.
 
 
 
-##Value Propositions
+## Value Propositions
 
 Our application offers a one stop shop for all your tracking needs. By modularizing core functionalities, users are able to customize data and gain insights. This in turn enables users to record in granularity and organize routines in life while feeling a sense of accomplishment. 
 Use this app to keep track of your: progress at the gym, to-do lists, sleeping routines and more. Let this app organize your tasks for you so that you can focus on staying motivated while reaching your goals. 
 
 
-##Affinity Diagrams
+## Affinity Diagrams
 
 After collecting the data, we made affinity diagrams and pictures of digrams are stored in meeting pics folder.
 
 
-##Scenarios
+## Scenarios
 
 Scenarios were created and stored in the documents folder as a png file.
 
-##Personas
+## Personas
+We created 3 personas targeted to our target audiences.
 
-Three personas generated from our data are stored in a separate folder called Personas.
+![](personas/persona-chelsea-passive.png)
 
-##Project Theme - Features List
+<div class='page-break'></div>
+![](personas/persona-jason-active.png)
+
+<div class='page-break'></div>
+![](personas/persona-heather-traditional.png)
+
+<div class='page-break'></div>
+
+**Three personas generated from our data are stored in a separate folder called Personas.**
+
+
+
+## Project Theme - Features List
 
 **Functionality # 1:**
 The ability to input and track specific exercises / to do lists / what I did last time so i can decide what to do this time etc. 
@@ -68,7 +81,7 @@ The ability to track a before and after so that it will be able to calculate the
 2. Have the ability for the user to customize their landing screen / main screen based on their needs, and what they want to track / visualize etc. Think Flash briefing. / Ability to delete.
 
 
-**Feature list (pdf version) is also attached in document folder.**
+**Feature list (pdf version) is also attached in milestone2-documents folder.**
 
 
 
