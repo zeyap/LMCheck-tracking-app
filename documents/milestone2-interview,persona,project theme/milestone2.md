@@ -16,7 +16,7 @@ Before collecting any data for our research phase. We had 3 diffent target audie
 
 ## Gathering Information (Interview + Affinity Diagrams)
 
-**We decided to interview 3 individuals per target audience.**
+**We decided to interview 4 individuals per target audience.**
 
 We collected data from 12 individuals.
 
