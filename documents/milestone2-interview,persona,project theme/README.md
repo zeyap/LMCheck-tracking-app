@@ -20,9 +20,9 @@ Before collecting any data for our research phase. We had 3 diffent target audie
 
 We collected data from 12 individuals through interviews. 
 
-Interview Questions and Analysis is [here](milestone2-documents/interview.pdf). All interview notes are stored in [meeting pics](meeting pics) folder as well.
+Interview Questions and Analysis is [here](milestone2-documents/interview.pdf). All interview notes are stored in meeting pics folder as well.
 
-After collecting the data, we made *affinity diagrams* to look for related response across interviewers for each question. Pictures of digrams are stored in [meeting pics](meeting pics) folder.
+After collecting the data, we made affinity diagrams to look for related response across interviewers for each question. Pictures of digrams are stored in meeting pics folder.
 
 
 ## Value Propositions
