@@ -22,7 +22,7 @@ We collected data from 12 individuals through interviews.
 
 Interview Questions and Analysis is [here](milestone2-documents/interview.pdf). All interview notes are stored in meeting pics folder as well.
 
-After collecting the data, we made affinity diagrams to look for related response across interviewers for each question. Pictures of digrams are stored in meeting pics folder.
+After collecting the data, we conducted an Affinity Grouping exercise to further consolidate answers to questions per target audience and get a feeling for the sense of direction they were heading. Following which we summarized each group into a cohesive voice, and proceeded onto conducting an Affinity Diagram to further consolidate the three target audiences into one general broad audience. Afterwards, we framed these voices into task-based scenario's (People Problems In Facebook's Terminology). Based on these task-based stories, we were able to create a minimal viable product list for our feature, and prioritized them based on importance. Pictures of diagrams are stored in meeting pictures folder.
 
 
 ## Value Propositions
