@@ -35,26 +35,28 @@ After collecting the data, we made affinity diagrams and pictures of digrams are
 
 ## Scenarios
 
-Scenarios were created and stored in the documents folder as a png file.
+![](milestone2-documents/scenarios.png)
+
+<div class='page-break'></div>
+
 
 ## Personas
 We created 3 personas targeted to our target audiences.
 
-![](personas/persona-chelsea-passive.png)
+![](milestone2-documents/personas/persona-chelsea-passive.png)
 
 <div class='page-break'></div>
 
 
-![](personas/persona-jason-active.png)
+![](milestone2-documents/personas/persona-jason-active.png)
 
 <div class='page-break'></div>
 
 
-![](personas/persona-heather-traditional.png)
+![](milestone2-documents/personas/persona-heather-traditional.png)
 
 <div class='page-break'></div>
 
-**Three personas generated from our data are stored in a separate folder called Personas.**
 
 
 
@@ -85,7 +87,6 @@ The ability to track a before and after so that it will be able to calculate the
 2. Have the ability for the user to customize their landing screen / main screen based on their needs, and what they want to track / visualize etc. Think Flash briefing. / Ability to delete.
 
 
-**Feature list (pdf version) is also attached in milestone2-documents folder.**
 
 
 
