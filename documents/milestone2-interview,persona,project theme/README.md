@@ -33,6 +33,8 @@ Our application offers a one stop shop for all your tracking needs. By modulariz
 Use this app to keep track of your: progress at the gym, to-do lists, sleeping routines and more. Let this app organize your tasks for you so that you can focus on staying motivated while reaching your goals. 
 
 
+
+
 ## Scenarios
 
 ![](milestone2-documents/scenarios.png)
@@ -89,6 +91,9 @@ The ability to track a before and after so that it will be able to calculate the
 2. Have the ability for the user to customize their landing screen / main screen based on their needs, and what they want to track / visualize etc. Think Flash briefing. / Ability to delete.
 
 
+
+
+[PDF version](milestone2-documents/Project Theme-Feature List.pdf)
 
 
 
