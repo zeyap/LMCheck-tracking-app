@@ -5,11 +5,11 @@
 
 Before collecting any data for our research phase. We had 3 diffent target audience to find out about needs for different groups of people.
 
-1. Passive Tracking Application Users
+1. Passive Sleep Tracking Application Users
     -Users who use sleep tracking application to track their sleeping patterns, but not actively feed in their data.
-2. Active Tracking Application Users
+2. Active Fitness Tracking Application Users
     -Users who use workout application to track their fitness and workout routines, and also input their data actively.
-3. Non-tracking Users
+3. Non-tracking Traditional Users
     -Users who use notebooks to write grocery lists for shopping
 
 
