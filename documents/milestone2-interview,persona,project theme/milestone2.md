@@ -16,7 +16,8 @@ Before collecting any data for our research phase. We had 3 diffent target audie
 ### Interview Notes
 ```
 We collected data from 12 individuals.
-All notes collected from the interviews and questions are stored in documents folder.
+Interview summary and questions are stored in documents folder.
+All interview notes are stored in meeting pics folder.
 
 ```
 
