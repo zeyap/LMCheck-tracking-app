@@ -43,9 +43,13 @@ We created 3 personas targeted to our target audiences.
 ![](personas/persona-chelsea-passive.png)
 
 <div class='page-break'></div>
+
+
 ![](personas/persona-jason-active.png)
 
 <div class='page-break'></div>
+
+
 ![](personas/persona-heather-traditional.png)
 
 <div class='page-break'></div>
