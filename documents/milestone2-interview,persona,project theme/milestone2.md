@@ -14,19 +14,17 @@ Before collecting any data for our research phase. We had 3 diffent target audie
 
 
 
-## Gathering Information
+## Gathering Information (Interview + Affinity Diagrams)
 
 **We decided to interview 3 individuals per target audience.**
 
 We collected data from 12 individuals.
-Interview Questions and Analysis is here([PDF](milestone2-documents/interview.pdf))
-All interview notes are stored in meeting pics folder as well.
-
-
-
-## Affinity Diagrams
 
 After collecting the data, we made affinity diagrams and pictures of digrams are stored in meeting pics folder.
+
+Interview Questions and Analysis is here([PDF](milestone2-documents/interview.pdf))
+
+All interview notes are stored in meeting pics folder as well.
 
 
 ## Value Propositions
@@ -34,11 +32,14 @@ After collecting the data, we made affinity diagrams and pictures of digrams are
 Our application offers a one stop shop for all your tracking needs. By modularizing core functionalities, users are able to customize data and gain insights. This in turn enables users to record in granularity and organize routines in life while feeling a sense of accomplishment. 
 Use this app to keep track of your: progress at the gym, to-do lists, sleeping routines and more. Let this app organize your tasks for you so that you can focus on staying motivated while reaching your goals. 
 
+
 ## Scenarios
 
 ![](milestone2-documents/scenarios.png)
 
 <div class='page-break'></div>
+
+
 
 
 ## Personas
