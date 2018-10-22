@@ -33,6 +33,8 @@ The ability to track a before and after so that it will be able to calculate the
 ## Paper Prototypes & User Testing
 We created paper prototypes based on our brainstorm design ideas and scenarios. And we gave over 12 user testings and revised our design twice based on test feedbacks.
 
+[Click here for detail.](paper-prototype/)
+
 ### Version 1
 ![](paper-prototype/paper-prototype-v1.png)
 <div class='page-break'></div>
@@ -46,8 +48,6 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 <div class='page-break'></div>
 
 
-
-
 ## Site Map
 ![](SiteMap.jpg)
 <div class='page-break'></div>
@@ -58,24 +58,31 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 
 ## Wireframes (Phone & Web)
 ### Phone version
+[Click here](wireframes/wireframes-phone/)
+**numeric**
 ![](wireframes/wireframes-phone/wireframe-phone-numberic.png)
 <div class='page-break'></div>
 
+**timer**
 ![](wireframes/wireframes-phone/wireframe-phone-timer.png)
 <div class='page-break'></div>
 
+**to do list**
 ![](wireframes/wireframes-phone/wireframe-phone-todolist.png)
 <div class='page-break'></div>
 
 ### Web version
 [Click here](wireframes/wireframes-web/)
 
-![](wireframes/wireframes-web/wireframe-web-numberic.png)
+**numeric**
+![](wireframes/wireframes-web/wireframe-web-numeric.png)
 <div class='page-break'></div>
 
+**timer**
 ![](wireframes/wireframes-web/wireframe-web-timer.png)
 <div class='page-break'></div>
 
+**to do list**
 ![](wireframes/wireframes-web/wireframe-web-todolist.png)
 <div class='page-break'></div>
 
