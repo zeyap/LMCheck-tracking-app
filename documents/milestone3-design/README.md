@@ -100,8 +100,8 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 Based on feedback from Kyle, we revised scenarios from Milestone 2 to ensure they are specific enough to be tested and measured. We also clarified our Personas' goals so that they are more specific. 
 See updated personas here: 
 [Jason](revisedContent/persona-jason.png)
-[Heather](revisedContent/persona - heather.png)
-[Chelsea](revisedContent/persona - chelsea.png)
+[Heather](revisedContent/persona-heather.png)
+[Chelsea](revisedContent/persona-chelsea.png)
 
 
 **Gym tracking:**
