@@ -96,8 +96,8 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 ## Rationale
 
 
-## Revisions to Scenarios
-We revised scenarios from Milestone 2 to ensure they are specific enough to be tested and measured. 
+## Revisions to Scenarios and Personas
+Based on feedback from Kyle, we revised scenarios from Milestone 2 to ensure they are specific enough to be tested and measured. We also clarified our Personas' goals. You can see the revised personas in the revisedContent file. 
 
 **Gym tracking:**
 Jason, a professional in his late thirties wants to lose weight and be more fit. He starts going to the gym more frequently and wants to increase the productivity of his workouts. He wants to know if his workouts improve over time. 
