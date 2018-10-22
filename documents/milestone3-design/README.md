@@ -115,6 +115,7 @@ Once these issues were addressed, we tested with 4 users. In this version of our
 
 To remedy this, we removed this ability to add different modules to trackers. In our final design, trackers are set up from the home screen. Each tracker is associated with only a single format for a very specific variable (i.e. sleep, pushup, etc.). We created a final paper prototype and user tested with 3 participants. Each participant was given a different scenario, and were able to accomplish our tasks without any problems. 
 
+[(PDF version here.)](Rationale.pdf)
 
 ## Revisions to Scenarios and Personas
 Based on feedback from Kyle, we revised scenarios from Milestone 2 to ensure they are specific enough to be tested and measured. We also clarified our Personas' goals so that they are more specific. 
