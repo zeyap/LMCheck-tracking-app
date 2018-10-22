@@ -1,4 +1,4 @@
-# Milestone2: Design
+# Milestone 3: Design
 
 ## Brainstorming
 
