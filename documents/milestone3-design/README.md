@@ -43,9 +43,13 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 ![](paper-prototype/paper-prototype-v2-components.png)
 <div class='page-break'></div>
 
-### Version 3
+### Version FINAL
+**phone version**
 ![](paper-prototype/paper-prototype-FINAL-components.png)
+**web version**
+![](paper-prototype/paper-prototype-FINAL-components-web.jpeg)
 <div class='page-break'></div>
+
 
 
 ## Site Map
@@ -59,6 +63,7 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 ## Wireframes (Phone & Web)
 ### Phone version
 [Click here](wireframes/wireframes-phone/)
+
 **numeric**
 ![](wireframes/wireframes-phone/wireframe-phone-numberic.png)
 <div class='page-break'></div>
