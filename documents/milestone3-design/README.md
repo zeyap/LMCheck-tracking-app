@@ -135,3 +135,8 @@ Chelsea, a working grad student in her mid twenties is often tired due to lack o
 Heather, 28 year old woman working multiple jobs, wants to keep track of all the items she needs to buy from the grocery store. It is difficult for her to remember while juggling two jobs. She needs to be reminded of all the things she needs to buy while she is at the grocery store. 
 
 [(PDF version here.)](revisedContent/scenarios-revised.pdf)
+
+## UI Explorations 
+![](UIExplorations/addView.png)
+![](UIExplorations/todo.png)
+![](UIExplorations/homepage.png)
