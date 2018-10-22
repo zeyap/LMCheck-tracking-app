@@ -50,6 +50,10 @@ We created paper prototypes based on our brainstorm design ideas and scenarios. 
 ![](paper-prototype/paper-prototype-FINAL-components-web.jpeg)
 <div class='page-break'></div>
 
+### User Testing
+![](userTesting/papertest.gif)
+
+
 
 
 ## Site Map
