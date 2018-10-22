@@ -33,8 +33,8 @@ The ability to track a before and after so that it will be able to calculate the
 ## Paper Prototypes & User Testing
 We created paper prototypes based on our brainstorm design ideas and scenarios. And we gave over 12 user testings and revised our design twice based on test feedbacks.
 
-![](userTesting/user_testing_designv2.JPG)
-![](userTesting/user_testing_designFINAL.jpg)
+![](userTesting/user_testing_designv2.JPG | width=100)
+![](userTesting/user_testing_designFINAL.jpg | width=100)
 <div class='page-break'></div>
 
 
