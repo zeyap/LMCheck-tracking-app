@@ -23,5 +23,5 @@ We did 2 minutes brainstorm ideation for each functionalities we made in previou
 
 
 ## Revisions to Scenarios
-We revised scenarios from milestone 1 to ensure they are specific enough to be tested and measured. 
+We revised scenarios from Milestone 2 to ensure they are specific enough to be tested and measured. 
 
