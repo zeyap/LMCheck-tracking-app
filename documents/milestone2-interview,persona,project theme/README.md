@@ -36,7 +36,7 @@ The costs and barriers to adopting our application are low. It requires an app d
 
 
 ## Scenarios
-
+This was updated in class at 10/22 -- check our 'User Scenarios (revised).pdf' doc
 ![](milestone2-documents/scenarios.png)
 
 <div class='page-break'></div>
