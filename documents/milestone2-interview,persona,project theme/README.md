@@ -29,6 +29,8 @@ After collecting the data, we conducted an Affinity Grouping exercise to further
 
 Our application offers a one stop shop for all your tracking needs. By modularizing core functionalities, users are able to customize data and gain insights. This in turn enables users to record in granularity and organize routines in life while feeling a sense of accomplishment. 
 Use this app to keep track of your: progress at the gym, to-do lists, sleeping routines and more. Let this app organize your tasks for you so that you can focus on staying motivated while reaching your goals. 
+The costs and barriers to adopting our application are low. It requires an app download and allows you to create customized trackers from the home page. Each tracker is easily created and updated. This app is a great alternative for those who keep traditional to-do lists using paper and pencil, or for those who struggle to take accurate logs while at the gym because they forget to specific start / end times while attempting to calculate durations. 
+
 
 
 
@@ -44,6 +46,7 @@ Use this app to keep track of your: progress at the gym, to-do lists, sleeping r
 
 ## Personas
 We created 3 personas targeted to our target audiences.
+This was updated in class on 10/22 -- please check our personas
 
 ![](milestone2-documents/personas/persona-chelsea-passive.png)
 
