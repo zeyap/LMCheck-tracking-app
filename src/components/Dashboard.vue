@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <TrackerCard v-for="(tracker, id) in trackers" v-bind:key="id">
+    <TrackerCard  v-for="(tracker, id) in trackers" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
@@ -53,7 +53,7 @@ export default {
 }
 
 .shadowed{
-  box-shadow: 2px 2px 2px #d1d1d1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .center-and-large{
   color: white;

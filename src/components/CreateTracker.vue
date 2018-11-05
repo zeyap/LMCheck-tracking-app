@@ -1,28 +1,28 @@
 <template>
   <div class="wrapper">
-    <Layout title="App Name" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:title="title" type="0">
       <b-container class="textBoxTop">
         <b-row class="justify-content-md-center">
           <b-col cols="12">
               <form>
-                <input type="text" id="fname" name="fname" placeholder="Measurement Title">
+                <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
               </form>
           </b-col>
         </b-row>
       </b-container>
-    <b-container class="trackerCell indentationOneOf">
+    <b-container class="trackerCell indentationOneOf" v-on:click="createTracker('numeric')">
       <b-row class="justify-content-md-center indentationOneOff">
           <b-col cols="3 numericIcon"><img src="../assets/icons/numericIcon.jpg" alt="numericIcon"></b-col>
           <b-col cols="9 textDescription">Numeric Measurement</b-col>
       </b-row>
     </b-container>
-      <b-container class="trackerCell" v-on:click="timer">
+      <b-container class="trackerCell" v-on:click="createTracker('timer')">
         <b-row class="justify-content-md-center">
             <b-col cols="3 timerIcon"><img src="../assets/icons/timerIcon.jpg" alt="numericIcon"></b-col>
             <b-col cols="9 textDescription">Timer</b-col>
         </b-row>
       </b-container>
-      <b-container class="trackerCell">
+      <b-container class="trackerCell" v-on:click="createTracker('todo')">
         <b-row class="justify-content-md-center">
           <b-col cols="3 toDoIcon"><img src="../assets/icons/todoIcon.jpg" alt="numericIcon"></b-col>
           <b-col cols="9 textDescription">To-do List</b-col>
@@ -34,24 +34,36 @@
 </template>
 <script>
 import Layout from './Layout.vue';
+import Store from '../js/Store';
+import Tracker from '../js/Tracker'
 export default {
   name: 'CreateTracker',
   components:{
     Layout
   },
   props: {
-    msg: String
+    
   },
-    methods:{
-    timer: function(){
-      this.$router.push({path:`/timer`});
+  data: function(){
+    return {
+      title: ''
+    }
+  },
+  methods:{
+    createTracker: function(type){
+      if(this.title === ''){
+        // alert('Title is required');
+        return;
+      }
+      this.$router.push({path:`/`+type});
+      Store.addTracker(new Tracker(this.title,type));
     }
   }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style scoped>
+<style>
 
 .indentationOneOff{
   margin-top: 12%;

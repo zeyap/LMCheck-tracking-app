@@ -1,6 +1,8 @@
 <template>
   <div class="tracker-card shadowed" v-on:click="goTo">
-    <div ref="colorBar" class="color-bar-left"></div>
+    <div v-if="this.type==='timer'" class="timerIcon color-bar-left"></div>
+    <div v-if="this.type==='numeric'" class="numericIcon color-bar-left"></div>
+    <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
     <div class="tracker-card-title">
     <slot ></slot>
     </div>
@@ -14,11 +16,8 @@ export default {
     
   },
   props: {
-    color: String,
-    url: String
-  },
-  mounted: function(){
-      this.$refs.colorBar.style.background=this.color||'#ff985c';
+    url: String,
+    type: String
   },
   methods:{
     goTo: function(){
@@ -39,7 +38,6 @@ export default {
     border: 1px solid #dddddd;
 }
 .color-bar-left{
-    background: #ff985c;
     height: 100%;
     width: 8%;
     float:left;
@@ -52,5 +50,6 @@ export default {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 </style>

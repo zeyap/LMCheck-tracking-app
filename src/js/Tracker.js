@@ -2,11 +2,11 @@ var Tracker=function(title, type, unit){
     this.title = title||"Anonymous Tracker";
     switch(type){
         case "numeric":
-        this.type = type;
+        this.type = "numeric";
         this.unit = unit;
         break;
-        case "time":
-        this.type = type;
+        case "timer":
+        this.type = "timer";
         break;
         default:
         this.type = "todo";
