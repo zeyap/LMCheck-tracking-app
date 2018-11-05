@@ -28,16 +28,13 @@ export default {
 .floating-button{
   width: 65px;
   height: 65px;
-  background: #3daeca;
+  background-color: #009cd3;
   border-radius: 50%;
-
   position: absolute;
   right: 20px;
   bottom: 20px;
-
   box-shadow: 2px 2px 2px #d1d1d1;
 }
-
 .center-and-large{
   color: white;
   position: absolute;
