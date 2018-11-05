@@ -10,7 +10,6 @@
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
-      
       <b-dropdown  v-if="this.type==='1'" no-caret right variant="link" size="lg">
         <template slot="button-content">
             <span style="color:#f8f9fa" ><v-icon name="ellipsis-v"/></span>
@@ -49,7 +48,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav-bar{
-    color: white
+    color: #009cd3;
 }
 .nav-bar-body{
     height: 50px
