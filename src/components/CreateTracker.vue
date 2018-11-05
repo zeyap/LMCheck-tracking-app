@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout title="App Name" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout title="" type="2" >
       <div class="below-nav-bar">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .below-nav-bar{
   padding: 20px;
   text-align: left;

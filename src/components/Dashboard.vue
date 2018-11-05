@@ -1,18 +1,26 @@
 <template>
-  <div>
-    <div class="floating-button" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
+  <div class="dashboard">
+    <TrackerCard v-for="(tracker, id) in trackers" v-bind:key="id">
+    {{tracker.title}}
+    </TrackerCard>
+    <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
   </div>
 </template>
 
 <script>
+import TrackerCard from './TrackerCard.vue'
+import Store from '../js/Store.js'
 export default {
   name: 'Dashboard',
   props: {
     
   },
+  components:{
+    TrackerCard
+  },
   data: function(){
     return {
-      
+      trackers: Store.getTrackers()
     }
   },
   methods:{
@@ -24,17 +32,27 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+.dashboard{
+  padding:30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .floating-button{
   width: 65px;
   height: 65px;
   background: #3daeca;
   border-radius: 50%;
 
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
+}
 
+.shadowed{
   box-shadow: 2px 2px 2px #d1d1d1;
 }
 
