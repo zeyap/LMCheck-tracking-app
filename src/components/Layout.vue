@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="nav-bar">
  <b-navbar class="nav-bar-body" toggleable="md" type="dark" v-bind:variant="this.variant">
     <b-navbar-nav>
@@ -20,6 +21,8 @@
     </b-navbar-nav>
 </b-navbar>
   </div>
+  <slot></slot>
+</div>
 </template>
 
 <script>
