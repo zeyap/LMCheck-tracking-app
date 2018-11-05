@@ -2,7 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // TODO: Import component you created
-import HelloWord from './components/HelloWorld.vue'
+import CreateTracker from './components/CreateTracker.vue'
+import Dashboard from './components/Dashboard.vue'
+
+//vue-router reference: https://router.vuejs.org/guide/
 
 Vue.use(Router)
 
@@ -14,8 +17,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HelloWord
+      name: 'Home',
+      component: Dashboard
+    },{
+      path: '/createTracker',
+      name: 'create new tracker',
+      component: CreateTracker
     }
+    
   ]
 })
