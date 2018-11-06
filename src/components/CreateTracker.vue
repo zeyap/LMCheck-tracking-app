@@ -1,11 +1,12 @@
 <template>
-  <div class="wrapper">
+  <div>
     <Layout v-bind:title="title" type="0">
       <b-container class="textBoxTop">
         <b-row class="justify-content-md-center">
           <b-col cols="12">
               <form>
                 <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
+                <div v-if="errorMessage === true"><h1>Title is required.</h1></div>
               </form>
           </b-col>
         </b-row>
@@ -42,17 +43,17 @@ export default {
     Layout
   },
   props: {
-    
   },
   data: function(){
     return {
-      title: ''
+      title: '',
+      errorMessage: ''
     }
   },
   methods:{
     createTracker: function(type){
       if(this.title === ''){
-        // alert('Title is required');
+        this.errorMessage = true;
         return;
       }
       this.$router.push({path:`/`+type});
@@ -62,7 +63,6 @@ export default {
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
 <style>
 
 .indentationOneOff{
@@ -105,9 +105,5 @@ input[type=text] {
     border: none;
     background-color: #f0f0f0;
     border-bottom: 2px solid silver;
-}
-.wrapper{
-  height: 640px;
-  background-color: #f0f0f0;
 }
 </style>
