@@ -52,15 +52,15 @@ export default {
   },
   methods:{
     createTracker: function(type){
-      if(this.title === ''){
-        // alert('Title is required');
-        return;
-      }
+      if(this.title == ''){
+        this.errorMessage = true;
+      } else {
       this.$router.push({path:`/${type}/${this.title}`});
       Store.addTracker(new Tracker(this.title,type));
       }
     }
   }
+}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
