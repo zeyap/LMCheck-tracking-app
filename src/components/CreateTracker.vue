@@ -52,11 +52,11 @@ export default {
   },
   methods:{
     createTracker: function(type){
-      if(this.title == ''){
-        this.errorMessage = true;
+      if(this.title == '') {
+          this.errorMessage = true;
       } else {
-      this.$router.push({path:`/${type}/${this.title}`});
-      Store.addTracker(new Tracker(this.title,type));
+          this.$router.push({path:`/${type}/${this.title}`});
+          Store.addTracker(new Tracker(this.title,type));
       }
     }
   }

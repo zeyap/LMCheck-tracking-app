@@ -4,13 +4,14 @@
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
-          <b-col cols="12 timerDescription">{{this.startTime}}</b-col>
+          <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
         </b-row>
       </b-container>
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12 startDescription"><button v-on:click="startTimer">START</button></b-col>
+        <b-col cols="12 startDescription"><button v-on:click="startTimer" id="start">START</button></b-col>
+        <!-- <b-col cols="12 startDescription"><button v-on:click="startTimer" id="stop">PAUSE</button></b-col> -->
         <b-col cols="12 finishDescription"><button>FINISH</button></b-col>
         </b-row>
       </b-container>
@@ -29,13 +30,51 @@ export default {
   }, 
   data: function() {
     return {
-      startTime: ''
+      startTime: '',
+      startingTimer: ''
     }
   },
     methods:{
     startTimer: function(){
-      this.startTime = "10:00";
-      console.log(startTime);
+    var startingTimer = true;
+    var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById('start'),
+    stop = document.getElementById('stop'),
+    clear = document.getElementById('clear'),
+    seconds = 0, minutes = 0, hours = 0,
+    t;
+    if (startingTimer = true){
+      start.style.visibility ='hidden';
+      // stop.style.visibility ='visible';
+    }
+function add() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+
+/* Stop button */
+// stop.onclick = function() {
+//     clearTimeout(t);
+// }
+
+/* Clear button */
+// clear.onclick = function() {
+//     h1.textContent = "00:00:00";
+//     seconds = 0; minutes = 0; hours = 0;
+// }
     }
   }
 }
@@ -60,7 +99,7 @@ export default {
   border-radius: 5px;
 }
 .timerDescription{
-  padding-top: 35px;
+  padding-top: 60px;
   font-size: 4em;
 }
 .buttonDescription{
