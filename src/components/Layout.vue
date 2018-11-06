@@ -16,7 +16,8 @@
         </template>
         <b-dropdown-item v-for="(item,id) in this.settingsList" v-bind:key="'setting'+id" href="#">{{item}}</b-dropdown-item>
       </b-dropdown>
-      <b-nav-item v-if="this.type==='2'">Save</b-nav-item>
+      <b-nav-item v-if="this.type==='2'" v-on:click="onClickRightButtonDefault">Save</b-nav-item>
+      <b-nav-item v-if="this.type==='3'" v-on:click="onClickRightButtonDefault">{{textOnRight}}</b-nav-item>
     </b-navbar-nav>
 </b-navbar>
   </div>
@@ -29,8 +30,10 @@ export default {
   name: 'Layout',
   props: {
     title: String,
-    type: String, //0-none, 1-settingIcon, 2-save
-    settingsList: Array
+    type: String, //0-none, 1-settingIcon, 2-save, 3-other text
+    settingsList: Array,
+    textOnRight: String,
+    onClickRightButton: Function
   },
   data:function(){
       return {
@@ -39,7 +42,15 @@ export default {
   },
   methods:{
     goBack: function(){
-        this.$router.go(-1);
+      this.$router.go(-1);
+    },
+    onClickRightButtonDefault: function(){
+      if(this.onClickRightButton===undefined){
+        console.log('nothing happens')
+      }else{
+        this.onClickRightButton();
+      }
+      
     }
   }
 }

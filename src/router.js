@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import CreateTracker from './components/CreateTracker.vue'
 import Dashboard from './components/Dashboard.vue'
 import Timer from './components/Timer.vue'
+import Todo from './components/Todo.vue'
 
 //vue-router reference: https://router.vuejs.org/guide/
 
@@ -27,9 +28,14 @@ export default new Router({
       component: CreateTracker
     },
     {
-      path: '/timer',
+      path: '/timer/:title',
       name: 'create new timer',
       component: Timer
+    },
+    {
+      path: '/todo/:title',
+      name: 'create new Todo List',
+      component: Todo
     }
   ]
 })

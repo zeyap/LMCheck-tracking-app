@@ -55,7 +55,7 @@ export default {
         // alert('Title is required');
         return;
       }
-      this.$router.push({path:`/`+type});
+      this.$router.push({path:`/${type}/${this.title}`});
       Store.addTracker(new Tracker(this.title,type));
     }
   }

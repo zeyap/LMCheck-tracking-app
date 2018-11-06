@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <Layout title="App Name" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:title="this.$route.params.title" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .indentationOneOff{
   margin-top: 12%;
-},
+}
 .timerCell{
   background-color: white;
   margin-top: 4%;
@@ -38,23 +38,23 @@ export default {
   color: black;
   width: 90%;
   border-radius: 5px;
-},
+}
 .timerDescription{
   padding-top: 30px;
   font-size: 4em;
-},
+}
 .buttonDescription{
   padding-top: 30px;
   font-size: 2.5em;
   font-weight: bold;
-},
+}
 .timerButton button{
   margin-top: 20%;
   width: 100%;
   border-radius: 5px;
   background-color: #01a76b;
   color: white;
-},
+}
 .wrapper{
   height: 640px;
   background-color: #f0f0f0;
