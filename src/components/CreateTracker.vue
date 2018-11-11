@@ -6,7 +6,7 @@
           <b-col cols="12">
               <form>
                 <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
-                <div v-if="errorMessage == true"><h1>Title is required.</h1></div>
+                <div v-if="errorMessage.length>0"><B>{{errorMessage}}</B></div>
               </form>
           </b-col>
         </b-row>
@@ -53,8 +53,12 @@ export default {
   methods:{
     createTracker: function(type){
       if(this.title == '') {
-          this.errorMessage = true;
+          this.errorMessage = 'Title is required.';
       } else {
+          if(Store.getTracker(type,this.title)!==undefined){
+            this.errorMessage='Title already exists for '+type+' tracker';
+            return;
+          }
           this.$router.push({path:`/${type}/${this.title}`});
           Store.addTracker(new Tracker(this.title,type));
       }

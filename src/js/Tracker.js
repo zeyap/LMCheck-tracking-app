@@ -1,5 +1,5 @@
 var Tracker=function(title, type, unit){
-    this.title = title||"Anonymous Tracker";
+    this.title = title.toLowerCase()||"anonymous_tracker";
     switch(type){
         case "numeric":
         this.type = "numeric";

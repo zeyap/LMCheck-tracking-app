@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <TrackerCard  v-for="(tracker, id) in trackers" v-bind:type="tracker.type" v-bind:key="id">
+    <TrackerCard v-for="(tracker, id) in trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>

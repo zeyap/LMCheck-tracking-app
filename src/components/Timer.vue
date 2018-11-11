@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:title="this.$route.params.title" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:onClickRightButton="save" v-bind:title="this.$route.params.title" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
@@ -12,7 +12,7 @@
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12 startDescription"><button v-on:click="startTimer" id="init" style="display:true;">START</button></b-col>
+        <b-col cols="12 startDescription"><button v-on:click="this.startTimer" id="init" style="display:true;">START</button></b-col>
         <b-col cols="12 startDescription"><button id="start" style="display:none;">CONTINUE</button></b-col>
         <b-col cols="12 startDescription"><button id="pause" style="display:none;">PAUSE</button></b-col>
         <b-col cols="12 finishDescription" id="finish" style="display:none;"><button >FINISH</button></b-col>
@@ -23,7 +23,7 @@
 <script>
 import Layout from './Layout.vue';
 import Store from '../js/Store';
-import Tracker from '../js/Tracker'
+import Record from '../js/Record';
 export default {
   name: 'Timer',
   components:{
@@ -35,13 +35,39 @@ export default {
     return {
       startTime: '',
       endTime: '',
-      started: ''
+      started: '',
+      endRecords:[]
     }
   },
+  mounted(){
+    let title = this.$route.params.title;
+    let history = Store.getTracker('timer',title).records;
+    if(history.length>1){
+      this.endRecords = history.map(record=>record.detail);
+      this.startTime = (this.endRecords[0]).toString();
+      this.endTime = this.endRecords[this.endRecords.length-1];
+    }
+    this.updateTracker =function(){
+      if(this.endRecords.length<2)return;
+      Store.updateTracker('timer',title,this.endRecords);
+    };
+  },
+  beforeDestroy:function(){
+    this.updateTracker();
+  },
   methods:{
+    save:function(){
+      this.updateTracker();
+    },
     startTimer: function(){
-      var started = true;
-      var startTime = new Date().toString().slice(0,-23);
+      //a new timer with no history
+      if(this.startTime===''){
+        var started = true;
+        this.startTime = new Date().toString().slice(0,-23);
+        this.endRecords.push(this.startTime);
+      }
+      
+
       var p = document.getElementsByTagName('p')[0];
       var h1 = document.getElementsByTagName('h1')[0],
       start = document.getElementById('start'),
@@ -68,15 +94,15 @@ export default {
                   hours++;
               }
           }
-          p.textContent = startTime;
+          p.textContent = this.startTime;
           h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
           timer();
       }
-      function end(){
-          var endTime = new Date().toString().slice(0,-23);
+      var end = ()=>{
+          this.endTime = new Date().toString().slice(0,-23);
           var p2 = document.getElementsByTagName('p')[1];
-          p2.textContent = endTime;
-          console.log(end);
+          p2.textContent = this.endTime;
+          this.endRecords.push(this.endTime);
       }
       function timer() {
         t = setTimeout(add, 1000);

@@ -6,6 +6,7 @@ import CreateTracker from './components/CreateTracker.vue'
 import Dashboard from './components/Dashboard.vue'
 import Timer from './components/Timer.vue'
 import Todo from './components/Todo.vue'
+import NonExist from './components/NonExist.vue'
 
 //vue-router reference: https://router.vuejs.org/guide/
 
@@ -36,6 +37,12 @@ export default new Router({
       path: '/todo/:title',
       name: 'create new Todo List',
       component: Todo
+    },
+    //404
+    {
+      path: '/:any',
+      name: "page doesn't exist",
+      component: NonExist
     }
   ]
 })
