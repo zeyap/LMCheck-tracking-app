@@ -2,16 +2,16 @@
   <div>
     <Layout v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
-        <div v-if="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
-        <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container" placeholder="" v-model="newItem"/>
+        <div v-show="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
+        <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" placeholder="What's next?" v-model="newItem"/>
         </div>
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
             <div style="width: 0.3em; height:0.3em; "/>
-            <div class="todo-item-container" v-bind:class="{done: selected[id]}" v-if="!ifShowItemInput(id)">{{todo.content}}</div>
+            <div class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="!ifShowItemInput(id)">{{todo.content}}</div>
             <!-- <span v-if="" class="done" >{{todo.content}}</span> -->
-            <textarea rows="2" min-rows="2" class="bottom-border-input todo-item-container" v-if="ifShowItemInput(id)" v-model="todo.content"/>
+            <textarea  rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" v-show="ifShowItemInput(id)" v-model="todo.content"/>
           </div>
           <div style="width: 100%; height:0.3em; "/>
         </div>
@@ -52,9 +52,18 @@ export default {
         this.selected[i] = this.todos[i].detail===true?true:false;
       }
     }
+    
     this.updateTracker =function(){
       Store.updateTracker('todo',title,this.selected);
     };
+
+    let textareas = document.querySelectorAll('.autoExpandTextarea');
+    for(let i=0;i<textareas.length;i++){
+      textareas[i].addEventListener('keydown',function(evt){
+        console.log(evt)
+      })
+    }
+    
   },
   beforeDestroy:function(){
     this.updateTracker();
@@ -86,10 +95,16 @@ export default {
     },
     finishCreateTodo: function(){
       if(this.newItem==='')return;
-      this.creatingNew = false;
+      // this.creatingNew = false;
       this.todos.unshift(new Record(new Date(),this.newItem, false));
       this.selected.unshift(false);
       this.newItem = '';
+    },
+    autoSize:function(){
+      let el = this;
+      let baseScrollHeight = el.scrollHeight;
+      console.log(el.rows,el.scrollHeight)
+
     }
   }
 }
@@ -152,5 +167,10 @@ export default {
   height: auto;
   display: inline-block;
   /* float:left; */
+}
+
+textarea {
+  /* border: none; */
+  resize: none;
 }
 </style>
