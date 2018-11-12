@@ -1,10 +1,11 @@
 <template>
-  <div class="tracker-card shadowed" v-on:click="goTo">
+  <div ref="cardBody" class="tracker-card shadowed" v-on:click="click" v-on:touchstart="onTouchStart">
     <div v-if="this.type==='timer'" class="timerIcon color-bar-left"></div>
     <div v-if="this.type==='numeric'" class="numericIcon color-bar-left"></div>
     <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
     <div class="tracker-card-title">
-    <slot ></slot>
+      <slot></slot>
+      <div v-show="this.editMode" class="cross"><v-icon name="times"/></div>
     </div>
   </div>
 </template>
@@ -17,18 +18,51 @@ export default {
   },
   props: {
     url: String,
-    type: String
+    type: String,
+    delete: Function
+  },
+  data:function(){
+    return {
+      editMode: false
+    }
   },
   methods:{
+    click:function(){
+      if(this.editMode===true){
+        return this.deleteTracker()
+      }else{
+        return this.goTo()
+      }
+    },
     goTo: function(){
       this.$router.push({path:this.url||"#"});
+    },
+    onTouchStart: function(){
+      setTimeout(()=>{
+        if(this.editMode==false){
+          this.$refs.cardBody.style.transform = 'scale(0.9)';
+          this.editMode = true;
+        }else{
+          this.$refs.cardBody.style.transform = 'scale(1)';
+          this.editMode = false;
+        }
+      },2000)
+    },
+    deleteTracker:function(){
+      this.delete();
     }
+  },
+  mounted(){
+    // this.onTouchStart();
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.cross{
+  position:absolute; right:10px;top:10px;
+}
 .tracker-card{
     display: inline-block;
     width: calc(50vw - 2*30px);
@@ -36,6 +70,7 @@ export default {
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;
+    transition: all 0.3s;
 }
 .color-bar-left{
     height: 100%;

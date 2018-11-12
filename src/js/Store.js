@@ -35,18 +35,29 @@ const Store = (function(){
         localStorage.setItem('dict',JSON.stringify(trackerDict));
     }
 
-    //test data
-    if(getTracker("todo","Groceries")===undefined){
-        let testTracker = new Tracker("Groceries","todo");
-        testTracker.add(new Record(new Date(),"Buy lettus"));
-        addTracker(testTracker);
+    var deleteTracker = (type,title)=>{
+        let id = trackerDict[''+type+'#'+(title).toLowerCase()];
+        _data.splice(id,1);
+        delete trackerDict[''+type+'#'+(title).toLowerCase()];
+        localStorage.setItem('data',JSON.stringify(_data));
+        localStorage.setItem('dict',JSON.stringify(trackerDict));
     }
+
+    //test data
+    // if(getTracker("todo","Groceries")===undefined){
+    //     let testTracker = new Tracker("Groceries","todo");
+    //     testTracker.add(new Record(new Date(),"Buy lettus"));
+    //     addTracker(testTracker);
+    // }
+
+    // localStorage.clear();
 
     return {
         addTracker,
         getTrackers, 
         getTracker,
-        updateTracker
+        updateTracker,
+        deleteTracker
     }
 
 })();

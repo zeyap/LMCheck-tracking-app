@@ -55,4 +55,7 @@ export default {
   background-color: #f0f0f0; 
   height: 100%;
 }
+body::-webkit-scrollbar {
+    width: 0;
+}
 </style>

@@ -5,7 +5,6 @@
     <b-navbar-nav>
       <b-nav-item v-on:click="goBack"><v-icon name="angle-left"/></b-nav-item>
     </b-navbar-nav>
-    
     <b-navbar-brand class="nav-bar-title">{{this.title}}</b-navbar-brand>
 
     <!-- Right aligned nav items -->
@@ -62,7 +61,7 @@ export default {
     color: #8B2A6C;
 }
 .nav-bar-body{
-    height: 50px
+    height: 40px
 }
 .nav-bar-title{
     position:absolute; 

@@ -1,6 +1,6 @@
 <template>
-  <div class="dashboard">
-    <TrackerCard v-for="(tracker, id) in trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
+  <div ref="dashboardBox" class="dashboard">
+    <TrackerCard v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
@@ -26,7 +26,21 @@ export default {
   methods:{
     createTracker: function(){
       this.$router.push({path:`/createTracker`});
+    },
+    deleteTracker: function(tracker){
+      return function(){
+        Store.deleteTracker(tracker.type,tracker.title);
+        this.trackers = Store.getTrackers();
+      }
     }
+  },
+  mounted(){
+    let _startY;
+    //this.$refs.dashboardBox
+    window.addEventListener('scroll', e => {
+      if (document.scrollingElement.scrollTop === 0)
+          console.log('top')
+    });
   }
 }
 </script>
