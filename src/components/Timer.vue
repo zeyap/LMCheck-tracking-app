@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:onClickRightButton="save" v-bind:title="this.$route.params.title" type="2" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
@@ -44,7 +44,7 @@ export default {
     let history = Store.getTracker('timer',title).records;
     if(history.length>1){
       this.endRecords = history.map(record=>record.detail);
-      this.startTime = (this.endRecords[0]).toString();
+      this.startTime = this.endRecords[0];
       this.endTime = this.endRecords[this.endRecords.length-1];
     }
     this.updateTracker =function(){
@@ -56,18 +56,14 @@ export default {
     this.updateTracker();
   },
   methods:{
-    save:function(){
-      this.updateTracker();
-    },
     startTimer: function(){
       //a new timer with no history
+      var started = true;
       if(this.startTime===''){
-        var started = true;
         this.startTime = new Date().toString().slice(0,-23);
         this.endRecords.push(this.startTime);
       }
       
-
       var p = document.getElementsByTagName('p')[0];
       var h1 = document.getElementsByTagName('h1')[0],
       start = document.getElementById('start'),
@@ -84,7 +80,7 @@ export default {
           finish.style.display = 'unset';
         } 
       }
-      function add(){
+      var add = ()=>{
           seconds++;
           if (seconds >= 60) {
               seconds = 0;
@@ -94,7 +90,7 @@ export default {
                   hours++;
               }
           }
-          p.textContent = this.startTime;
+          // p.textContent = this.startTime;
           h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
           timer();
       }
