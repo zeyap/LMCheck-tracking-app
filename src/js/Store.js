@@ -9,11 +9,15 @@ const Store = (function(){
         trackerDict = JSON.parse(localStorage.getItem('dict'));
     }
 
+    var save = ()=>{
+        localStorage.setItem('data',JSON.stringify(_data));
+        localStorage.setItem('dict',JSON.stringify(trackerDict));
+    }
+
     var addTracker = item => {
         _data.push(item);
         trackerDict[''+item.type+'#'+(item.title).toLowerCase()]=_data.length-1;
-        sessionStorage.setItem('data',JSON.stringify(_data));
-        sessionStorage.setItem('dict',JSON.stringify(trackerDict));
+        save();
     };
 
     var getTrackers = ()=>_data.map((tracker)=>({
@@ -31,22 +35,35 @@ const Store = (function(){
                 target.records[i].detail = dataArray[i];
             }
         }
-        localStorage.setItem('data',JSON.stringify(_data));
-        localStorage.setItem('dict',JSON.stringify(trackerDict));
+        save();
+    }
+
+    var deleteTracker = (type,title)=>{
+        let id = trackerDict[''+type+'#'+(title).toLowerCase()];
+        _data.splice(id,1);
+        delete trackerDict[''+type+'#'+(title).toLowerCase()];
+        for(let i=id;i<_data.length;i++){
+            trackerDict[''+_data[i].type+'#'+(_data[i].title).toLowerCase()] = i;
+        }
+
+        save();
     }
 
     //test data
-    if(getTracker("todo","Groceries")===undefined){
-        let testTracker = new Tracker("Groceries","todo");
-        testTracker.add(new Record(new Date(),"Buy lettus"));
-        addTracker(testTracker);
-    }
+    // if(getTracker("todo","Groceries")===undefined){
+    //     let testTracker = new Tracker("Groceries","todo");
+    //     testTracker.add(new Record(new Date(),"Buy lettus"));
+    //     addTracker(testTracker);
+    // }
+
+    // localStorage.clear();
 
     return {
         addTracker,
         getTrackers, 
         getTracker,
-        updateTracker
+        updateTracker,
+        deleteTracker
     }
 
 })();

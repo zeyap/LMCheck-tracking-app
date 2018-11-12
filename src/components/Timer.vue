@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
@@ -150,7 +150,7 @@ export default {
   margin-top: 20%;
   width: 100%;
   border-radius: 5px;
-  background-color: #01a76b;
+  background-color: #8ec921;
   color: white;
 }
 .dateDescription{
@@ -176,6 +176,6 @@ export default {
   color: white;
   font-size: 2.3em;
   font-weight: bold;
-  background-color: #01a76b;
+  background-color: #8ec921;
 }
 </style>

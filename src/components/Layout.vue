@@ -5,7 +5,6 @@
     <b-navbar-nav>
       <b-nav-item v-on:click="goBack"><v-icon name="angle-left"/></b-nav-item>
     </b-navbar-nav>
-    
     <b-navbar-brand class="nav-bar-title">{{this.title}}</b-navbar-brand>
 
     <!-- Right aligned nav items -->
@@ -33,16 +32,22 @@ export default {
     type: String, //0-none, 1-settingIcon, 2-save, 3-other text
     settingsList: Array,
     textOnRight: String,
-    onClickRightButton: Function
+    onClickRightButton: Function,
+    back: String
   },
   data:function(){
       return {
-          variant: 'info'
+          variant: 'dark'
       }
   },
   methods:{
     goBack: function(){
-      this.$router.go(-1);
+      if(this.back!==undefined){
+        this.$router.push({path:this.back});
+      }else{
+        this.$router.go(-1);
+      }
+      
     },
     onClickRightButtonDefault: function(){
       if(this.onClickRightButton===undefined){
@@ -57,12 +62,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .nav-bar{
-    color: #009cd3;
+    color: #8B2A6C;
 }
 .nav-bar-body{
-    height: 50px
+    height: 40px
 }
 .nav-bar-title{
     position:absolute; 

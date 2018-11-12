@@ -12,20 +12,20 @@
         </b-row>
       </b-container>
     <b-container class="trackerCell indentationOneOf" v-on:click="createTracker('numeric')">
-      <b-row class="justify-content-md-center indentationOneOff">
-          <b-col cols="3 numericIcon"><img src="../assets/icons/numericIcon.jpg" alt="numericIcon"></b-col>
+      <b-row class="justify-content-md-center indentationOneOff" style="height:100%">
+          <b-col cols="3 numericIcon"><v-icon name="calculator" class="icon-large"/></b-col>
           <b-col cols="9 textDescription">Numeric Measurement</b-col>
       </b-row>
     </b-container>
       <b-container class="trackerCell" v-on:click="createTracker('timer')">
-        <b-row class="justify-content-md-center">
-            <b-col cols="3 timerIcon"><img src="../assets/icons/timerIcon.jpg" alt="numericIcon"></b-col>
+        <b-row class="justify-content-md-center" style="height:100%">
+            <b-col cols="3 timerIcon"><v-icon name="clock" class="icon-large"/></b-col>
             <b-col cols="9 textDescription">Timer</b-col>
         </b-row>
       </b-container>
       <b-container class="trackerCell" v-on:click="createTracker('todo')">
-        <b-row class="justify-content-md-center">
-          <b-col cols="3 toDoIcon"><img src="../assets/icons/todoIcon.jpg" alt="numericIcon"></b-col>
+        <b-row class="justify-content-md-center" style="height:100%">
+          <b-col cols="3 toDoIcon"><v-icon name="check-circle" class="icon-large"/></b-col>
           <b-col cols="9 textDescription">To-do List</b-col>
         </b-row>
       </b-container>
@@ -81,17 +81,24 @@ export default {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.icon-large{
+  color: white;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
 .toDoIcon{
   height: 100%;
-  background-color: #f68004;
+  background-color: #F09500;
 }
 .numericIcon{
   height: 100%;
-  background-color: #3253fc;
+  background-color: #8B2A6C;
 }
 .timerIcon{
   height: 100%;
-  background-color: #f6ae00;
+  background-color: #BC192D;
 }
 .textDescription{
   padding-top: 30px;

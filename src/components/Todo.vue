@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
+    <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-show="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
         <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" placeholder="What's next?" v-model="newItem"/>
@@ -9,9 +9,9 @@
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
             <div style="width: 0.3em; height:0.3em; "/>
-            <div class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="!ifShowItemInput(id)">{{todo.content}}</div>
+            <div class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="selected[id]||(!selected[id]&&!editMode)">{{todo.content}}</div>
             <!-- <span v-if="" class="done" >{{todo.content}}</span> -->
-            <textarea  rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" v-show="ifShowItemInput(id)" v-model="todo.content"/>
+            <textarea  rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" v-show="!selected[id]&&editMode" v-model="todo.content"/>
           </div>
           <div style="width: 100%; height:0.3em; "/>
         </div>
@@ -57,24 +57,19 @@ export default {
       Store.updateTracker('todo',title,this.selected);
     };
 
-    let textareas = document.querySelectorAll('.autoExpandTextarea');
-    for(let i=0;i<textareas.length;i++){
-      textareas[i].addEventListener('keydown',function(evt){
-        console.log(evt)
-      })
-    }
+    // let textareas = document.querySelectorAll('.autoExpandTextarea');
+    // for(let i=0;i<textareas.length;i++){
+    //   textareas[i].addEventListener('keydown',function(evt){
+    //     console.log(evt)
+    //   })
+    // }
     
   },
   beforeDestroy:function(){
     this.updateTracker();
   },
   computed:{
-    ifShowItemInput:function(id){
-      return function(){
-        if(this.selected[id]||(!this.selected[id]&&!this.editMode))return false;
-        return true;
-      }
-    }
+    
   },
   methods:{
     check: function(id){
