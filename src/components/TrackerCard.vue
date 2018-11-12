@@ -23,30 +23,46 @@ export default {
   },
   data:function(){
     return {
-      editMode: false
+      editMode: false,
+      clicks: 0
     }
   },
   methods:{
     click:function(){
-      if(this.editMode===true){
-        return this.deleteTracker()
-      }else{
-        return this.goTo()
+      this.clicks++;
+      if(this.clicks === 1) {
+        var self = this
+        this.timer = setTimeout(function() {
+          if(self.clicks===1){
+            //1 click
+            if(self.editMode===true){
+              return self.deleteTracker();
+            }else{
+              return self.goTo()
+            }
+          }
+          self.clicks = 0;
+        }, 500);
+        
+      } else{
+        this.clicks++;
+        clearTimeout(this.timer);
+        //double click
+        this.onTouchStart();
+        this.clicks = 0;
       }
     },
     goTo: function(){
       this.$router.push({path:this.url||"#"});
     },
     onTouchStart: function(){
-      setTimeout(()=>{
-        if(this.editMode==false){
-          this.$refs.cardBody.style.transform = 'scale(0.9)';
-          this.editMode = true;
-        }else{
-          this.$refs.cardBody.style.transform = 'scale(1)';
-          this.editMode = false;
-        }
-      },2000)
+      if(this.editMode==false){
+        this.$refs.cardBody.style.transform = 'scale(0.9)';
+        this.editMode = true;
+      }else{
+        this.$refs.cardBody.style.transform = 'scale(1)';
+        this.editMode = false;
+      }
     },
     deleteTracker:function(){
       this.delete();

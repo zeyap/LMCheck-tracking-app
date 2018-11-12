@@ -39,6 +39,10 @@ const Store = (function(){
         let id = trackerDict[''+type+'#'+(title).toLowerCase()];
         _data.splice(id,1);
         delete trackerDict[''+type+'#'+(title).toLowerCase()];
+        for(let i=id;i<_data.length;i++){
+            trackerDict[''+_data[i].type+'#'+(_data[i].title).toLowerCase()] = i;
+        }
+
         localStorage.setItem('data',JSON.stringify(_data));
         localStorage.setItem('dict',JSON.stringify(trackerDict));
     }
