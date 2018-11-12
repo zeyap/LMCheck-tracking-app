@@ -37,7 +37,7 @@ export default {
   },
   data:function(){
       return {
-          variant: 'info'
+          variant: 'dark'
       }
   },
   methods:{
@@ -57,9 +57,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .nav-bar{
-    color: #009cd3;
+    color: #8B2A6C;
 }
 .nav-bar-body{
     height: 50px

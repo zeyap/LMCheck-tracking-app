@@ -150,7 +150,7 @@ export default {
   margin-top: 20%;
   width: 100%;
   border-radius: 5px;
-  background-color: #01a76b;
+  background-color: #8ec921;
   color: white;
 }
 .dateDescription{
@@ -176,6 +176,6 @@ export default {
   color: white;
   font-size: 2.3em;
   font-weight: bold;
-  background-color: #01a76b;
+  background-color: #8ec921;
 }
 </style>
