@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
+    <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-show="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
         <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" placeholder="What's next?" v-model="newItem"/>

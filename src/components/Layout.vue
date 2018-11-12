@@ -32,7 +32,8 @@ export default {
     type: String, //0-none, 1-settingIcon, 2-save, 3-other text
     settingsList: Array,
     textOnRight: String,
-    onClickRightButton: Function
+    onClickRightButton: Function,
+    back: String
   },
   data:function(){
       return {
@@ -41,7 +42,12 @@ export default {
   },
   methods:{
     goBack: function(){
-      this.$router.go(-1);
+      if(this.back!==undefined){
+        this.$router.push({path:this.back});
+      }else{
+        this.$router.go(-1);
+      }
+      
     },
     onClickRightButtonDefault: function(){
       if(this.onClickRightButton===undefined){
