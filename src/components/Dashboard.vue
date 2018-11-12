@@ -1,6 +1,6 @@
 <template>
   <div ref="dashboardBox" class="dashboard">
-    <TrackerCard v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
+    <TrackerCard v-bind:id="'trackercard_'+tracker.type+'_'+tracker.title" v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in this.trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
@@ -29,12 +29,20 @@ export default {
     },
     deleteTracker: function(tracker){
       return function(){
+        let card = document.querySelector('#trackercard_'+tracker.type+'_'+tracker.title);
+        card.style.transform="scale(0.5)";
+        card.style.opacity="0";
+        setTimeout(()=>{
+          card.style.display="none";
+        },200);
         Store.deleteTracker(tracker.type,tracker.title);
         this.trackers = Store.getTrackers();
+        
       }
     }
   },
   mounted(){
+    console.log(this.trackers)
     let _startY;
     //this.$refs.dashboardBox
     window.addEventListener('scroll', e => {

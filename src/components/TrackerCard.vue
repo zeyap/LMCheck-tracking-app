@@ -32,6 +32,7 @@ export default {
       this.clicks++;
       if(this.clicks === 1) {
         var self = this
+        clearTimeout(this.timer);
         this.timer = setTimeout(function() {
           if(self.clicks===1){
             //1 click
@@ -59,6 +60,10 @@ export default {
       if(this.editMode==false){
         this.$refs.cardBody.style.transform = 'scale(0.9)';
         this.editMode = true;
+        clearTimeout(this.timer);
+        this.timer = setTimeout(()=>{
+          this.onTouchStart();
+        },1000)
       }else{
         this.$refs.cardBody.style.transform = 'scale(1)';
         this.editMode = false;
@@ -86,7 +91,7 @@ export default {
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 .color-bar-left{
     height: 100%;

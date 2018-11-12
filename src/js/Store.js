@@ -9,11 +9,15 @@ const Store = (function(){
         trackerDict = JSON.parse(localStorage.getItem('dict'));
     }
 
+    var save = ()=>{
+        localStorage.setItem('data',JSON.stringify(_data));
+        localStorage.setItem('dict',JSON.stringify(trackerDict));
+    }
+
     var addTracker = item => {
         _data.push(item);
         trackerDict[''+item.type+'#'+(item.title).toLowerCase()]=_data.length-1;
-        sessionStorage.setItem('data',JSON.stringify(_data));
-        sessionStorage.setItem('dict',JSON.stringify(trackerDict));
+        save();
     };
 
     var getTrackers = ()=>_data.map((tracker)=>({
@@ -31,8 +35,7 @@ const Store = (function(){
                 target.records[i].detail = dataArray[i];
             }
         }
-        localStorage.setItem('data',JSON.stringify(_data));
-        localStorage.setItem('dict',JSON.stringify(trackerDict));
+        save();
     }
 
     var deleteTracker = (type,title)=>{
@@ -43,8 +46,7 @@ const Store = (function(){
             trackerDict[''+_data[i].type+'#'+(_data[i].title).toLowerCase()] = i;
         }
 
-        localStorage.setItem('data',JSON.stringify(_data));
-        localStorage.setItem('dict',JSON.stringify(trackerDict));
+        save();
     }
 
     //test data
