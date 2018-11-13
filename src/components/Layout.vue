@@ -88,6 +88,11 @@ export default {
     top: 50%; 
     transform: translateX(-50%) translateY(-50%);
 }
+.navbar-brand.nav-bar-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
 .wrapper{
   height: 100%;
 }
