@@ -63,6 +63,15 @@ export default {
           Store.addTracker(new Tracker(this.title,type));
       }
     }
+  },
+  mounted(){
+    let input = document.querySelector('#fname');
+    input.addEventListener('keydown',function(evt){
+      if(evt.key==='Enter'){
+        input.blur();
+      } 
+    })
+    
   }
 }
 </script>

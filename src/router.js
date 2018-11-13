@@ -24,6 +24,11 @@ export default new Router({
       component: Dashboard
     },
     {
+      path: '/index.html',
+      name: 'Home',
+      component: Dashboard
+    },
+    {
       path: '/createTracker',
       name: 'create new tracker',
       component: CreateTracker

@@ -25,7 +25,11 @@ export default {
     
   },
   mounted(){
+    
     this.checkTrackerValidity(window.location.pathname);
+  },
+  beforeDestroy(){
+    
   },
   methods:{
     checkTrackerValidity:function(url){

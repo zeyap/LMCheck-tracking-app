@@ -1,5 +1,6 @@
 <template>
-  <div ref="cardBody" class="tracker-card shadowed" v-on:click="click" v-on:touchstart="onTouchStart">
+<v-touch v-on:tap="tap" v-on:press="press">
+<div ref="cardBody" class="tracker-card shadowed">
     <div v-if="this.type==='timer'" class="timerIcon color-bar-left"></div>
     <div v-if="this.type==='numeric'" class="numericIcon color-bar-left"></div>
     <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
@@ -8,6 +9,8 @@
       <div v-show="this.editMode" class="cross"><v-icon name="times"/></div>
     </div>
   </div>
+</v-touch>
+  
 </template>
 
 <script>
@@ -28,30 +31,20 @@ export default {
     }
   },
   methods:{
-    click:function(){
-      this.clicks++;
-      if(this.clicks === 1) {
-        var self = this
-        clearTimeout(this.timer);
-        this.timer = setTimeout(function() {
-          if(self.clicks===1){
-            //1 click
-            if(self.editMode===true){
-              return self.deleteTracker();
-            }else{
-              return self.goTo()
-            }
-          }
-          self.clicks = 0;
-        }, 500);
-        
-      } else{
-        this.clicks++;
-        clearTimeout(this.timer);
-        //double click
-        this.onTouchStart();
-        this.clicks = 0;
-      }
+    tap:function(){
+      this.$refs.cardBody.style.transform = 'scale(0.9)';
+      setTimeout(()=>{
+        if(this.editMode===true){
+          return this.deleteTracker();
+        }else{
+          return this.goTo()
+        }
+      },200)
+      
+    },
+    press: function(){
+      //double click
+      this.onTouchStart();
     },
     goTo: function(){
       this.$router.push({path:this.url||"#"});
@@ -62,11 +55,9 @@ export default {
         this.editMode = true;
         clearTimeout(this.timer);
         this.timer = setTimeout(()=>{
-          this.onTouchStart();
-        },1000)
-      }else{
-        this.$refs.cardBody.style.transform = 'scale(1)';
-        this.editMode = false;
+          this.$refs.cardBody.style.transform = 'scale(1)';
+          this.editMode = false;
+        },3000)
       }
     },
     deleteTracker:function(){
@@ -86,8 +77,8 @@ export default {
 }
 .tracker-card{
     display: inline-block;
-    width: calc(50vw - 2*30px);
-    height: calc(50vw - 2*30px);
+    width: calc(50vw - 2*25px);
+    height: calc(50vw - 2*25px);
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;

@@ -1,5 +1,5 @@
 <template>
-<div>
+<v-touch class="wrapper" v-on:swiperight="goBack">
   <div class="nav-bar">
  <b-navbar class="nav-bar-body" toggleable="md" type="dark" v-bind:variant="this.variant">
     <b-navbar-nav>
@@ -21,7 +21,7 @@
 </b-navbar>
   </div>
   <slot></slot>
-</div>
+</v-touch>
 </template>
 
 <script>
@@ -55,8 +55,21 @@ export default {
       }else{
         this.onClickRightButton();
       }
-      
     }
+  },
+  mounted(){
+    this.body = document.querySelector('.wrapper');
+    let left = 100;
+    let step = 10;
+    let swipeLeft = ()=>{
+      left-=step;
+      this.body.style.transform= 'translateX('+(left)+'%)';
+      if(left>0){
+        setTimeout(swipeLeft,10)
+      }
+    }
+    swipeLeft();
+      
   }
 }
 </script>
@@ -74,5 +87,8 @@ export default {
     left: 50%; 
     top: 50%; 
     transform: translateX(-50%) translateY(-50%);
+}
+.wrapper{
+  height: 100%;
 }
 </style>

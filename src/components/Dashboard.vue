@@ -1,10 +1,12 @@
 <template>
+<v-touch v-on:swipedown="createTracker">
   <div ref="dashboardBox" class="dashboard">
     <TrackerCard v-bind:id="'trackercard_'+tracker.type+'_'+tracker.title" v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in this.trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
   </div>
+</v-touch>
 </template>
 
 <script>
@@ -32,6 +34,8 @@ export default {
         let card = document.querySelector('#trackercard_'+tracker.type+'_'+tracker.title);
         card.style.transform="scale(0.5)";
         card.style.opacity="0";
+        card.style['transition-property']="transform, opacity";
+        card.style['transition-duration']="0.2s, 0.2s";
         setTimeout(()=>{
           card.style.display="none";
         },200);
@@ -42,13 +46,7 @@ export default {
     }
   },
   mounted(){
-    console.log(this.trackers)
-    let _startY;
-    //this.$refs.dashboardBox
-    window.addEventListener('scroll', e => {
-      if (document.scrollingElement.scrollTop === 0)
-          console.log('top')
-    });
+    
   }
 }
 </script>

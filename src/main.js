@@ -12,6 +12,9 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('v-icon', Icon)
 
+import VueTouch from 'vue-touch'
+Vue.use(VueTouch, {name: 'v-touch'})
+
 Vue.config.productionTip = false
 
 new Vue({

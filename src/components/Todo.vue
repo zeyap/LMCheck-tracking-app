@@ -1,24 +1,29 @@
 <template>
-  <div>
+<v-touch style="height:100vh" v-on:swipedown="createTodo" v-on:swipeup="closeCreateTodo">
+  <div id='todo'>
     <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-show="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
-        <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" placeholder="What's next?" v-model="newItem"/>
+        <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container newTodoTextarea" placeholder="What's next?" v-model="newItem"/>
         </div>
+        <div v-show="todos.length===0 && !creatingNew" style="color:grey">Swipe down to add an item</div>
+        
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
             <div style="width: 0.3em; height:0.3em; "/>
-            <div class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="selected[id]||(!selected[id]&&!editMode)">{{todo.content}}</div>
-            <!-- <span v-if="" class="done" >{{todo.content}}</span> -->
-            <textarea  rows="1" min-rows="1" class="bottom-border-input todo-item-container autoExpandTextarea" v-show="!selected[id]&&editMode" v-model="todo.content"/>
+            
+            <div v-on:click="check(id)" class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="selected[id]||(!selected[id]&&!editMode)">{{todo.content}}</div>
+           <v-touch v-on:swipeleft="deleteItem(id)" v-show="!selected[id]&&editMode" style="width:100%">
+            <input class="bottom-border-input todo-item-container todoTextarea" v-model="todo.content"/>
+            </v-touch>
           </div>
           <div style="width: 100%; height:0.3em; "/>
         </div>
       </div>
-      <div class="floating-button shadowed" v-on:click="createTodo"><v-icon name="plus" class="center-and-large"/></div>
     </Layout>
   </div>
+  </v-touch>
 </template>
 
 <script>
@@ -57,12 +62,23 @@ export default {
       Store.updateTracker('todo',title,this.selected);
     };
 
-    // let textareas = document.querySelectorAll('.autoExpandTextarea');
-    // for(let i=0;i<textareas.length;i++){
-    //   textareas[i].addEventListener('keydown',function(evt){
-    //     console.log(evt)
-    //   })
-    // }
+    let todoWindow = document.querySelector('#todo');
+      todoWindow.addEventListener('keydown',function(evt){
+        if(evt.key==='Enter'){
+          let input = document.querySelectorAll('.todoTextarea');
+          input.forEach((item)=>{item.blur()})
+        } 
+      })
+  
+
+    let newTodo = document.querySelector('.newTodoTextarea');
+    // console.log(newTodo)
+    newTodo.addEventListener('keydown',(evt)=>{
+      if(evt.key==='Enter'){
+        newTodo.blur();
+        this.finishCreateTodo();
+      } 
+    })
     
   },
   beforeDestroy:function(){
@@ -78,15 +94,20 @@ export default {
       this.selected = selected;
       //vue issue: cannot detect change in v-bind variables of reference type
     },
+    deleteItem:function(id){
+      this.todos.splice(id,1);
+      this.selected.splice(id,1);
+    },
     edit: function(){
       this.editMode=!this.editMode;
     },
     createTodo: function(){
       this.editMode = false;
-      if(this.creatingNew===true){
-        this.finishCreateTodo();
-      }
-      this.creatingNew = !this.creatingNew;
+      this.creatingNew = true;
+    },
+    closeCreateTodo: function(){
+      this.editMode = false;
+      this.creatingNew = false;
     },
     finishCreateTodo: function(){
       if(this.newItem==='')return;
@@ -142,6 +163,7 @@ export default {
 }
 .circular-checkbox:checked:before{
   content: '\2714' ;
+  color: white;
   display: block; 
   position: absolute ; 
   top: 50% ; 
