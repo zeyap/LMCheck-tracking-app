@@ -205,7 +205,7 @@ textarea {
 
 .add-icon{
   width: 1.2em; 
-  height:1.3em; 
+  height:1.2em; 
   display: inline-block;
   border: 2px solid #ffd519;
   border-radius: 50%;
