@@ -1,10 +1,12 @@
 <template>
-  <div class="dashboard">
-    <TrackerCard v-for="(tracker, id) in trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
+<v-touch v-on:swipedown="createTracker">
+  <div ref="dashboardBox" class="dashboard">
+    <TrackerCard v-bind:id="'trackercard_'+tracker.type+'_'+tracker.title" v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in this.trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
     {{tracker.title}}
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
   </div>
+</v-touch>
 </template>
 
 <script>
@@ -26,7 +28,25 @@ export default {
   methods:{
     createTracker: function(){
       this.$router.push({path:`/createTracker`});
+    },
+    deleteTracker: function(tracker){
+      return function(){
+        let card = document.querySelector('#trackercard_'+tracker.type+'_'+tracker.title);
+        card.style.transform="scale(0.5)";
+        card.style.opacity="0";
+        card.style['transition-property']="transform, opacity";
+        card.style['transition-duration']="0.2s, 0.2s";
+        setTimeout(()=>{
+          card.style.display="none";
+        },200);
+        Store.deleteTracker(tracker.type,tracker.title);
+        this.trackers = Store.getTrackers();
+        
+      }
     }
+  },
+  mounted(){
+    
   }
 }
 </script>
@@ -44,7 +64,7 @@ export default {
 .floating-button{
   width: 65px;
   height: 65px;
-  background-color: #009cd3;
+  background-color: #F09500;
   border-radius: 50%;
 
   position: fixed;
