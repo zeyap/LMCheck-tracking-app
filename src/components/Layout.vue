@@ -38,7 +38,7 @@ export default {
   },
   data:function(){
       return {
-          variant: 'dark'
+          variant: ''
       }
   },
   methods:{
@@ -77,10 +77,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .nav-bar{
-    color: #8B2A6C;
+    background-color: #009AD8;
 }
 .nav-bar-body{
-    height: 40px
+    height: 90px
 }
 .nav-bar-title{
   width: calc(100% - 110px);
@@ -91,7 +91,13 @@ export default {
   top: 50%; 
   transform: translateX(-50%) translateY(-50%);
 }
+.navbar-brand.nav-bar-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
 .wrapper{
   height: 100%;
 }
+
 </style>
