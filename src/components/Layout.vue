@@ -38,7 +38,7 @@ export default {
   },
   data:function(){
       return {
-          variant: 'dark'
+          variant: ''
       }
   },
   methods:{
@@ -78,10 +78,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .nav-bar{
-    color: #8B2A6C;
+    background-color: #009AD8;
 }
 .nav-bar-body{
-    height: 40px
+    height: 90px
 }
 .nav-bar-title{
     position:absolute; 
@@ -92,4 +92,5 @@ export default {
 .wrapper{
   height: 100%;
 }
+
 </style>
