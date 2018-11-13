@@ -5,7 +5,7 @@
     <b-navbar-nav>
       <b-nav-item v-on:click="goBack"><v-icon v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
     </b-navbar-nav>
-    <b-navbar-brand class="nav-bar-title">{{this.title}}</b-navbar-brand>
+    <b-navbar-brand class="nav-bar-title"><input style="text-align:center; width:100%;border:none; background:#343a40; color:white;" v-model="this.title"/></b-navbar-brand>
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
@@ -83,10 +83,13 @@ export default {
     height: 40px
 }
 .nav-bar-title{
-    position:absolute; 
-    left: 50%; 
-    top: 50%; 
-    transform: translateX(-50%) translateY(-50%);
+  width: calc(100% - 110px);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  position:absolute;
+  left: 50%; 
+  top: 50%; 
+  transform: translateX(-50%) translateY(-50%);
 }
 .wrapper{
   height: 100%;

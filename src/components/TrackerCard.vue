@@ -78,7 +78,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .cross{
-  position:absolute; right:10px;top:10px;
+  position:absolute; 
+  right:10px;
+  top:10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .tracker-card{
     display: inline-block;
