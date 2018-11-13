@@ -6,7 +6,7 @@
     <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
     <div class="tracker-card-title">
       <slot></slot>
-      <div v-show="this.editMode" class="cross"><v-icon name="times"/></div>
+      <div v-show="this.editMode" class="cross" v-on:click="deleteTracker"><v-icon name="times"/></div>
     </div>
   </div>
 </v-touch>
@@ -34,10 +34,8 @@ export default {
     tap:function(){
       this.$refs.cardBody.style.transform = 'scale(0.9)';
       setTimeout(()=>{
-        if(this.editMode===true){
-          return this.deleteTracker();
-        }else{
-          return this.goTo()
+        if(this.editMode===false){
+          return this.goTo();
         }
       },200)
       
@@ -45,6 +43,7 @@ export default {
     press: function(){
       //double click
       this.onTouchStart();
+      
     },
     goTo: function(){
       this.$router.push({path:this.url||"#"});
@@ -55,16 +54,22 @@ export default {
         this.editMode = true;
         clearTimeout(this.timer);
         this.timer = setTimeout(()=>{
-          this.$refs.cardBody.style.transform = 'scale(1)';
-          this.editMode = false;
-        },3000)
+          this.unselect();
+        },2000);
       }
+      
+      
+    },
+    unselect:function(){
+      this.$refs.cardBody.style.transform = 'scale(1)';
+      this.editMode = false;
     },
     deleteTracker:function(){
       this.delete();
     }
   },
   mounted(){
+    
     // this.onTouchStart();
   }
 }

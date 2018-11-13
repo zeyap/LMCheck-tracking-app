@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
     </Layout>
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
