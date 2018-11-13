@@ -1,24 +1,21 @@
 <template>
-<v-touch style="height:100vh" v-on:swipedown="createTodo" v-on:swipeup="closeCreateTodo">
+<v-touch style="height:100vh">
   <div id='todo'>
-    <Layout v-bind:back="'/'" v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
+    <Layout v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'done':'edit'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
-        <div v-show="creatingNew"><div style="width: 1.5em; height:1.5em; display: inline-block;"/>
-        <textarea rows="1" min-rows="1" class="bottom-border-input todo-item-container newTodoTextarea" placeholder="What's next?" v-model="newItem"/>
-        </div>
-        <div v-show="todos.length===0 && !creatingNew" style="color:grey">Swipe down to add an item</div>
-        
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
             <div style="width: 0.3em; height:0.3em; "/>
-            
-            <div v-on:click="check(id)" class="todo-item-container" v-bind:class="{done: selected[id]}" v-show="selected[id]||(!selected[id]&&!editMode)">{{todo.content}}</div>
-           <v-touch v-on:swipeleft="deleteItem(id)" v-show="!selected[id]&&editMode" style="width:100%">
+          <v-touch v-on:tap="editItem(id)" v-on:swipeleft="deleteItem(id)" style="width:100%">
             <input class="bottom-border-input todo-item-container todoTextarea" v-model="todo.content"/>
-            </v-touch>
+          </v-touch>
           </div>
           <div style="width: 100%; height:0.3em; "/>
+        </div>
+        <div class="add-icon" v-on:click="createTodo"/>
+        <div v-on:click="createTodo" class=" todo-item-container">
+          <input class="bottom-border-input newTodoTextarea" v-model="newItem"/>
         </div>
       </div>
     </Layout>
@@ -75,6 +72,7 @@ export default {
     // console.log(newTodo)
     newTodo.addEventListener('keydown',(evt)=>{
       if(evt.key==='Enter'){
+        console.log('xxx')
         newTodo.blur();
         this.finishCreateTodo();
       } 
@@ -99,11 +97,23 @@ export default {
       this.selected.splice(id,1);
     },
     edit: function(){
-      this.editMode=!this.editMode;
+          //right button
+          this.editMode=!this.editMode;
+          if(this.editMode){
+            (document.querySelectorAll('.todoTextarea'))[0].focus();
+          }else{
+            (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
+          }
+    },
+    editItem: function(id){
+      //each item
+      this.editMode=true;
+      document.querySelectorAll('.todoTextarea')[id].focus();
     },
     createTodo: function(){
       this.editMode = false;
       this.creatingNew = true;
+      document.querySelector('.newTodoTextarea').focus();
     },
     closeCreateTodo: function(){
       this.editMode = false;
@@ -112,8 +122,8 @@ export default {
     finishCreateTodo: function(){
       if(this.newItem==='')return;
       // this.creatingNew = false;
-      this.todos.unshift(new Record(new Date(),this.newItem, false));
-      this.selected.unshift(false);
+      this.todos.push(new Record(new Date(),this.newItem, false));
+      this.selected.push(false);
       this.newItem = '';
     },
     autoSize:function(){
@@ -156,8 +166,8 @@ export default {
 } */
 
 .circular-checkbox:checked {
-	background-color: #ffb619;
-	border: 2px solid #ffb619;
+	background-color: #ffd519;
+	border: 2px solid #ffd519;
 	color: white;
   /* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); */
 }
@@ -174,8 +184,10 @@ export default {
 }
 
 .bottom-border-input{
+  width: 100%;
   border:none;
-  border-bottom: 1px solid #ffb619;
+  /* border-bottom: 1px solid #ffb619; */
+  background-color: #f0f0f0
 }
 .todo-item-container{
   width: calc(100% - 40px);
@@ -189,5 +201,26 @@ export default {
 textarea {
   /* border: none; */
   resize: none;
+}
+
+.add-icon{
+  width: 1.2em; 
+  height:1.2em; 
+  display: inline-block;
+  border: 2px solid #ffd519;
+  border-radius: 50%;
+  margin-right: 0.3em;
+  position: relative;
+  background: white;
+}
+.add-icon::before{
+  content: '+';
+  color:#ffd519;
+  display: block; 
+  position: absolute ; 
+  top: 50% ; 
+  left: 50% ; 
+  transform: translateX(-50%) translateY(-50%);
+  font-weight: bold;
 }
 </style>

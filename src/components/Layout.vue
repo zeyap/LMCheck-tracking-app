@@ -70,7 +70,6 @@ export default {
       }
     }
     swipeLeft();
-      
   }
 }
 </script>
