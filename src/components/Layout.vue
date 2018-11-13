@@ -3,7 +3,7 @@
   <div class="nav-bar">
  <b-navbar class="nav-bar-body" toggleable="md" type="dark" v-bind:variant="this.variant">
     <b-navbar-nav>
-      <b-nav-item v-on:click="goBack"><v-icon name="angle-left"/></b-nav-item>
+      <b-nav-item v-on:click="goBack"><v-icon v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
     </b-navbar-nav>
     <b-navbar-brand class="nav-bar-title">{{this.title}}</b-navbar-brand>
 
@@ -33,7 +33,8 @@ export default {
     settingsList: Array,
     textOnRight: String,
     onClickRightButton: Function,
-    back: String
+    back: String,
+    leftText: String
   },
   data:function(){
       return {
