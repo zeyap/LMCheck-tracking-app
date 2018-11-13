@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard.vue'
 import Timer from './components/Timer.vue'
 import Todo from './components/Todo.vue'
 import NonExist from './components/NonExist.vue'
+import NumericMeasurement from './components/NumericMeasurement.vue'
 
 //vue-router reference: https://router.vuejs.org/guide/
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/todo/:title',
       name: 'create new Todo List',
       component: Todo
+    },
+    {
+      path: '/numeric/:title',
+      name: 'create new Numeric Measurement',
+      component: NumericMeasurement
     },
     //404
     {
