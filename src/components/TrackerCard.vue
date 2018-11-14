@@ -91,7 +91,7 @@ export default {
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;
-    border-radius: 10px;
+    border-radius: 4px;
     transition: all 0.2s;
 }
 .color-bar-left{

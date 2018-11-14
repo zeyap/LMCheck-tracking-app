@@ -100,23 +100,20 @@ export default {
 .toDoIcon{
   height: 100%;
   background-color: #F68002;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 4px;
 
 }
 .numericIcon{
   height: 100%;
   background-color: #3252FC;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;  
+  border-radius: 4px;
 }
 .timerIcon{
   height: 100%;
   background-color: #F6AF00;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 4px;
   }
-  
+
 .textDescription{
   padding-top: 30px;
   text-align: center;
