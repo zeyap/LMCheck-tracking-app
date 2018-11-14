@@ -91,6 +91,7 @@ export default {
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;
+    border-radius: 10px;
     transition: all 0.2s;
 }
 .color-bar-left{
@@ -106,6 +107,8 @@ export default {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
 }
 </style>
