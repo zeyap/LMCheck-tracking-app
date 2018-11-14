@@ -12,10 +12,10 @@
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12 " class="startDescription"><button v-on:click="this.startTimer" id="init" style="display:true;">START</button></b-col>
-        <b-col cols="12" class="startDescription"><button id="start" style="display:none;">CONTINUE</button></b-col>
-        <b-col cols="12" class="startDescription"><button  id="pause" style="display:none;">PAUSE</button></b-col>
-        <b-col cols="12" id="finish" style="display:none;" class="finishDescription"><button >FINISH</button></b-col>
+        <b-col v-show="!started" cols="12 " class="startDescription"><button v-on:click="this.startTimer" id="init">START</button></b-col>
+        <b-col v-show="started && isPaused" cols="12" class="startDescription"><button id="start">CONTINUE</button></b-col>
+        <b-col v-show="started && !isPaused" cols="12" class="startDescription"><button  id="pause">PAUSE</button></b-col>
+        <b-col v-show="started" cols="12" id="finish" class="finishDescription"><button >FINISH</button></b-col>
         </b-row>
       </b-container>
       </Layout>
@@ -36,8 +36,9 @@ export default {
     return {
       startTime: '',
       endTime: '',
-      started: '',
-      endRecords:[]
+      started:false,
+      endRecords:[],
+      isPaused: false
     }
   },
   mounted(){
@@ -59,7 +60,8 @@ export default {
   methods:{
     startTimer: function(){
       //a new timer with no history
-      var started = true;
+      this.started = true;
+      this.isPaused = false;
       if(this.startTime===''){
         this.startTime = new Date().toString().slice(0,-23);
         this.endRecords.push(this.startTime);
@@ -74,12 +76,7 @@ export default {
       t;
       check();
       function check(){
-        if (started = "true"){
-          init.style.display = 'none';
-          pause.style.display = 'unset';
-          start.style.display = 'unset';
-          finish.style.display = 'unset';
-        } 
+        
       }
       var add = ()=>{
           seconds++;
@@ -101,13 +98,15 @@ export default {
           p2.textContent = this.endTime;
           this.endRecords.push(this.endTime);
       }
-      function timer() {
+      var timer = ()=> {
         t = setTimeout(add, 1000);
+        this.isPaused=false;
       }
     timer();
       start.onclick = timer;
-      pause.onclick = function() {
+      pause.onclick = ()=>{
           clearTimeout(t);
+          this.isPaused = true;
       }
       finish.onclick = function() {
           clearTimeout(t);
