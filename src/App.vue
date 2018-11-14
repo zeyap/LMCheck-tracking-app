@@ -41,6 +41,9 @@ export default {
           this.nonExist=true;
         }
       }
+    },
+    pan: function(evt){
+      console.log('x')
     }
   }
 }
@@ -59,6 +62,6 @@ export default {
   height: 100%;
 }
 body::-webkit-scrollbar {
-    width: 0;
+    width: 1px;
 }
 </style>

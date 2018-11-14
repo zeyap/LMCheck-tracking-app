@@ -7,7 +7,7 @@
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
           <v-touch v-on:tap="editItem(id)" v-on:swipeleft="deleteItem(id)" style="width:100%">
-            <input class="bottom-border-input todo-item-container todoTextarea" v-model="todo.content"/>
+            <input v-bind:class="'bottom-border-input todo-item-container todoTextarea'+(selected[id]?' done':'')" v-model="todo.content"/>
           </v-touch>
           </div>
           <div style="width: 100%; height:0.3em; "/>
@@ -52,6 +52,7 @@ export default {
       for(let i=0;i<this.todos.length;i++){
         this.selected[i] = this.todos[i].detail===true?true:false;
       }
+      if(data.records.length===0)this.createTodo();
     }
     
     this.updateTracker =function(){
@@ -71,7 +72,7 @@ export default {
     // console.log(newTodo)
     newTodo.addEventListener('keydown',(evt)=>{
       if(evt.key==='Enter'){
-        console.log('xxx')
+        // console.log('xxx')
         newTodo.blur();
         this.finishCreateTodo();
       } 
@@ -79,6 +80,7 @@ export default {
     
   },
   beforeDestroy:function(){
+    this.finishCreateTodo();
     this.updateTracker();
   },
   computed:{
@@ -98,10 +100,12 @@ export default {
     edit: function(){
           //right button
           this.editMode=!this.editMode;
-          if(this.editMode){
+          if(this.editMode===true){//edit
             (document.querySelectorAll('.todoTextarea'))[0].focus();
-          }else{
+          }else{//done
             (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
+            this.finishCreateTodo();
+            this.updateTracker();
           }
     },
     editItem: function(id){
@@ -110,7 +114,7 @@ export default {
       document.querySelectorAll('.todoTextarea')[id].focus();
     },
     createTodo: function(){
-      this.editMode = false;
+      this.editMode = true;
       this.creatingNew = true;
       document.querySelector('.newTodoTextarea').focus();
     },
@@ -120,7 +124,6 @@ export default {
     },
     finishCreateTodo: function(){
       if(this.newItem==='')return;
-      // this.creatingNew = false;
       this.todos.push(new Record(new Date(),this.newItem, false));
       this.selected.push(false);
       this.newItem = '';
@@ -128,7 +131,7 @@ export default {
     autoSize:function(){
       let el = this;
       let baseScrollHeight = el.scrollHeight;
-      console.log(el.rows,el.scrollHeight)
+      // console.log(el.rows,el.scrollHeight)
 
     }
   }
@@ -214,7 +217,7 @@ textarea {
   background: white;
 }
 .add-icon::before{
-  content: '+';
+  content: '';
   color:#ffd519;
   display: block; 
   position: absolute ; 
