@@ -86,8 +86,8 @@ export default {
 }
 .tracker-card{
     display: inline-block;
-    width: calc(50vw - 2*25px);
-    height: calc(50vw - 2*25px);
+    width: calc(50vw - 2*26px);
+    height: calc(50vw - 2*26px);
     margin: 10px;
     background: white;
     border: 1px solid #dddddd;
