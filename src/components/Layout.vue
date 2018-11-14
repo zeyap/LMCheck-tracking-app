@@ -83,10 +83,13 @@ export default {
     height: 90px
 }
 .nav-bar-title{
-    position:absolute; 
-    left: 50%; 
-    top: 50%; 
-    transform: translateX(-50%) translateY(-50%);
+  width: calc(100% - 110px);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  position:absolute;
+  left: 50%; 
+  top: 50%; 
+  transform: translateX(-50%) translateY(-50%);
 }
 .navbar-brand.nav-bar-title {
     font-size: 32px;

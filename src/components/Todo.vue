@@ -6,7 +6,6 @@
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
-            <div style="width: 0.3em; height:0.3em; "/>
           <v-touch v-on:tap="editItem(id)" v-on:swipeleft="deleteItem(id)" style="width:100%">
             <input class="bottom-border-input todo-item-container todoTextarea" v-model="todo.content"/>
           </v-touch>
@@ -154,10 +153,11 @@ export default {
   -webkit-appearance: none;
 	background-color: white;
 	border: 2px solid #ffd519;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.6em;
+  height: 1.5em;
 	padding: 0;
 	border-radius: 50%;
+  margin-right: 0.3em;
 	display: inline-block;
 	position: relative;
 }
@@ -204,8 +204,8 @@ textarea {
 }
 
 .add-icon{
-  width: 1.2em; 
-  height:1.2em; 
+  width: 1.5em; 
+  height:1.5em; 
   display: inline-block;
   border: 2px solid #ffd519;
   border-radius: 50%;
