@@ -6,7 +6,7 @@
     <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
     <div class="tracker-card-title">
       <slot></slot>
-      <div v-show="this.editMode" class="cross" v-on:click="deleteTracker"><v-icon name="times"/></div>
+      <div v-show="this.editMode" class="cross" v-on:click="deleteTracker"><v-icon class="center-and-large" name="times"/></div>
     </div>
   </div>
 </v-touch>
@@ -78,26 +78,29 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .cross{
+  width: 28%;
+  height: 28%;
   position:absolute; 
-  right:10px;
-  top:10px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  right: -10%;
+  top: -10%;
+  background:#a5a5a5;
+  color:white;
+  border-radius: 50%;
 }
 .tracker-card{
-    display: inline-block;
-    width: calc(50vw - 2*26px);
-    height: calc(50vw - 2*26px);
-    margin: 10px;
-    background: white;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    transition: all 0.2s;
+  display: inline-block;
+  width: calc(50vw - 2*26px);
+  height: calc(50vw - 2*26px);
+  margin: 10px;
+  background: white;
+  border-radius: 4px;
+  transition: all 0.2s;
 }
 .color-bar-left{
-    height: 20%;
-    width: 100%;
-    float:left;
+  height: 20%;
+  width: 100%;
+  float:left;
+  border-radius: 4px 4px 0 0;
 }
 .tracker-card-title{
   width: 92%;

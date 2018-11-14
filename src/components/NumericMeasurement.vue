@@ -1,7 +1,6 @@
 <template>
   <div>
     <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
-    </Layout>
       <b-container class="valueContainer indentationOneOf">
         <b-row align-v="center" class="valueCell">
             <b-form-input id="valueForm" size="lg" v-model="text" type="text" placeholder="Enter your unit"></b-form-input>
@@ -12,6 +11,7 @@
                 <b-button id="saveButton">SAVE</b-button>
             </b-row>
         </b-container>
+      </Layout>
   </div>
 </template>
 
