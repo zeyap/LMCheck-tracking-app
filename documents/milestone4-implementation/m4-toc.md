@@ -2,14 +2,18 @@
 
 ## Table of Contents
 
-| Team Member Name  | Second Header |
+
+
+## Effort & Accountability
+
+| Team Member Name  | Effort |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-## Effort & Accountability
+
 
 ## Scenario
 
-## Evaluation
+
 
