@@ -99,15 +99,15 @@ export default {
 }
 .toDoIcon{
   height: 100%;
-  background-color: #F09500;
+  background-color: #F68002;
 }
 .numericIcon{
   height: 100%;
-  background-color: #8B2A6C;
+  background-color: #3252FC;
 }
 .timerIcon{
   height: 100%;
-  background-color: #BC192D;
+  background-color: #F6AF00;
 }
 .textDescription{
   padding-top: 30px;

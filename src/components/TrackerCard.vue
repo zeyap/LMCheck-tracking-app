@@ -90,13 +90,13 @@ export default {
     transition: all 0.2s;
 }
 .color-bar-left{
-    height: 100%;
-    width: 8%;
+    height: 20%;
+    width: 100%;
     float:left;
 }
 .tracker-card-title{
   width: 92%;
-  height:100%;
+  height:80%;
   float:left;
   display: flex;
   flex-flow: column wrap;

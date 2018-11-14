@@ -93,6 +93,10 @@ export default {
     font-weight: 600;
 }
 
+.trackerCell.container{
+  width:90%;
+}
+
 .wrapper{
   height: 100%;
 }

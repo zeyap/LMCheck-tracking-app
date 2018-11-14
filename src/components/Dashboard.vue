@@ -64,7 +64,7 @@ export default {
 .floating-button{
   width: 65px;
   height: 65px;
-  background-color: #F09500;
+  background-color: #01A764;
   border-radius: 50%;
 
   position: fixed;
