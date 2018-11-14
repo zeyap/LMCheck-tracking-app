@@ -1,7 +1,7 @@
 <template>
   <div>
     <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
-    </Layout>
+    
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
           <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
@@ -12,12 +12,13 @@
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12 startDescription"><button v-on:click="this.startTimer" id="init" style="display:true;">START</button></b-col>
-        <b-col cols="12 startDescription"><button id="start" style="display:none;">CONTINUE</button></b-col>
-        <b-col cols="12 startDescription"><button id="pause" style="display:none;">PAUSE</button></b-col>
-        <b-col cols="12 finishDescription" id="finish" style="display:none;"><button >FINISH</button></b-col>
+        <b-col cols="12 " class="startDescription"><button v-on:click="this.startTimer" id="init" style="display:true;">START</button></b-col>
+        <b-col cols="12" class="startDescription"><button id="start" style="display:none;">CONTINUE</button></b-col>
+        <b-col cols="12" class="startDescription"><button  id="pause" style="display:none;">PAUSE</button></b-col>
+        <b-col cols="12" id="finish" style="display:none;" class="finishDescription"><button >FINISH</button></b-col>
         </b-row>
       </b-container>
+      </Layout>
   </div>
 </template>
 <script>
