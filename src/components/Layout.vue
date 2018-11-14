@@ -13,7 +13,7 @@
         <template slot="button-content">
             <span style="color:#f8f9fa" ><v-icon name="ellipsis-v"/></span>
         </template>
-        <b-dropdown-item v-for="(item,id) in this.settingsList" v-bind:key="'setting'+id" href="#">{{item}}</b-dropdown-item>
+        <b-dropdown-item v-for="(item,id) in this.settingsList" v-on:click="go(item)" v-bind:key="'setting'+id" href="#">{{item}}</b-dropdown-item>
       </b-dropdown>
       <b-nav-item v-if="this.type==='2'" v-on:click="onClickRightButtonDefault">Save</b-nav-item>
       <b-nav-item v-if="this.type==='3'" v-on:click="onClickRightButtonDefault">{{textOnRight}}</b-nav-item>
@@ -48,7 +48,11 @@ export default {
       }else{
         this.$router.go(-1);
       }
-      
+    },
+    go:function(item){
+      if(item.indexOf('List')>-1){
+        this.$router.push({path:this.$route.path+'/list'});
+      }
     },
     onClickRightButtonDefault: function(){
       if(this.onClickRightButton===undefined){
