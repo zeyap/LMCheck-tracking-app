@@ -51,7 +51,7 @@ export default new Router({
       component: NumericMeasurement
     },
     {
-      path: '/:type/:title/list',
+      path: '/:type/:title/:visualizeType',
       name: 'list',
       component: List
     },

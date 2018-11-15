@@ -15,6 +15,9 @@ Vue.component('v-icon', Icon)
 import VueTouch from 'vue-touch'
 Vue.use(VueTouch, {name: 'v-touch'})
 
+import ECharts from 'vue-echarts/components/ECharts';
+Vue.component('v-chart', ECharts);
+
 Vue.config.productionTip = false
 
 new Vue({

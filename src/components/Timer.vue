@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Layout v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout color="#F6AF00" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
     
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
           <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
-          <b-col cols ="12 dateDescription indentationOneOff"><p>{{this.startTime}}</p></b-col>
-          <b-col cols ="12 dateDescription"><p>{{this.endTime}}</p></b-col>
+          <b-col cols ="12 dateDescription indentationOneOff"><p>Start {{formatTime(this.startTime)}}</p></b-col>
+          <b-col cols ="12 dateDescription"><p>End {{formatTime(this.endTime)}}</p></b-col>
         </b-row>
       </b-container>
       <b-container class="timerButton">
@@ -58,12 +58,21 @@ export default {
     this.updateTracker();
   },
   methods:{
+    formatTime: function(date){
+      if(date=='')return '';
+      let t = new Date(date);
+      let h = t.getHours(), m = t.getMinutes(), s=t.getSeconds();
+      h = h<10?'0'+h:h;
+      m = m<10?'0'+m:m;
+      s = s<10?'0'+s:s;
+      return h+':'+m+":"+s;
+    },
     startTimer: function(){
       //a new timer with no history
       this.started = true;
       this.isPaused = false;
       if(this.startTime===''){
-        this.startTime = new Date().toString().slice(0,-23);
+        this.startTime = new Date();
         this.endRecords.push(this.startTime);
       }
       
@@ -93,10 +102,9 @@ export default {
           timer();
       }
       var end = ()=>{
-          this.endTime = new Date().toString().slice(0,-23);
-          var p2 = document.getElementsByTagName('p')[1];
-          p2.textContent = this.endTime;
+          this.endTime = new Date();
           this.endRecords.push(this.endTime);
+          console.log(this.endRecords)
       }
       var timer = ()=> {
         t = setTimeout(add, 1000);
@@ -108,11 +116,13 @@ export default {
           clearTimeout(t);
           this.isPaused = true;
       }
-      finish.onclick = function() {
-          clearTimeout(t);
-          end();
-          h1.textContent = "00:00:00";
-          seconds = 0; minutes = 0; hours = 0;
+      finish.onclick = ()=> {
+        this.isPaused = false;
+        this.started = false;
+        clearTimeout(t);
+        end();
+        h1.textContent = "00:00:00";
+        seconds = 0; minutes = 0; hours = 0;
       }
     }
   }
