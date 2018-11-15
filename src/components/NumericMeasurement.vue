@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['Add Record','View List','View Chart']">
+    <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
       <b-container class="valueContainer indentationOneOf">
         <b-row align-v="center" class="valueCell">
             <b-form-input id="valueForm" size="lg" v-model="text" type="text" placeholder="Enter your unit"></b-form-input>
