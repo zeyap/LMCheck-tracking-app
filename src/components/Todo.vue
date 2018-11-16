@@ -81,7 +81,7 @@ export default {
   },
   beforeDestroy:function(){
     this.finishCreateTodo();
-    this.updateTracker();
+   this.updateTracker();
   },
   computed:{
     
@@ -102,11 +102,12 @@ export default {
           this.editMode=!this.editMode;
           if(this.editMode===true){//edit
             (document.querySelectorAll('.todoTextarea'))[0].focus();
+            
           }else{//done
             (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
             this.finishCreateTodo();
             this.updateTracker();
-            this.$router.push({path:`/`});
+            // this.$router.push({path:`/`});
           }
     },
     editItem: function(id){

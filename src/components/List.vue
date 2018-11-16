@@ -1,5 +1,6 @@
 <template>
-<Layout v-bind:title="title" type="0" v-bind:color="color">
+<Layout color="#F6AF00" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+<!-- <Layout v-bind:title="title" type="0" v-bind:color="color"> -->
     <div class="below-nav-bar wrapper">
         <div v-if="showList">
 

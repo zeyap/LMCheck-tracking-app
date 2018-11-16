@@ -49,6 +49,8 @@ export default {
         this.$router.push({path:this.back});
       }else{
         this.$router.go(-1);
+        // if (this.$route.path== this.ro)
+        // this.$router.push({path:`/`});
       }
     },
     go:function(item){
