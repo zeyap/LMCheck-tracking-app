@@ -1,7 +1,7 @@
 <template>
 <v-touch style="height:100vh">
   <div id='todo'>
-    <Layout color="#F68002" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':''" v-bind:onClickRightButton="edit">
+    <Layout color="#F68002" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':'Done'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
@@ -14,7 +14,7 @@
         </div>
         <div class="add-icon" v-on:click="createTodo"/>
         <div v-on:click="createTodo" class=" todo-item-container">
-          <input class="bottom-border-in                                                                                                                                                                                                                                                                                                                                                                                                                                        put newTodoTextarea" v-model="newItem"/>
+          <input class="bottom-border-input newTodoTextarea" v-model="newItem"/>
         </div>
       </div>
     </Layout>
@@ -73,7 +73,7 @@ export default {
     newTodo.addEventListener('keydown',(evt)=>{
       if(evt.key==='Enter'){
         // console.log('xxx')
-        newTodo.blur();
+        // newTodo.blur();
         this.finishCreateTodo();
       } 
     })
@@ -102,6 +102,7 @@ export default {
           this.editMode=!this.editMode;
           if(this.editMode===true){//edit
             (document.querySelectorAll('.todoTextarea'))[0].focus();
+            this.$router.push({path:`/`});
             
           }else{//done
             (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
