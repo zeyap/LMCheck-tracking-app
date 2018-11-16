@@ -1,7 +1,7 @@
 <template>
 <v-touch style="height:100vh">
   <div id='todo'>
-    <Layout color="#F68002" v-bind:title="this.$route.params.title" type="3" v-bind:textOnRight="this.editMode?'Save':''" v-bind:onClickRightButton="edit">
+    <Layout color="#F68002" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':''" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
