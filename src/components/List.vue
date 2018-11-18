@@ -1,5 +1,5 @@
 <template>
-<Layout color="#F6AF00" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+<Layout v-bind:color="this.color" v-bind:title="this.$route.params.title" type="0" v-bind:settingsList="['View List','View Chart']">
 <!-- <Layout v-bind:title="title" type="0" v-bind:color="color"> -->
     <div class="below-nav-bar wrapper">
         <div v-if="showList">
@@ -89,6 +89,7 @@ export default {
     this.title = this.$route.params.title;
     this.type = this.$route.params.type;
     this.showList = this.$route.params.visualizeType==='list'?true:false;
+    console.log(this.type)
     switch(this.type){
         case 'timer':
         this.color="#F6AF00";

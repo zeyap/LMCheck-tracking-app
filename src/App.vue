@@ -41,9 +41,6 @@ export default {
           this.nonExist=true;
         }
       }
-    },
-    pan: function(evt){
-      console.log('x')
     }
   }
 }
@@ -59,7 +56,8 @@ export default {
   color: #2c3e50;
   margin: 0;
   background-color: #f0f0f0; 
-  height: 100%;
+  height: 100vmax;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
     width: 1px;

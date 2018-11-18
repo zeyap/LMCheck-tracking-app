@@ -187,5 +187,6 @@ export default {
   font-size: 2.3em;
   font-weight: bold;
   background-color: #8ec921;
+  border:none;
 }
 </style>

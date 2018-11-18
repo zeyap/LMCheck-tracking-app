@@ -1,13 +1,18 @@
 <template>
-<v-touch style="height:100vh">
+<v-touch>
   <div id='todo'>
     <Layout color="#F68002" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':'Done'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
             <input class="circular-checkbox" v-bind:checked="selected[id]" type="checkbox" v-on:change="check(id)"/>
-          <v-touch v-on:tap="editItem(id)" v-on:swipeleft="deleteItem(id)" style="width:100%">
+          <v-touch v-on:tap="editItem(id)" v-on:swipeleft="showDeleteButton(id)" v-on:swiperight="cancelDelete" style="width:100%">
             <input v-bind:class="'bottom-border-input todo-item-container todoTextarea'+(selected[id]?' done':'')" v-model="todo.content"/>
+            <div class="deleteButton">
+            <b-button v-on:click="deleteItem(id)" v-show="deletingItem === id" size="sm" variant="danger">
+                Delete
+            </b-button>
+            </div>
           </v-touch>
           </div>
           <div style="width: 100%; height:0.3em; "/>
@@ -38,6 +43,7 @@ export default {
   data () {
     return {
       selected: [], // Must be an array reference!
+      deletingItem: -1,
       todos: [],
       editMode: false,
       creatingNew: false,
@@ -52,7 +58,8 @@ export default {
       for(let i=0;i<this.todos.length;i++){
         this.selected[i] = this.todos[i].detail===true?true:false;
       }
-      if(data.records.length===0)this.createTodo();
+      // if(data.records.length===0)this.createTodo();
+      this.createTodo();
     }
     
     this.updateTracker =function(){
@@ -96,20 +103,29 @@ export default {
     deleteItem:function(id){
       this.todos.splice(id,1);
       this.selected.splice(id,1);
+      this.deletingItem = -1;
+    },
+    showDeleteButton: function(id){
+      this.deletingItem = id;
+    },
+    cancelDelete: function(){
+      this.deletingItem =-1;
     },
     edit: function(){
-          //right button
-          this.editMode=!this.editMode;
-          if(this.editMode===true){//edit
-            (document.querySelectorAll('.todoTextarea'))[0].focus();
-            this.$router.push({path:`/`});
-            
-          }else{//done
-            (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
-            this.finishCreateTodo();
-            this.updateTracker();
-            // this.$router.push({path:`/`});
-          }
+      //right button
+      this.editMode=!this.editMode;
+      if(this.editMode===true){//edit
+      if(document.querySelectorAll('.todoTextarea').length>0){
+        (document.querySelectorAll('.todoTextarea'))[0].focus();
+      }
+        this.$router.push({path:`/`});
+        
+      }else{//done
+        (document.querySelectorAll('.todoTextarea')).forEach((item)=>item.blur());
+        this.finishCreateTodo();
+        this.updateTracker();
+        // this.$router.push({path:`/`});
+      }
     },
     editItem: function(id){
       //each item
@@ -166,6 +182,12 @@ export default {
   margin-right: 0.3em;
 	display: inline-block;
 	position: relative;
+}
+.deleteButton{
+  display: block;
+  position: absolute;
+  transform: translateY(-93%) scale(0.9);
+  right: 20px;
 }
 /* .circular-checkbox:active, .circular-checkbox:checked:active {
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
