@@ -35,7 +35,7 @@
 | Sangmin Kim | Numeric measurement, Data Visualization  |
 | Zhiyu Mao  |   |
 | Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage  |
-| Daniel Ra  | Timer user flow, and functionality  | General CSS Styling  | Code Review
+| Daniel Ra  | Timer functionality ,General CSS Styling, Code Review
 | Cynthia Yue  | Color Selection, User testing  |
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
 
