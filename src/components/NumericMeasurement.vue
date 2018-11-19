@@ -2,9 +2,9 @@
   <div>
     <Layout back="/" color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     <div id="newNumericTracker" v-if="newNumeric">
-        <b-container class="valueContainer indentationOneOf">
-            <b-row align-v="center" class="valueCell">
-                <b-form-input id="valueForm" size="lg"  type="text" v-model="myUnit" placeholder="Enter your unit"></b-form-input>
+        <b-container class="timerCell valueContainer indentationOneOf">
+            <b-row class="valueCell justify-content-md-center indentationOneOff">
+              <b-form-input id="valueForm" size="lg"  type="text" v-model="myUnit" placeholder="Enter your unit"></b-form-input>
             </b-row>
         </b-container>
         <b-container class="saveContainer indentationOneOf">
@@ -14,9 +14,11 @@
         </b-container>
     </div>
     <div id="oldNumericTracker" v-if="!newNumeric">
-        <b-container class="inputContainer indentationOneOf">
-            <b-row align-v="center" class="valueCell">
-                <b-form-input id="valueForm" size="lg"  type="number" v-model="myInput" placeholder="Enter your value"></b-form-input>
+        <b-container class="timerCell valueContainer indentationOneOf">
+            <b-row class="valueCell justify-content-md-center indentationOneOff">
+              <b-col cols="12 timerDescription">  
+                <b-form-input style="border:none; text-align: center; font-size: 0.6em" size="lg"  type="number" v-model="myInput" placeholder="Enter your value"></b-form-input>
+              </b-col>   
             </b-row>
         </b-container>
         <b-container class="saveContainer indentationOneOf">
@@ -121,7 +123,8 @@ export default {
     margin-left: auto;
     margin-right:auto;
     height: 165px;
-    font-size: 44px;
+    width: 1000px;
+    font-size: 30px;
     font-weight: bold;
     color:black;
 }
@@ -129,7 +132,6 @@ export default {
 .saveContainer{
     padding-top: 30px;
 }
-
 #saveButton{
     width: 100%;
     background-color: #01a76b;
