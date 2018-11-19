@@ -1,11 +1,17 @@
 # Milestone 4: Implementation
 
 ## Table of Contents
-[Effort & Accountability](#here)
+[Effort & Accountability](#effort)
+[Scenario-based Design](#scenario)
+[Planning & Psuedocode](#planning)
+[Coding](#code)
+[User Testing](#test)
+
 
 
 ## Effort & Accountability
 
+<a name="effort"></a>
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
@@ -17,6 +23,8 @@
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
 
 ## Scenario-based Design
+
+<a name="scenario"></a>
 
 We tested our design extensively in our last milestone and identified major issues before implementation began. 
 
@@ -62,6 +70,9 @@ After preliminary user testing, our team decided that our color scheme did not s
 
 
 ## Planning & Psuedocode 
+
+<a name="planning"></a>
+
 Information acrchitecture
 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png )
@@ -70,15 +81,19 @@ Information acrchitecture
 
 
 ## Coding 
+
+<a name="code"></a>
+
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
 
 
 ## User Testing 
 
+<a name="test"></a>
+
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
 
-<a name="here"></a>
 
 
 
