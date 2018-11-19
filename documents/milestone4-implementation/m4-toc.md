@@ -42,11 +42,12 @@
 <a name="scenario"></a>
 
 ## Scenario-based Design
-[See user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
 
-We tested our design extensively in our last milestone and identified major issues before implementation began. 
+[User Interviews](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/interview.pdf)
 
-To reiterate, we paper prototyped 2 complete versions of our design. 
+[Persona Development & Festures List](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme)
+
+[User Scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/scenarios.png)
 
 **Paper prototype of our first design** 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-v2-components.png )
@@ -60,6 +61,11 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
+
+[Updated personas](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/revisedContent)
+
+[Updated user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
+
 
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
 
@@ -125,8 +131,10 @@ Since developers on our team have divided works, we work on the master branch fo
 
 ## User Testing 
 
+[User testing notes - paper prototypes]
+(/user_testing_prototypes)
 
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
+[User testing notes - coded app](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
 
 
