@@ -2,7 +2,7 @@
 <v-touch>
   <div ref="dashboardBox" class="dashboard">
     <TrackerCard v-bind:id="'trackercard_'+tracker.type+'_'+tracker.title" v-bind:delete="deleteTracker(tracker)" v-for="(tracker, id) in this.trackers" v-bind:url="'/'+tracker.type+'/'+tracker.title" v-bind:type="tracker.type" v-bind:key="id">
-    <div style="text-align:left; padding:15px; width: 100%; overflow:hidden; text-overflow:ellipsis; overflow-wrap: break-word;">{{tracker.title}}</div>
+    <div style="text-align:left; padding:15px; width: 100%; overflow:hidden; text-overflow:ellipsis; overflow-wrap: break-word;">{{showTitle(tracker.title)}}</div>
     </TrackerCard>
     <div class="floating-button shadowed" v-on:click="createTracker"><v-icon name="plus" class="center-and-large"/></div>
   </div>
@@ -26,6 +26,9 @@ export default {
     }
   },
   methods:{
+    showTitle: function(title){
+      return title.replace('_',' ');
+    },
     createTracker: function(){
       this.$router.push({path:`/createTracker`});
     },
