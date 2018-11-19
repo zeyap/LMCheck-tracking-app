@@ -45,7 +45,7 @@ export default {
   },
   methods:{
     showTitle: function(title){
-      return title.replace('_',' ');
+      return title.replace(/[_]+/g,' ');
     },
     goBack: function(){
       if(this.back!==undefined){
