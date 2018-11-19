@@ -9,6 +9,7 @@ import Todo from './components/Todo.vue'
 import NonExist from './components/NonExist.vue'
 import NumericMeasurement from './components/NumericMeasurement.vue'
 import List from './components/List.vue'
+import EnterUnit from './components/EnterUnit.vue'
 
 //vue-router reference: https://router.vuejs.org/guide/
 
@@ -47,7 +48,7 @@ export default new Router({
     },
     {
       path: '/numeric/:title',
-      name: 'create new Numeric Measurement',
+      name: 'Use Numeric Measurement',
       component: NumericMeasurement
     },
     {

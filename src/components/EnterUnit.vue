@@ -1,31 +1,17 @@
 <template>
   <div>
     <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
-    <div id="newNumericTracker" v-if="newNumeric">
-        <b-container class="valueContainer indentationOneOf">
-            <b-row align-v="center" class="valueCell">
-                <b-form-input id="valueForm" size="lg"  type="text" v-model="myUnit" placeholder="Enter your unit"></b-form-input>
-            </b-row>
-        </b-container>
+      <b-container class="valueContainer indentationOneOf">
+        <b-row align-v="center" class="valueCell">
+            <b-form-input id="valueForm" size="lg" ref="myUnit" type="text" placeholder="Enter your unit"></b-form-input>
+        </b-row>
+      </b-container>
         <b-container class="saveContainer indentationOneOf">
             <b-row align-v="center">
                 <b-button id="saveButton" v-on:click="getUnit()">SAVE</b-button>
             </b-row>
         </b-container>
-    </div>
-    <div id="oldNumericTracker" v-if="!newNumeric">
-        <b-container class="inputContainer indentationOneOf">
-            <b-row align-v="center" class="valueCell">
-                <b-form-input id="inputForm" size="lg"  type="number" v-model="myInput" placeholder=message></b-form-input>
-            </b-row>
-        </b-container>
-        <b-container class="enterContainer indentationOneOf">
-            <b-row align-v="center">
-                <b-button id="saveButton" v-on:click="createTracker('numeric')">Add</b-button>
-            </b-row>
-        </b-container>
-    </div>
-    </Layout>
+      </Layout>
   </div>
 </template>
 
@@ -33,9 +19,8 @@
 import Store from '../js/Store.js';
 import Layout from './Layout.vue';
 import Record from '../js/Record';
-import Tracker from '../js/Tracker';
 export default {
-  name: 'NumericMeasurement',
+  name: 'EnterUnit',
   props: {
     
   },
@@ -44,32 +29,19 @@ export default {
   },
   data: function() {
     return {
-      trackers: Store.getTrackers(),
-      thisTracker:[],
-      newNumeric: true,
-      myUnit:'',
-      myInput:0,
-      message:''
+      trackers: Store.getTrackers()
     }
   },
-//   mounted:{
-//     findTracker(){
-//      this.thisTracker = this.trackers.find(this.$route.params.title);
-//     }
-//   },
   methods:{
-    getTracker(tracker){
-        return tracker.title === this.$route.params.title;
-    },
     getUnit(){
-      this.message = "Enter # of" + this.myUnit;
-      this.newNumeric = false;
-      //console.log(thisTracker);
-      //Store.addTracker(new Tracker(this.$route.params.title,'numeric',this.myUnit));
-      Store.deleteTracker('numeric',this.$route.params.title);
-      console.log(this.trackers.find(tracker=> tracker.title === this.$route.params.title));
+      this.unit = this.$refs.myUnit.value;
+      this.message = "Enter # of" + this.unit;
+      console.log(title);
+      Store.addTracker(new Tracker(tracker.title,type,this.unit));
+      Store.deleteTracker(tracker.type,tracker.title);
+
       console.log("hello");
-    }
+    },
   }
 }
 </script>
