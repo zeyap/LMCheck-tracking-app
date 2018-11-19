@@ -1,11 +1,11 @@
 # Milestone 4: Implementation
 
 ## Table of Contents
-
+[Effort & Accountability](#here)
 
 
 ## Effort & Accountability
-
+<a name="here"></a>
 | Team Member Name  | Effort |
 | ------------- | ------------- |
 | Sangmin Kim | Numeric measurement, Data Visualization  |
@@ -76,6 +76,8 @@ Information acrchitecture
 
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
+
+<a name="here"></a>
 
 
 
