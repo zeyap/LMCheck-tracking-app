@@ -42,7 +42,8 @@
 <a name="scenario"></a>
 
 ## Scenario-based Design
-
+![]
+(user_scenarios_revised.pdf)
 
 We tested our design extensively in our last milestone and identified major issues before implementation began. 
 
@@ -58,8 +59,6 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-FINAL-components.png )
 
 <div class=‘page-break’></div>
-
-
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
