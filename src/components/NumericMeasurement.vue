@@ -16,10 +16,10 @@
     <div id="oldNumericTracker" v-if="!newNumeric">
         <b-container class="inputContainer indentationOneOf">
             <b-row align-v="center" class="valueCell">
-                <b-form-input id="inputForm" size="lg"  type="number" v-model="myInput" placeholder=message></b-form-input>
+                <b-form-input id="valueForm" size="lg"  type="number" v-model="myInput" placeholder="Enter your value"></b-form-input>
             </b-row>
         </b-container>
-        <b-container class="enterContainer indentationOneOf">
+        <b-container class="saveContainer indentationOneOf">
             <b-row align-v="center">
                 <b-button id="saveButton" v-on:click="enterData()">Add</b-button>
             </b-row>
@@ -48,7 +48,7 @@ export default {
       thisTracker:[],
       newNumeric: true,
       myUnit:'',
-      myInput:0,
+      myInput:'',
       message:'',
       eachInput:[],
       timeAdded:''
@@ -59,7 +59,6 @@ export default {
         return tracker.title === this.$route.params.title;
     },
     getUnit(){
-      this.message = "Enter # of" + this.myUnit;
       this.newNumeric = false;
       //console.log(thisTracker);
       Store.deleteTracker('numeric',this.$route.params.title);
@@ -71,11 +70,13 @@ export default {
     enterData(){
       this.timeAdded = new Date();
       this.eachInput.push(new Record(this.timeAdded,this.myInput)); //need timestamp
+      this.myInput = '';
       console.log(this.eachInput);
       
     }
   },
   mounted: function(){
+     this.message = "Enter # of " + Store.getTracker('numeric',this.$route.params.title).unit
      if(Store.getTracker('numeric',this.$route.params.title).unit !== undefined){
        this.newNumeric =false;
        console.log("babe")
@@ -83,10 +84,9 @@ export default {
        this.newNumeric = true;
        console.log("nobabe")
      }
-    console.log(Store.getTracker('numeric',this.$route.params.title).unit)
+    console.log(this.message);
     let title=this.$route.params.title;
     this.updateNumTracker =()=>{
-      console.log(this.$route.params.title);
       Store.updateNumTracker('numeric',title,this.eachInput);
     }
   },
