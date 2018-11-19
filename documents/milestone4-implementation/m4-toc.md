@@ -71,14 +71,8 @@ Information acrchitecture
 
 
 ## User Testing 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/user_testing1.jpg)
 
-<div class=‘page-break’></div>
-
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/user_testing2.jpg)
-
-<div class=‘page-break’></div>
-
+[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
 
 
