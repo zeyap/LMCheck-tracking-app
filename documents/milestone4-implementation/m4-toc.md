@@ -42,8 +42,7 @@
 <a name="scenario"></a>
 
 ## Scenario-based Design
-[See user scenarios]
-(user_scenarios_revised.pdf)
+[See user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
 
 We tested our design extensively in our last milestone and identified major issues before implementation began. 
 
@@ -63,11 +62,16 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 <div class=‘page-break’></div>
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
 
-**Fitness Tracker** - originally included + / - buttons to incrementally increase value being tracked by 1. Removed these buttons. In our gym tracking scenario, not all instances will have a need for values to be tracked in increments of 1. If Jason, our gym goer, is going to the gym to record his running distance in miles that day, it will be easier for him to enter the final amount after his running session. Having the +/- buttons gave the impression that tracking in increments of 1 was required / encouraged. 
+*Fitness Tracker* - originally included + / - buttons to incrementally increase value being tracked by 1. Removed these buttons. In our gym tracking scenario, not all instances will have a need for values to be tracked in increments of 1. If Jason, our gym goer, is going to the gym to record his running distance in miles that day, it will be easier for him to enter the final amount after his running session. Having the +/- buttons gave the impression that tracking in increments of 1 was required / encouraged. 
 
-**The Nav Bar** - we realized that there wasn't a need for home and settings buttons. The Add Tracer (+) button was placed in the bottom right, rather than the center, for more accessibility. This makes it easier for our users to create a new trackers in all scenarios. 
+*The Nav Bar* - we realized that there wasn't a need for home and settings buttons. The Add Tracer (+) button was placed in the bottom right, rather than the center, for more accessibility. This makes it easier for our users to create a new trackers in all scenarios. 
 
-**Data visualization** - our original design features a page that displays a graph of activity over time with a table  of specific values per date beneath it. We separated this in our new design -- graph and tables are displayed in separate sections. The original design does not serve Chelsea, our sleep tracker, who wants to look at her previous night's sleep to better understand her current mood. Previous design doesn't make this information accessible because it pushes it beneath the visualization. 
+*Data visualization* - our original design features a page that displays a graph of activity over time with a table  of specific values per date beneath it. We separated this in our new design -- graph and tables are displayed in separate sections. The original design does not serve Chelsea, our sleep tracker, who wants to look at her previous night's sleep to better understand her current mood. Previous design doesn't make this information accessible because it pushes it beneath the visualization. 
+
+*Wireframes*
+[wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
+
+[wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
 
 **High Fidelity Design 1**
 <div class=‘page-break’></div>
