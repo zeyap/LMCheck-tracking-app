@@ -55,6 +55,7 @@ export default {
       if(this.title == '') {
           this.errorMessage = 'Title is required.';
       } else {
+          this.title = this.title.replace(/[\s]+/,'_');
           if(Store.getTracker(type,this.title)!==undefined){
             this.errorMessage='Title already exists for '+type+' tracker';
             return;
