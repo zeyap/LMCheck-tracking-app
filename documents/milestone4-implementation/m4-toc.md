@@ -32,11 +32,11 @@
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
-| Sangmin Kim | Numeric measurement, Data Visualization  |
+| Sangmin Kim | Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  |
 | Zhiyu Mao  |   |
-| Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage, Overall Code Compilation, Design Thinking Contribution / Feedback |
-| Daniel Ra  | Timer functionality, General CSS Styling  |
-| Cynthia Yue  | Color Selection, User testing  |
+| Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming |
+| Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow |
+| Cynthia Yue  | Color Selection,   |
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
 
 <a name="scenario"></a>
