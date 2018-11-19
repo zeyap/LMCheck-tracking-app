@@ -44,9 +44,14 @@ const Store = (function(){
         save();
     }
 
-    // var updateNumTracker = (type, title, unit, dataArray) =>{
-    //     let target = _data[trackerDict[''+type+'#'(title).toLowerCase()+unit]]
-    // }
+    var updateNumTracker = (type, title, dataArray) =>{
+        let target = _data[trackerDict[''+type+'#'+(title).toLowerCase()]];
+        for(let i=0; i<dataArray.length; i++){
+            target.records.push(dataArray[i]);
+        }
+        save();
+        console.log(target);
+    }
 
     var deleteTracker = (type,title)=>{
         let id = trackerDict[''+type+'#'+(title).toLowerCase()];
@@ -73,7 +78,8 @@ const Store = (function(){
         getTrackers, 
         getTracker,
         updateTracker,
-        deleteTracker
+        deleteTracker,
+        updateNumTracker
     }
 
 })();
