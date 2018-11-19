@@ -6,7 +6,7 @@
     <b-navbar-nav style="z-index:1">
       <b-nav-item v-on:click="goBack"><v-icon v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
     </b-navbar-nav>
-    <b-navbar-brand class="nav-bar-title">{{this.title}}</b-navbar-brand>
+    <b-navbar-brand class="nav-bar-title">{{showTitle(this.title)}}</b-navbar-brand>
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto" style="z-index:1">
@@ -44,6 +44,9 @@ export default {
       }
   },
   methods:{
+    showTitle: function(title){
+      return title.replace('_',' ');
+    },
     goBack: function(){
       if(this.back!==undefined){
         this.$router.push({path:this.back});

@@ -32,21 +32,22 @@
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
-| Sangmin Kim | Numeric measurement, Data Visualization  |
-| Zhiyu Mao  |   |
-| Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage  |
-| Daniel Ra  | Timer function  |
-| Cynthia Yue  | Color Selection, User testing  |
-| Zidong Zhang  | Debugging, Organizing documentation, User testing  |
+| Sangmin Kim | Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  , Paper Prototyping, Brainstorming  |
+| Zhiyu Mao  |  User Testing, Initiated UI Design  |
+| Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming, Brainstorming  |
+| Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow, Brainstorming |
+| Cynthia Yue  | Color Selection, Affinity Diagramming, Usability Testing, User Interface Design, CSS Styling Editing, Bootstrap Grid Implementation, Documentation and Write up   |
+| Zidong Zhang  | Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Affinity Diagramming  |
 
 <a name="scenario"></a>
 
 ## Scenario-based Design
-[See user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
 
-We tested our design extensively in our last milestone and identified major issues before implementation began. 
+[User Interviews](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/interview.pdf)
 
-To reiterate, we paper prototyped 2 complete versions of our design. 
+[Persona Development & Festures List](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme)
+
+[User Scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/scenarios.png)
 
 **Paper prototype of our first design** 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-v2-components.png )
@@ -61,6 +62,11 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 
+[Updated personas](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/revisedContent)
+
+[Updated user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
+
+
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
 
 <div class=‘page-break’></div>
@@ -74,9 +80,12 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 *Wireframes*
 <div class=‘page-break’></div>
+
 [wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
 
 [wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
+
+[See our milestone 3](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/README.md)
 
 **High Fidelity Design 1**
 <div class=‘page-break’></div>
@@ -99,10 +108,13 @@ After preliminary user testing, our team decided that our color scheme did not s
 
 ## Planning & Psuedocode 
 
+User Flow
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png)
 
 Information acrchitecture
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png )
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone4-implementation/InformationArchitecture.png)
 
 <div class=‘page-break’></div>
 
@@ -110,18 +122,23 @@ Information acrchitecture
 
 ## Coding 
 
-
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
 
 
 <a name="test"></a>
 
+
+## Development Practices
+
+Since developers on our team have divided works, we work on the master branch for most of the time. There was a point when one of us was changing color throughout the web app, so we add a new branch and made pull request (https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/pull/1).
+
 ## User Testing 
 
+[User testing notes - paper prototypes](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/user_testing_prototypes)
 
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
+[User testing notes - coded app](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
-
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/userTesting/papertest.gif)
 
 
 

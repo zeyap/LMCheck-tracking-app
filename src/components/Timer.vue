@@ -1,12 +1,10 @@
 <template>
   <div>
-    <Layout color="#F6AF00" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+    <Layout back="/" color="#F6AF00" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
           <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
-          <b-col cols ="12 dateDescription indentationOneOff"><p>Last Start Time{{formatTime(this.startTime)}}</p></b-col>
-          <b-col cols ="12 dateDescription"><p>Last End Time{{formatTime(this.endTime)}}</p></b-col>
         </b-row>
       </b-container>
       <b-container class="timerButton">
