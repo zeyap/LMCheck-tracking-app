@@ -60,7 +60,9 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
+
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
+
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 
