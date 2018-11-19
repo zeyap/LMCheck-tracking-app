@@ -41,6 +41,9 @@ export default {
           this.nonExist=true;
         }
       }
+      if(url=='/enterUnit'){
+        this.nonExist=false;
+      }
     },
     pan: function(evt){
       console.log('x')
