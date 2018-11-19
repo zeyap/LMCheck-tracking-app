@@ -5,8 +5,8 @@
         <div v-if="showList">
 
             <table width="100%">
-                <tr><th width="50%">Date</th> <th width="50%">Duration</th></tr>
-                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td> <td>{{item.detail}}</td></tr>
+                <tr><th width="50%">Time</th> <th width="50%">Duration</th> <th width="50%">Status</th> </tr>
+                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td> <td>{{item.duration}}</td> <td>{{item.detail}}</td></tr>
             </table>
 
         </div>
@@ -21,7 +21,7 @@ import Layout from './Layout.vue';
 import Store from '../js/Store.js';
 import ECharts from 'vue-echarts/components/ECharts';
 import 'echarts/lib/chart/line'
-// import 'echarts/lib/component/tooltip'
+import 'echarts/lib/component/tooltip'
 
 export default {
   name: 'List',
@@ -45,10 +45,17 @@ export default {
             title: {
                 text: ''
             },
-            legend: {
-                data: ['unit']
+            tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross'
+                }
             },
-            tooltip: {
+            legend: {
+                data: ['Duration (ms)']
+            },
+            grid:{
+                containLabel: true
             },
             xAxis: {
                 data:[1,2,3]
@@ -56,7 +63,7 @@ export default {
             yAxis:{},
             series: [
             {
-                name: 'line',
+                name: 'Duration (ms)',
                 type: 'line',
                 data: [4,3,2]
             }
@@ -89,7 +96,6 @@ export default {
     this.title = this.$route.params.title;
     this.type = this.$route.params.type;
     this.showList = this.$route.params.visualizeType==='list'?true:false;
-    console.log(this.type)
     switch(this.type){
         case 'timer':
         this.color="#F6AF00";
@@ -107,16 +113,33 @@ export default {
 
     let data = Store.getTracker(this.type,this.title);
     if(undefined!==data){
+        //Timer
         for(let i=0;i<data.records.length;i++){
-            this.list[i] = {
-                date: this.formatDate(data.records[i].detail),
-                detail: (i===0?0:this.duration(data.records[i-1].detail,data.records[i].detail))
-            };
+            if(i===0){
+                this.list[i] = {
+                    date: this.formatDate(data.records[i].content),
+                    duration: '',
+                    detail: data.records[i].detail
+                };
+            }
+            else {
+                this.list[i] = {
+                    date: this.formatDate(data.records[i].content),
+                    duration: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
+                    detail: data.records[i].detail
+                };
+            }
+                
         }
 
         if(this.showList===false){//show chart
-            this.options.xAxis.data = this.list.map((item)=>item.date);
-            this.options.series[0].data = this.list.map((item)=>item.detail);
+        //filter points with a duration
+            let filtered = this.list.filter((item)=>item.duration!==null);
+            this.options.xAxis.data = filtered.map((item)=>item.date);
+            let lastValidY, lastValidX;
+            this.options.series[0].data = filtered.map((item)=>{
+                return item.duration;
+            });
         }
     }
   }

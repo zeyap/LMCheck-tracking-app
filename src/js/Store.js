@@ -31,13 +31,14 @@ const Store = (function(){
 
     var getTracker = (type,title) => _data[trackerDict[''+type+'#'+title.toLowerCase()]];
 
-    var updateTracker = (type,title,dataArray) =>{
+    var updateTracker = (type,title,updateField,dataArray) =>{
+        // console.log(updateField==='record')
         let target = _data[trackerDict[''+type+'#'+(title).toLowerCase()]];
         for(let i=0;i<dataArray.length;i++){
-            if(target.records[i]===undefined){
-                target.records[i] = new Record(new Date(),i,dataArray[i]);
-            }else{
+            if(updateField==='detail'){
                 target.records[i].detail = dataArray[i];
+            }else if(updateField==='record'){
+                target.records[i] = dataArray[i];
             }
         }
         save();
