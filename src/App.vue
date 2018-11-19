@@ -41,12 +41,6 @@ export default {
           this.nonExist=true;
         }
       }
-      if(url=='/enterUnit'){
-        this.nonExist=false;
-      }
-    },
-    pan: function(evt){
-      console.log('x')
     }
   }
 }
@@ -62,9 +56,12 @@ export default {
   color: #2c3e50;
   margin: 0;
   background-color: #f0f0f0; 
-  height: 100%;
+  height: 100vmax;
+  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-    width: 1px;
+    /* width: 10px;
+    background: #f0f0f0; */
+    width:1px;
 }
 </style>

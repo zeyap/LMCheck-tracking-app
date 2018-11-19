@@ -54,11 +54,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .dashboard{
-  padding:30px;
-  display: flex;
+  padding:5vw;
+  /* display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start; */
+  column-count: 2;
 }
 
 .floating-button{

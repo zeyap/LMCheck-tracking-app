@@ -111,7 +111,8 @@ export default {
 }
 
 .wrapper{
-  height: 100%;
+  /* display: block; */
+  /* height: 100vh; */
 }
 
 .color-changeable-header{
