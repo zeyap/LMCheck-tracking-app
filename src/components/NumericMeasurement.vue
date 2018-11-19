@@ -52,11 +52,6 @@ export default {
       message:''
     }
   },
-//   mounted:{
-//     findTracker(){
-//      this.thisTracker = this.trackers.find(this.$route.params.title);
-//     }
-//   },
   methods:{
     getTracker(tracker){
         return tracker.title === this.$route.params.title;
@@ -65,13 +60,24 @@ export default {
       this.message = "Enter # of" + this.myUnit;
       this.newNumeric = false;
       //console.log(thisTracker);
-      //Store.addTracker(new Tracker(this.$route.params.title,'numeric',this.myUnit));
       Store.deleteTracker('numeric',this.$route.params.title);
+      Store.addTracker(new Tracker(this.$route.params.title,'numeric',this.myUnit));
       console.log(Store.getTracker('numeric',this.$route.params.title));
+      console.log(Store.getTracker('numeric',this.$route.params.title).unit)
       console.log("hello");
     }
+  },
+  mounted: function(){
+     if(Store.getTracker('numeric',this.$route.params.title).unit !== undefined){
+       this.newNumeric =false;
+       console.log("babe")
+     }else{
+       this.newNumeric = true;
+       console.log("nobabe")
+     }
+    console.log(Store.getTracker('numeric',this.$route.params.title).unit)
+    }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

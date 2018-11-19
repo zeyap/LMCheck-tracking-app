@@ -43,6 +43,10 @@ const Store = (function(){
         save();
     }
 
+    // var updateNumTracker = (type, title, unit, dataArray) =>{
+    //     let target = _data[trackerDict[''+type+'#'(title).toLowerCase()+unit]]
+    // }
+
     var deleteTracker = (type,title)=>{
         let id = trackerDict[''+type+'#'+(title).toLowerCase()];
         _data.splice(id,1);
