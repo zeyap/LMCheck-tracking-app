@@ -55,6 +55,7 @@ https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/mast
 https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src 
 
 ## User Testing 
+https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/user_testing 
 
 
 
