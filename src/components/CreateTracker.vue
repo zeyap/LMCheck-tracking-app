@@ -66,9 +66,15 @@ export default {
   },
   mounted(){
     let input = document.querySelector('#fname');
-    input.addEventListener('keydown',function(evt){
+    input.addEventListener('keydown',(evt)=>{
       if(evt.key==='Enter'){
         input.blur();
+        //check validity of name
+        if(this.title.search(/[.|\/]+/)>-1){
+          this.errorMessage="Please don't include . or / in your title";
+        }else{
+          this.errorMessage='';
+        }
       } 
     })
     

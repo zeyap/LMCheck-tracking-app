@@ -65,7 +65,7 @@ export default {
     }
     
     this.updateTracker =function(){
-      Store.updateTracker('todo',title,this.selected);
+      Store.updateTracker('todo',title,'detail',this.selected);
     };
 
     let todoWindow = document.querySelector('#todo');

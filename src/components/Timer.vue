@@ -5,15 +5,15 @@
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">
           <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
-          <b-col cols ="12 dateDescription indentationOneOff"><p>Start {{formatTime(this.startTime)}}</p></b-col>
-          <b-col cols ="12 dateDescription"><p>End {{formatTime(this.endTime)}}</p></b-col>
+          <b-col cols ="12 dateDescription indentationOneOff"><p>Last Start Time{{formatTime(this.startTime)}}</p></b-col>
+          <b-col cols ="12 dateDescription"><p>Last End Time{{formatTime(this.endTime)}}</p></b-col>
         </b-row>
       </b-container>
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
         <b-col v-show="!started" cols="12 " class="startDescription"><button v-on:click="this.startTimer" id="init">START</button></b-col>
-        <b-col v-show="started && isPaused" cols="12" class="startDescription"><button id="start">CONTINUE</button></b-col>
+        <b-col v-show="started && isPaused" cols="12" class="startDescription"><button id="resume">CONTINUE</button></b-col>
         <b-col v-show="started && !isPaused" cols="12" class="startDescription"><button  id="pause">PAUSE</button></b-col>
         <b-col v-show="started" cols="12" id="finish" class="finishDescription"><button >FINISH</button></b-col>
         </b-row>
@@ -45,13 +45,24 @@ export default {
     let title = this.$route.params.title;
     let history = Store.getTracker('timer',title).records;
     if(history.length>1){
-      this.endRecords = history.map(record=>record.detail);
-      this.startTime = this.endRecords[0];
-      this.endTime = this.endRecords[this.endRecords.length-1];
+      this.endRecords = history;
+      for(let i=this.endRecords.length-1;i>=0;i--){
+        if(this.endRecords[i].detail==='end'){
+          this.endTime = this.endRecords[i].content;
+        }
+        if(this.endRecords[i].detail==='start'){
+          this.startTime = this.endRecords[i].content;
+          break;
+        }
+      }
+      
     }
     this.updateTracker =function(){
-      if(this.endRecords.length<2)return;
-      Store.updateTracker('timer',title,this.endRecords);
+      if(this.endRecords.length===0)return;
+      if(this.endRecords[this.endRecords.length-1].detail!=='end'){
+        this.end();
+      }
+      Store.updateTracker('timer',title,'record',this.endRecords);
     };
   },
   beforeDestroy:function(){
@@ -71,14 +82,14 @@ export default {
       //a new timer with no history
       this.started = true;
       this.isPaused = false;
-      if(this.startTime===''){
+      // if(this.startTime===''){
         this.startTime = new Date();
-        this.endRecords.push(this.startTime);
-      }
+        this.endRecords.push(new Record(this.startTime,this.startTime,'start'));
+      // }
       
       var p = document.getElementsByTagName('p')[0];
       var h1 = document.getElementsByTagName('h1')[0],
-      start = document.getElementById('start'),
+      resume = document.getElementById('resume'),
       stop = document.getElementById('stop'),
       clear = document.getElementById('cnpm lear'),
       seconds = 0, minutes = 0, hours = 0,
@@ -103,18 +114,24 @@ export default {
       }
       var end = ()=>{
           this.endTime = new Date();
-          this.endRecords.push(this.endTime);
+          this.endRecords.push(new Record(this.startTime,this.endTime,'end'));
           // console.log(this.endRecords)
       }
       var timer = ()=> {
         t = setTimeout(add, 1000);
         this.isPaused=false;
+
       }
     timer();
-      start.onclick = timer;
+
+      resume.onclick = ()=>{
+        timer();
+        this.endRecords.push(new Record(this.startTime,new Date(),'continue'));
+      }
       pause.onclick = ()=>{
           clearTimeout(t);
           this.isPaused = true;
+          this.endRecords.push(new Record(this.startTime,new Date(),'pause'));
       }
       finish.onclick = ()=> {
         this.isPaused = false;
