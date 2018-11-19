@@ -6,7 +6,7 @@
 
             <table width="100%">
                 <tr><th width="50%">Time</th> <th width="50%"></th> <th width="50%">Duration</th> </tr>
-                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td> <td></td> <td>{{item.duration}}</td></tr>
+                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td><td></td><td>{{item.duration}}</td></tr>
             </table>
 
         </div>
