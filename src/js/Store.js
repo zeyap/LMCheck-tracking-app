@@ -23,6 +23,11 @@ const Store = (function(){
     var getTrackers = ()=>_data.map((tracker)=>({
         title:tracker.title, 
         type:tracker.type}));
+    
+    var getNumericTracker = ()=>_data.map((tracker)=>({
+        title:tracker.title,
+        type:tracker.type,
+        unit:tracker.unit}));;    
 
     var getTracker = (type,title) => _data[trackerDict[''+type+'#'+title.toLowerCase()]];
 

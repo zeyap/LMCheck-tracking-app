@@ -17,7 +17,9 @@
           </div>
           <div style="width: 100%; height:0.3em; "/>
         </div>
-        <div class="add-icon" v-on:click="createTodo"/>
+        <div class="add-icon-placeholder">
+          <div v-show="this.editMode" class="add-icon" v-on:click="createTodo"/>
+        </div>
         <div v-on:click="createTodo" class=" todo-item-container">
           <input class="bottom-border-input newTodoTextarea" v-model="newItem"/>
         </div>
@@ -231,14 +233,19 @@ textarea {
   resize: none;
 }
 
-.add-icon{
+.add-icon-placeholder{
   width: 1.5em; 
   height:1.5em; 
-  display: inline-block;
-  border: 2px solid #ffd519;
-  border-radius: 50%;
   margin-right: 0.3em;
   position: relative;
+  display: inline-block;
+}
+
+.add-icon{
+  width:100%;
+  height:100%;
+  border: 2px solid #ffd519;
+  border-radius: 50%;
   background: white;
 }
 .add-icon::before{

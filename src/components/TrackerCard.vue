@@ -89,9 +89,9 @@ export default {
 }
 .tracker-card{
   display: inline-block;
-  width: calc(50vw - 2*26px);
-  height: calc(50vw - 2*26px);
-  margin: 10px;
+  width: 40vw;
+  height: 40vw;
+  margin: 1.8vw;
   background: white;
   border-radius: 4px;
   transition: all 0.2s;

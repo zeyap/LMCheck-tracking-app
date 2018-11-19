@@ -60,6 +60,8 @@ export default {
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-    width: 1px;
+    /* width: 10px;
+    background: #f0f0f0; */
+    width:1px;
 }
 </style>
