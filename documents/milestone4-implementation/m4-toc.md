@@ -42,7 +42,7 @@
 <a name="scenario"></a>
 
 ## Scenario-based Design
-![See user scenarios]
+[See user scenarios]
 (user_scenarios_revised.pdf)
 
 We tested our design extensively in our last milestone and identified major issues before implementation began. 
