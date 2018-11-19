@@ -34,7 +34,7 @@
 | ------------- | ------------- |
 | Sangmin Kim | Numeric measurement, Data Visualization  |
 | Zhiyu Mao  |   |
-| Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage  |
+| Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage, Overall Code Compilation, Design Thinking Contribution / Feedback |
 | Daniel Ra  | Timer functionality, General CSS Styling  |
 | Cynthia Yue  | Color Selection, User testing  |
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
