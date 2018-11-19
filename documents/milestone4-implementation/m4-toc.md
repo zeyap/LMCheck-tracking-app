@@ -35,7 +35,7 @@
 | Sangmin Kim | Numeric measurement, Data Visualization  |
 | Zhiyu Mao  |   |
 | Zeya Peng  | Dashboard, Screen layout, To-do list function, Data storage  |
-| Daniel Ra  | Timer function  |
+| Daniel Ra  | Timer function, Create Tracker  |
 | Cynthia Yue  | Color Selection, User testing  |
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
 
@@ -99,10 +99,13 @@ After preliminary user testing, our team decided that our color scheme did not s
 
 ## Planning & Psuedocode 
 
+User Flow
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png)
 
 Information acrchitecture
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png )
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone4-implementation/InformationArchitecture.png)
 
 <div class=‘page-break’></div>
 
@@ -110,11 +113,15 @@ Information acrchitecture
 
 ## Coding 
 
-
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
 
 
 <a name="test"></a>
+
+
+## Development Practices
+
+Since developers on our team have divided works, we work on the master branch for most of the time. There was a point when one of us was changing color throughout the web app, so we add a new branch and made pull request (https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/pull/1).
 
 ## User Testing 
 
