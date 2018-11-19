@@ -45,6 +45,7 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 **High Fidelity Design 1**
 <div class=‘page-break’></div>
+
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid1/)
 
 
@@ -52,6 +53,7 @@ High fidelity version incorporates a color palette based on a mood map created b
 
 **High Fidelity Design 2**
 <div class=‘page-break’></div>
+
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid2/)
 
 
