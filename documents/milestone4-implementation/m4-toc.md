@@ -85,7 +85,7 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 [wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
 
-[See our mileston 3](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/README.md)
+[See our milestone 3](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/README.md)
 
 **High Fidelity Design 1**
 <div class=‘page-break’></div>
