@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+    <Layout color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     <div id="newNumericTracker" v-if="newNumeric">
         <b-container class="valueContainer indentationOneOf">
             <b-row align-v="center" class="valueCell">
@@ -141,7 +141,8 @@ export default {
   margin-top: 20%;
   width: 100%;
   border-radius: 5px;
-  background-color: #01a76b;
+  background-color: #99c58f;
+  border:none;
   color: white;
 }
 .dateDescription{
@@ -167,6 +168,6 @@ export default {
   color: white;
   font-size: 2.3em;
   font-weight: bold;
-  background-color: #01a76b;
+  background-color: #99c58f;
 }
 </style>

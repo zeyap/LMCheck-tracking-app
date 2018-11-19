@@ -41,7 +41,7 @@ export default {
         color:'',
 
         options: {
-            color: ['#F6AF00','#F68002','#3252FC'],
+            color: ['#99d9e8','#aed8a4','#e46983'],
             title: {
                 text: ''
             },
@@ -98,13 +98,13 @@ export default {
     this.showList = this.$route.params.visualizeType==='list'?true:false;
     switch(this.type){
         case 'timer':
-        this.color="#F6AF00";
+        this.color="#99d9e8";
         break;
         case 'todo':
-        this.color="#F68002";
+        this.color="#aed8a4";
         break;
         case 'numeric':
-        this.color="#3252FC";
+        this.color="#e46983";
         break;
         default:
         break;
@@ -128,8 +128,7 @@ export default {
                     duration: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
                     detail: data.records[i].detail
                 };
-            }
-                
+            }  
         }
 
         if(this.showList===false){//show chart
