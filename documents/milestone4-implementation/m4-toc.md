@@ -52,6 +52,7 @@ After preliminary user testing, our team decided that our color scheme did not s
 https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png 
 
 ## Coding 
+[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
 https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src 
 
 ## User Testing 
