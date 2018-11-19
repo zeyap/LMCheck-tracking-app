@@ -6,7 +6,7 @@
     <div v-if="this.type!=='timer'&&this.type!=='numeric'" class="toDoIcon color-bar-left"></div>
     <div class="tracker-card-title">
       <slot></slot>
-      <div v-show="this.editMode" class="cross" v-on:click="deleteTracker"><v-icon class="center-and-large" name="times"/></div>
+      <div v-show="this.editMode" class="cross" v-on:click="deleteTracker"><v-icon class="centerCross" name="times"/></div>
     </div>
   </div>
 </v-touch>
@@ -77,6 +77,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.centerCross{
+  color:white;
+}
 .cross{
   width: 28%;
   height: 28%;
@@ -86,7 +89,13 @@ export default {
   background:#a5a5a5;
   color:white;
   border-radius: 50%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
+
 .tracker-card{
   display: inline-block;
   width: 40vw;

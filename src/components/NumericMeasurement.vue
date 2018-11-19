@@ -67,7 +67,7 @@ export default {
       //console.log(thisTracker);
       //Store.addTracker(new Tracker(this.$route.params.title,'numeric',this.myUnit));
       Store.deleteTracker('numeric',this.$route.params.title);
-      console.log(this.trackers.find(tracker=> tracker.title === this.$route.params.title));
+      console.log(Store.getTracker('numeric',this.$route.params.title));
       console.log("hello");
     }
   }
