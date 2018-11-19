@@ -2,16 +2,33 @@
 
 ## Table of Contents
 [Effort & Accountability](#effort)
+
+<div class=‘page-break’></div>
+
 [Scenario-based Design](#scenario)
+
+<div class=‘page-break’></div>
+
 [Planning & Psuedocode](#planning)
+
+<div class=‘page-break’></div>
+
 [Coding](#code)
+
+<div class=‘page-break’></div>
+
 [User Testing](#test)
 
+<div class=‘page-break’></div>
+<div class=‘page-break’></div>
+<div class=‘page-break’></div>
 
+
+
+<a name="effort"></a>
 
 ## Effort & Accountability
 
-<a name="effort"></a>
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
@@ -22,9 +39,10 @@
 | Cynthia Yue  | Color Selection, User testing  |
 | Zidong Zhang  | Debugging, Organizing documentation, User testing  |
 
+<a name="scenario"></a>
+
 ## Scenario-based Design
 
-<a name="scenario"></a>
 
 We tested our design extensively in our last milestone and identified major issues before implementation began. 
 
@@ -69,9 +87,10 @@ High fidelity version incorporates a color palette based on a mood map created b
 After preliminary user testing, our team decided that our color scheme did not sufficiently separate each tracker created by the user. For example, a time based tracker has the same header color (blue) as a shopping list. We changed this to make the different colors representing each tracking format consistent throughout the app. This is useful when a user is switching from one scenario to another. For example, when a user exits a gym tracking scenario and enters a grocery list building scenario, different colors will be helpful in representing different scenarios. 
 
 
+<a name="planning"></a>
+
 ## Planning & Psuedocode 
 
-<a name="planning"></a>
 
 Information acrchitecture
 
@@ -79,17 +98,18 @@ Information acrchitecture
 
 <div class=‘page-break’></div>
 
+<a name="code"></a>
 
 ## Coding 
 
-<a name="code"></a>
 
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
 
 
+<a name="test"></a>
+
 ## User Testing 
 
-<a name="test"></a>
 
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
