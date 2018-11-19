@@ -35,12 +35,12 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 **Data visualization** - our original design features a page that displays a graph of activity over time with a table  of specific values per date beneath it. We separated this in our new design -- graph and tables are displaed in separate sections. The original design does not serve Chelsea, our sleep tracker, who wants to look at her previous night's sleep to better understand her current mood. Previous design doesn't make this information accessible because it pushes it beneath the visualization. 
 
-###High Fidelity Design 1
+### High Fidelity Design 1
 ENTER LINK HERE 
 High fidelity version incorporates a color palette based on a mood map created by our team. We searched for appropirate color choices that convey moods / adjectives users described in our interviews. For example, our interviewees used words such as "productive", "organized" and "improvement" to describe the process of tracking their activities. Different colors are used to reperesent different tracker formats. 
 
 
-###High Fidelity Design 2
+### High Fidelity Design 2
 ENTER LINK HERE
 After preliminary user testing, our team decided that our color scheme did not sufficiently separarate each tracker created by the user. For example, a time based tracker has the same header color (blue) as a shopping list. We changed this to make the different colors representing each tracking format consistent throughout the app. This is useful when a user is switching from one scenario to another. For example, when a user exits a gym tracking scenario and enters a grocery list building scenario, different colors will be helpful in representing different scenarios. 
 
