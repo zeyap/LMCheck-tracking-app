@@ -80,6 +80,7 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 *Wireframes*
 <div class=‘page-break’></div>
+
 [wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
 
 [wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
@@ -131,8 +132,7 @@ Since developers on our team have divided works, we work on the master branch fo
 
 ## User Testing 
 
-[User testing notes - paper prototypes]
-(/user_testing_prototypes)
+[User testing notes - paper prototypes](/user_testing_prototypes)
 
 [User testing notes - coded app](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_testing/)
 
