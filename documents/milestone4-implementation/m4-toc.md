@@ -9,7 +9,7 @@
 
 <div class=‘page-break’></div>
 
-[Planning & Psuedocode](#planning)
+[Planning & Pseudocode](#planning)
 
 <div class=‘page-break’></div>
 
@@ -106,7 +106,7 @@ After preliminary user testing, our team decided that our color scheme did not s
 
 <a name="planning"></a>
 
-## Planning & Psuedocode 
+## Planning & Pseudocode 
 
 User Flow
 
