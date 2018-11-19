@@ -73,6 +73,7 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 <div class=‘page-break’></div>
 
 [wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
+
 & 
 
 [wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
