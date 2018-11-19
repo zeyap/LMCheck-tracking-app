@@ -60,8 +60,8 @@ export default {
       for(let i=0;i<this.todos.length;i++){
         this.selected[i] = this.todos[i].detail===true?true:false;
       }
-      // if(data.records.length===0)this.createTodo();
-      this.createTodo();
+      if(data.records.length===0)this.createTodo();
+      
     }
     
     this.updateTracker =function(){
