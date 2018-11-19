@@ -5,7 +5,7 @@
         <div v-if="showList">
 
             <table width="100%">
-                <tr><th width="50%">Time</th> <th width="50%"></th> <th width="50%">Duration</th> </tr>
+                <tr><th width="50%">Time</th> <th width="50%"></th> <th width="50%">Value</th> </tr>
                 <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td><td></td><td>{{item.value}}</td></tr>
             </table>
 
@@ -36,6 +36,7 @@ export default {
     return {
         title:'',
         type:'',
+        unit:'Duration (ms)',
         list:[],
         showList: true,
         color:'',
@@ -52,7 +53,7 @@ export default {
                 }
             },
             legend: {
-                data: ['Duration (ms)']
+                data: [this.unit]
             },
             grid:{
                 containLabel: true
@@ -63,7 +64,7 @@ export default {
             yAxis:{},
             series: [
             {
-                name: 'Duration (ms)',
+                name: '',
                 type: 'line',
                 data: [4,3,2]
             }
@@ -112,10 +113,12 @@ export default {
     this.options.color[0] = this.color;
 
     let data = Store.getTracker(this.type,this.title);
-    console.log(data.type);
+    this.unit = data.unit;
+    console.log(data.unit);
     if(data.type =='timer'){
         if(undefined!==data){
             //Timer
+            this.options.series[0].name = 'Duration (ms)';
             for(let i=0;i<data.records.length;i++){
                 if(i===0){
                     this.list[i] = {
@@ -147,6 +150,7 @@ export default {
     }
         if(data.type == 'numeric'){
             console.log('please')
+            this.options.series[0].name = '# of '+ this.unit;
             if(undefined!==data){
                 //Numeric
                 for(let i=0;i<data.records.length;i++){
