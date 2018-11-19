@@ -62,6 +62,7 @@ To reiterate, we paper prototyped 2 complete versions of our design.
 <div class=‘page-break’></div>
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
 <div class=‘page-break’></div>
+<div class=‘page-break’></div>
 
 *Fitness Tracker* - originally included + / - buttons to incrementally increase value being tracked by 1. Removed these buttons. In our gym tracking scenario, not all instances will have a need for values to be tracked in increments of 1. If Jason, our gym goer, is going to the gym to record his running distance in miles that day, it will be easier for him to enter the final amount after his running session. Having the +/- buttons gave the impression that tracking in increments of 1 was required / encouraged. 
 
@@ -71,10 +72,7 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 
 *Wireframes*
 <div class=‘page-break’></div>
-
 [wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
-
-& 
 
 [wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
 
