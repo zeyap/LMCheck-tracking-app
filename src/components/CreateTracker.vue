@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Layout v-bind:title="title" type="0">
+    <!-- <Layout v-bind:title="title" type="0"> -->
       <b-container class="textBoxTop">
         <b-row class="justify-content-md-center">
           <b-col cols="12">
               <form>
                 <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
-                <div v-if="errorMessage.length>0"><B>{{errorMessage}}</B></div>
+                <div v-if="errorMessage.length>0" style="color: #aaaaaa"><i>{{errorMessage}}</i></div>
               </form>
           </b-col>
         </b-row>
@@ -30,7 +30,7 @@
         </b-row>
       </b-container>
 
-    </Layout>
+    <!-- </Layout> -->
   </div>
 </template>
 <script>
@@ -106,18 +106,18 @@ export default {
 }
 .toDoIcon{
   height: 100%;
-  background-color: #F68002;
+  background-color: #aed8a4;
   border-radius: 4px;
 
 }
 .numericIcon{
   height: 100%;
-  background-color: #3252FC;
+  background-color: #e46983;
   border-radius: 4px;
 }
 .timerIcon{
   height: 100%;
-  background-color: #F6AF00;
+  background-color: #99d9e8;
   border-radius: 4px;
   }
 
