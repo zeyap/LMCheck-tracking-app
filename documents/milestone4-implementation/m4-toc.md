@@ -5,7 +5,8 @@
 
 
 ## Effort & Accountability
-<a name="here"></a>
+
+
 | Team Member Name  | Effort |
 | ------------- | ------------- |
 | Sangmin Kim | Numeric measurement, Data Visualization  |
