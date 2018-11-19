@@ -21,7 +21,7 @@
         </b-container>
         <b-container class="enterContainer indentationOneOf">
             <b-row align-v="center">
-                <b-button id="saveButton" v-on:click="createTracker('numeric')">Add</b-button>
+                <b-button id="saveButton" v-on:click="enterData()">Add</b-button>
             </b-row>
         </b-container>
     </div>
@@ -49,7 +49,9 @@ export default {
       newNumeric: true,
       myUnit:'',
       myInput:0,
-      message:''
+      message:'',
+      eachInput:[],
+      timeAdded:''
     }
   },
   methods:{
@@ -65,6 +67,12 @@ export default {
       console.log(Store.getTracker('numeric',this.$route.params.title));
       console.log(Store.getTracker('numeric',this.$route.params.title).unit)
       console.log("hello");
+    },
+    enterData(){
+      this.timeAdded = new Date();
+      this.eachInput.push(new Record(this.timeAdded,this.myInput)); //need timestamp
+      console.log(this.eachInput);
+      
     }
   },
   mounted: function(){
@@ -76,6 +84,14 @@ export default {
        console.log("nobabe")
      }
     console.log(Store.getTracker('numeric',this.$route.params.title).unit)
+    let title=this.$route.params.title;
+    this.updateNumTracker =()=>{
+      console.log(this.$route.params.title);
+      Store.updateNumTracker('numeric',title,this.eachInput);
+    }
+  },
+    beforeDestroy:function(){
+      this.updateNumTracker();
     }
   }
 </script>
