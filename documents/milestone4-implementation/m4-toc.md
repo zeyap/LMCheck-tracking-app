@@ -21,19 +21,20 @@ We tested our design extensively in our last milestone and identified major issu
 
 To reiterate, we paper prototyped 2 complete versions of our design. 
 
-**Paper prototype of our first design:** 
+**Paper prototype of our first design** 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-v2-components.png )
 
 <div class=‘page-break’></div>
 
 
-**Paper prototype and Pencil Wireframe of our second design:**
+**Paper prototype and Pencil Wireframe of our second design**
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-FINAL-components.png )
 
 <div class=‘page-break’></div>
 
 
-
+<div class=‘page-break’></div>
+<div class=‘page-break’></div>
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
 
 **Fitness Tracker** - originally included + / - buttons to incrementally increase value being tracked by 1. Removed these buttons. In our gym tracking scenario, not all instances will have a need for values to be tracked in increments of 1. If Jason, our gym goer, is going to the gym to record his running distance in miles that day, it will be easier for him to enter the final amount after his running session. Having the +/- buttons gave the impression that tracking in increments of 1 was required / encouraged. 
@@ -43,12 +44,14 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 **Data visualization** - our original design features a page that displays a graph of activity over time with a table  of specific values per date beneath it. We separated this in our new design -- graph and tables are displayed in separate sections. The original design does not serve Chelsea, our sleep tracker, who wants to look at her previous night's sleep to better understand her current mood. Previous design doesn't make this information accessible because it pushes it beneath the visualization. 
 
 **High Fidelity Design 1**
+<div class=‘page-break’></div>
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid1/)
 
 
 High fidelity version incorporates a color palette based on a mood map created by our team. We searched for approprrate color choices that convey moods / adjectives users described in our interviews. For example, our interviewees used words such as "productive", "organized" and "improvement" to describe the process of tracking their activities. Different colors are used to represent different tracker formats. 
 
 **High Fidelity Design 2**
+<div class=‘page-break’></div>
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid2/)
 
 
@@ -76,7 +79,7 @@ Information acrchitecture
 
 <div class=‘page-break’></div>
 
-https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/user_testing 
+
 
 
 
