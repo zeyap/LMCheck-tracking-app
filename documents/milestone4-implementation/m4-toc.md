@@ -32,10 +32,10 @@
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
-| Sangmin Kim | Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  |
+| Sangmin Kim | Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  , Paper Prototyping, Brainstorming  |
 | Zhiyu Mao  |  User Testing, Created boilerplate sketch file for design, Paper Prototyping |
-| Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming |
-| Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow |
+| Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming, Brainstorming  |
+| Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow, Brainstorming |
 | Cynthia Yue  | Color Selection, Affinity Diagramming, Usability Testing, User Interface Design, CSS Styling Editing, Bootstrap Grid Implementation, Documentation and Write up   |
 | Zidong Zhang  | Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Affinity Diagramming  |
 
