@@ -113,8 +113,6 @@ export default {
   color: black;
   width: 100%;
   border-radius: 5px;
-  margin-left: unset;
-  margin-right: unset;
 }
 #valueForm{
     background-color:white;
@@ -130,7 +128,6 @@ export default {
 
 .saveContainer{
     padding-top: 30px;
-   
 }
 
 #saveButton{
@@ -144,10 +141,6 @@ export default {
     background-color:white;
 }
 
-.timerDescription{
-  padding-top: 60px;
-  font-size: 4em;
-}
 .buttonDescription{
   padding-top: 30px;
   font-size: 2.3em;
@@ -160,30 +153,5 @@ export default {
   background-color: #99c58f;
   border:none;
   color: white;
-}
-.dateDescription{
-  font-size: 0.8em;
-  color: grey;
-  padding-top: 7%;
-}
-.finishDescription button{
-  padding: 15px 15px;
-  width: 97%;
-  margin-top: 9%;
-  border-radius: 7px;
-  font-size: 2.3em;
-  color: white;
-  font-weight: bold;
-  background-color: grey;
-}
-.startDescription button{
-  border-radius: 7px;
-  padding: 15px 15px;
-  width: 97%;
-  margin-top: 12%;
-  color: white;
-  font-size: 2.3em;
-  font-weight: bold;
-  background-color: #99c58f;
 }
 </style>
