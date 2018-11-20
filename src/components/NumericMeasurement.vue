@@ -30,6 +30,7 @@
     </Layout>
   </div>
 </template>
+
 <script>
 import Store from '../js/Store.js';
 import Layout from './Layout.vue';
@@ -116,16 +117,12 @@ export default {
   border-radius: 5px;
 }
 #valueForm{
-    background-color:white;
-    border-bottom: none;
-    text-align: center;
-    margin-left: auto;
-    margin-right:auto;
-    height: 165px;
-    width: 1000px;
-    font-size: 30px;
-    font-weight: bold;
-    color:black;
+  background-color: white;
+  margin-top: 25%;
+  height: 165px;
+  color: black;
+  width: 90%;
+  border-radius: 5px;
 }
 
 .saveContainer{
@@ -133,7 +130,7 @@ export default {
 }
 #saveButton{
     width: 100%;
-    background-color: #99c58f;
+    background-color:#99c58f;
     height:70px;
     font-size: 44px;
     text-align: center;
@@ -141,7 +138,6 @@ export default {
 .valueContainer{
     background-color:white;
 }
-
 .buttonDescription{
   padding-top: 30px;
   font-size: 2.3em;
