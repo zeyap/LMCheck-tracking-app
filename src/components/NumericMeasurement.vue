@@ -2,35 +2,34 @@
   <div>
     <Layout back="/" color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     <div id="newNumericTracker" v-if="newNumeric">
-        <b-container class="timerCell valueContainer indentationOneOf">
-            <b-row class="valueCell justify-content-md-center indentationOneOff">
-              <b-form-input id="valueForm" size="lg"  type="text" v-model="myUnit" placeholder="Enter your unit"></b-form-input>
-            </b-row>
-        </b-container>
-        <b-container class="saveContainer indentationOneOf">
-            <b-row align-v="center">
-                <b-button id="saveButton" v-on:click="getUnit()">SAVE</b-button>
-            </b-row>
-        </b-container>
+        <b-container class="timerCell indentationOneOf">
+        <b-row class="justify-content-md-center indentationOneOff">
+          <b-form-input id="valueForm" type="text" v-model="myUnit" style="font-size: 1.7em; text-align: center;" placeholder="Enter your unit"></b-form-input>
+        </b-row>
+      </b-container>
+     <b-container class="timerButton">
+        <div class="indentationTwoOff"></div>
+        <b-row class="justify-content-md-center">
+        <b-col cols="12" class="startDescription"><button v-on:click="getUnit()" id="init">SAVE</button></b-col>
+        </b-row>
+      </b-container>
     </div>
     <div id="oldNumericTracker" v-if="!newNumeric">
-        <b-container class="timerCell valueContainer indentationOneOf">
-            <b-row class="valueCell justify-content-md-center indentationOneOff">
-              <b-col cols="12 timerDescription">  
-                <b-form-input style="border:none; text-align: center; font-size: 0.6em" size="lg"  type="number" v-model="myInput" placeholder="Enter your value"></b-form-input>
-              </b-col>   
-            </b-row>
-        </b-container>
-        <b-container class="saveContainer indentationOneOf">
-            <b-row align-v="center">
-                <b-button id="saveButton" v-on:click="enterData()">Add</b-button>
-            </b-row>
-        </b-container>
+        <b-container class="timerCell indentationOneOf">
+          <b-row class="justify-content-md-center indentationOneOff">
+          <b-form-input id="valueForm" type="number" v-model="myInput" style="font-size: 1.7em; text-align: center; border-style: none;" placeholder="Enter your value"></b-form-input>
+        </b-row>
+      </b-container>
+     <b-container class="timerButton">
+        <div class="indentationTwoOff"></div>
+        <b-row class="justify-content-md-center">
+        <b-col cols="12" class="startDescription"><button v-on:click="enterData()" id="init">SAVE</button></b-col>
+        </b-row>
+      </b-container>
     </div>
     </Layout>
   </div>
 </template>
-
 <script>
 import Store from '../js/Store.js';
 import Layout from './Layout.vue';
