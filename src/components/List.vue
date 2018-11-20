@@ -155,18 +155,14 @@ export default {
             if(undefined!==data){
                 //Numeric
                 for(let i=0;i<data.records.length;i++){
-                    if(i===0){
-                        this.list[i] = {
-                            date: this.formatDate(data.records[i].timestamp),
-                            value: data.records[i].content
-                        };
-                    }
-                    else {
-                        this.list[i] = {
-                            date: this.formatDate(data.records[i].timestamp),
-                            value: data.records[i].content
-                        };
-                    } 
+                  const obj = {
+                    date: this.formatDate(data.records[i].content),
+                    value: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
+                    detail: data.records[i].detail
+                };
+                if(obj.detail === "pause"){
+                    this.list.push(obj);
+                    };
                 }
                 if(this.showList===false){//show chart
                 //filter points with a duration
