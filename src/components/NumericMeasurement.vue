@@ -10,7 +10,7 @@
      <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12" class="startDescription"><button v-on:click="getUnit()" id="init">SAVE</button></b-col>
+        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="getUnit()"  id="init">SAVE</button></b-col>
         </b-row>
       </b-container>
     </div>
@@ -23,7 +23,7 @@
      <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12" class="startDescription"><button v-on:click="enterData()" id="init">SAVE</button></b-col>
+        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="enterData()" id="init">SAVE</button></b-col>
         </b-row>
       </b-container>
     </div>
