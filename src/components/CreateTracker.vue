@@ -5,7 +5,7 @@
         <b-row class="justify-content-md-center">
           <b-col cols="12">
               <form>
-                <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
+                <input v-model="title" type="text" id="fname" name="fname" placeholder="Please enter a measurement title">
                 <div v-if="errorMessage.length>0" style="color: #aaaaaa"><i>{{errorMessage}}</i></div>
               </form>
           </b-col>
@@ -76,9 +76,9 @@ export default {
         }else{
           this.errorMessage='';
         }
-      } 
+      }
     })
-    
+
   }
 }
 </script>
@@ -107,18 +107,18 @@ export default {
 .toDoIcon{
   height: 100%;
   background-color: #aed8a4;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 
 }
 .numericIcon{
   height: 100%;
   background-color: #e46983;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
 }
 .timerIcon{
   height: 100%;
   background-color: #99d9e8;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
   }
 
 .textDescription{
@@ -126,6 +126,8 @@ export default {
   text-align: center;
   font-weight: bold;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
 }
 .textBoxTop{
   padding-top: 5%;
@@ -135,7 +137,7 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     border: none;
-    background-color: #f0f0f0;
+    background-color: #FEFEFE;
     border-bottom: 2px solid silver;
 }
 </style>
