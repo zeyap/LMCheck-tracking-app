@@ -35,6 +35,8 @@
 
 ## Evaluation
 
+**We did 6 user testing (2 people per scenario) to evaluate our app. And information below are feedback we've gotten from our user-testing.**
+
 **Gym Tracking**
 <div class=‘page-break’></div>
 
