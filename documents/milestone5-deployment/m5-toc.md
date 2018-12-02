@@ -29,7 +29,7 @@
 | Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming, Brainstorming, Assemblred Paper Prototype  |
 | Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow, Brainstorming, Assemblred Paper Prototype |
 | Cynthia Yue  | Color Selection, Affinity Diagramming, Usability Testing, User Interface Design, CSS Styling Editing, Bootstrap Grid Implementation, Assemblred Paper Prototype, Documentation and Write up   |
-| Zidong Zhang  | Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Assemblred Paper Prototype, Affinity Diagramming  |
+| Zidong Zhang  | App Icon creating, Presentation editing, Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Assemblred Paper Prototype, Affinity Diagramming  |
 
 <a name="evaluation"></a>
 
