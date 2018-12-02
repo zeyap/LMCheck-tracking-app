@@ -76,6 +76,11 @@ export default {
       s = s<10?'0'+s:s;
       return h+':'+m+":"+s;
     },
+    end: function(){
+          this.endTime = new Date();
+          this.endRecords.push(new Record(this.startTime,this.endTime,'end'));
+          // console.log(this.endRecords)
+    },
     startTimer: function(){
       //a new timer with no history
       this.started = true;
@@ -110,11 +115,6 @@ export default {
           h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
           timer();
       }
-      var end = ()=>{
-          this.endTime = new Date();
-          this.endRecords.push(new Record(this.startTime,this.endTime,'end'));
-          // console.log(this.endRecords)
-      }
       var timer = ()=> {
         t = setTimeout(add, 1000);
         this.isPaused=false;
@@ -135,7 +135,7 @@ export default {
         this.isPaused = false;
         this.started = false;
         clearTimeout(t);
-        end();
+        this.end();
         h1.textContent = "00:00:00";
         seconds = 0; minutes = 0; hours = 0;
       }

@@ -4,7 +4,7 @@
  <b-navbar class="nav-bar-body" toggleable="md" type="dark" v-bind:variant="this.variant">
    <div class="color-changeable-header" v-bind:style="this.color?('background:'+this.color):''"></div>
     <b-navbar-nav style="z-index:1">
-      <b-nav-item v-on:click="goBack"><v-icon v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
+      <b-nav-item v-on:click="goBack"><v-icon class="backBtn" v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
     </b-navbar-nav>
     <b-navbar-brand class="nav-bar-title">{{showTitle(this.title)}}</b-navbar-brand>
 
@@ -12,7 +12,7 @@
     <b-navbar-nav class="ml-auto" style="z-index:1">
       <b-dropdown  v-if="this.type==='1'" no-caret right variant="link" size="lg">
         <template slot="button-content">
-            <span style="color:#f8f9fa" ><v-icon name="ellipsis-v"/></span>
+            <span style="color:#f8f9fa" ><v-icon class="menuBtn" name="ellipsis-v"/></span>
         </template>
         <b-dropdown-item v-for="(item,id) in this.settingsList" v-on:click="go(item)" v-bind:key="'setting'+id" href="#">{{item}}</b-dropdown-item>
       </b-dropdown>
@@ -45,7 +45,7 @@ export default {
   },
   methods:{
     showTitle: function(title){
-      return title.replace('_',' ');
+      return title.replace(/[_]+/g,' ');
     },
     goBack: function(){
       if(this.back!==undefined){
@@ -100,8 +100,8 @@ export default {
   overflow:hidden;
   text-overflow:ellipsis;
   position:absolute;
-  left: 50%; 
-  top: 50%; 
+  left: 50%;
+  top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 .navbar-brand.nav-bar-title {
@@ -122,10 +122,20 @@ export default {
   position:absolute;
   top:0;
   left:0;
-  background:#009AD8; 
-  width:100%; 
-  height:100%; 
+  background:#009AD8;
+  width:100%;
+  height:100%;
   z-index:0;
 }
-
+.backBtn {
+  height: 38px;
+  width: 38px;
+  margin-left: -10px;
+  color: #FEFEFE;
+}
+.menuBtn {
+  height: 27px;
+  width: 27px;
+  margin-right: -15px;
+}
 </style>

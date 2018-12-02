@@ -91,6 +91,11 @@ export default {
       s = s<10?'0'+s:s;
       return h+':'+m+":"+s;
     }
+    // sorting: function(data){
+    //     var temp = this.data;
+    //     const durationArray = temp.filter(temp.value != null);
+    //     this.list.push(durationArray;
+    // }
   },
   mounted(){
     this.title = this.$route.params.title;
@@ -112,6 +117,7 @@ export default {
     this.options.color[0] = this.color;
 
     let data = Store.getTracker(this.type,this.title);
+<<<<<<< HEAD
     if(undefined!==data){
         //Timer
         for(let i=0;i<data.records.length;i++){
@@ -128,6 +134,32 @@ export default {
                     duration: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
                     detail: data.records[i].detail
                 };
+=======
+    this.unit = data.unit;
+    console.log(data.unit);
+    if(data.type =='timer'){
+        if(undefined!==data){
+            //Timer
+            this.options.series[0].name = 'Duration (ms)';
+            for(let i=0;i<data.records.length;i++){
+                    const obj = {
+                        date: this.formatDate(data.records[i].content),
+                        value: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
+                        detail: data.records[i].detail
+                    };
+                    if(obj.detail === "pause"){
+                        this.list.push(obj);
+                    };
+            }
+            if(this.showList===false){//show chart
+            //filter points with a duration
+                let filtered = this.list.filter((item)=>item.value!==null);
+                this.options.xAxis.data = filtered.map((item)=>item.date);
+                let lastValidY, lastValidX;
+                this.options.series[0].data = filtered.map((item)=>{
+                    return item.value;
+                });
+>>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
             }
                 
         }

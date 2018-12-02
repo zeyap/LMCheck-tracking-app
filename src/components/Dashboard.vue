@@ -30,7 +30,7 @@ export default {
   },
   methods:{
     showTitle: function(title){
-      return title.replace('_',' ');
+      return title.replace(/[_]+/g,' ');
     },
     createTracker: function(){
       this.$router.push({path:`/createTracker`});

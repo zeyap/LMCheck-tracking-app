@@ -2,18 +2,20 @@
   <div>
     <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     <div id="newNumericTracker" v-if="newNumeric">
-        <b-container class="valueContainer indentationOneOf">
-            <b-row align-v="center" class="valueCell">
-                <b-form-input id="valueForm" size="lg"  type="text" v-model="myUnit" placeholder="Enter your unit"></b-form-input>
-            </b-row>
-        </b-container>
-        <b-container class="saveContainer indentationOneOf">
-            <b-row align-v="center">
-                <b-button id="saveButton" v-on:click="getUnit()">SAVE</b-button>
-            </b-row>
-        </b-container>
+        <b-container class="timerCell indentationOneOf">
+        <b-row class="justify-content-md-center indentationOneOff">
+          <b-form-input id="valueForm" type="text" v-model="myUnit" style="font-size: 1.7em; text-align: center;" placeholder="Enter your unit"></b-form-input>
+        </b-row>
+      </b-container>
+     <b-container class="timerButton">
+        <div class="indentationTwoOff"></div>
+        <b-row class="justify-content-md-center">
+        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="getUnit()"  id="init">SAVE</button></b-col>
+        </b-row>
+      </b-container>
     </div>
     <div id="oldNumericTracker" v-if="!newNumeric">
+<<<<<<< HEAD
         <b-container class="inputContainer indentationOneOf">
             <b-row align-v="center" class="valueCell">
                 <b-form-input id="inputForm" size="lg"  type="number" v-model="myInput" placeholder=message></b-form-input>
@@ -24,6 +26,19 @@
                 <b-button id="saveButton" v-on:click="createTracker('numeric')">Add</b-button>
             </b-row>
         </b-container>
+=======
+        <b-container class="timerCell indentationOneOf">
+          <b-row class="justify-content-md-center indentationOneOff">
+          <b-form-input id="valueForm" type="number" v-model="myInput" style="font-size: 1.7em; text-align: center; border-style: none;" placeholder="Enter your value"></b-form-input>
+        </b-row>
+      </b-container>
+     <b-container class="timerButton">
+        <div class="indentationTwoOff"></div>
+        <b-row class="justify-content-md-center">
+        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="enterData()" id="init">SAVE</button></b-col>
+        </b-row>
+      </b-container>
+>>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
     </div>
     </Layout>
   </div>
@@ -101,25 +116,21 @@ export default {
   margin-right: unset;
 }
 #valueForm{
-    background-color:white;
-    border-bottom: none;
-    text-align: center;
-    margin-left: auto;
-    margin-right:auto;
-    height: 165px;
-    font-size: 44px;
-    font-weight: bold;
-    color:black;
+  background-color: white;
+  margin-top: 25%;
+  height: 165px;
+  color: black;
+  width: 90%;
+  border-radius: 5px;
 }
 
 .saveContainer{
     padding-top: 30px;
    
 }
-
 #saveButton{
     width: 100%;
-    background-color: #01a76b;
+    background-color:#99c58f;
     height:70px;
     font-size: 44px;
     text-align: center;
@@ -127,11 +138,14 @@ export default {
 .valueContainer{
     background-color:white;
 }
+<<<<<<< HEAD
 
 .timerDescription{
   padding-top: 60px;
   font-size: 4em;
 }
+=======
+>>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
 .buttonDescription{
   padding-top: 30px;
   font-size: 2.3em;
