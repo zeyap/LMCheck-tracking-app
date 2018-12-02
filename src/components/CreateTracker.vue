@@ -54,7 +54,8 @@ export default {
   methods:{
     createTracker: function(type){
       if(this.title == '') {
-          this.errorMessage = 'Title is required.';
+        this.title="tracker-"+((Store.getTrackers()).length+1);
+        this.errorMessage = 'The tracker will use a default name';
       } else {
           this.title = this.title.replace(/[\s]+/g,'_');
           if(Store.getTracker(type,this.title)!==undefined){
@@ -123,10 +124,11 @@ export default {
   }
 
 .textDescription{
-  padding-top: 30px;
-  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
-  text-align: center;
   font-family: 'Roboto', sans-serif;
   font-size: 21px;
 }
