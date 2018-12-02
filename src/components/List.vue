@@ -5,8 +5,8 @@
         <div v-if="showList">
 
             <table width="100%">
-                <tr><th width="50%">Time</th> <th width="50%"></th> <th width="50%">Value</th> </tr>
-                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td><td></td><td>{{item.value}}</td></tr>
+                <tr><th width="50%">Time</th><th width="50%"></th> <th width="50%">Duration</th></tr>
+                <tr v-for="(item,key) in list" v-bind:key="key"><td>{{item.date}}</td><td></td><td>{{item.duration}}</td></tr>
             </table>
 
         </div>
@@ -36,13 +36,12 @@ export default {
     return {
         title:'',
         type:'',
-        unit:'Duration (ms)',
         list:[],
         showList: true,
         color:'',
 
         options: {
-            color: ['#99d9e8','#aed8a4','#e46983'],
+            color: ['#F6AF00','#F68002','#3252FC'],
             title: {
                 text: ''
             },
@@ -53,7 +52,7 @@ export default {
                 }
             },
             legend: {
-                data: [this.unit]
+                data: ['Duration (ms)']
             },
             grid:{
                 containLabel: true
@@ -64,7 +63,7 @@ export default {
             yAxis:{},
             series: [
             {
-                name: '',
+                name: 'Duration (ms)',
                 type: 'line',
                 data: [4,3,2]
             }
@@ -104,13 +103,13 @@ export default {
     this.showList = this.$route.params.visualizeType==='list'?true:false;
     switch(this.type){
         case 'timer':
-        this.color="#99d9e8";
+        this.color="#F6AF00";
         break;
         case 'todo':
-        this.color="#aed8a4";
+        this.color="#F68002";
         break;
         case 'numeric':
-        this.color="#e46983";
+        this.color="#3252FC";
         break;
         default:
         break;
@@ -118,6 +117,24 @@ export default {
     this.options.color[0] = this.color;
 
     let data = Store.getTracker(this.type,this.title);
+<<<<<<< HEAD
+    if(undefined!==data){
+        //Timer
+        for(let i=0;i<data.records.length;i++){
+            if(i===0){
+                this.list[i] = {
+                    date: this.formatDate(data.records[i].content),
+                    duration: '',
+                    detail: data.records[i].detail
+                };
+            }
+            else {
+                this.list[i] = {
+                    date: this.formatDate(data.records[i].content),
+                    duration: (data.records[i].detail==='pause'||data.records[i].detail==='end')&&(data.records[i-1].detail==='start'||data.records[i-1].detail==='continue')?this.duration(data.records[i-1].content,data.records[i].content):null,
+                    detail: data.records[i].detail
+                };
+=======
     this.unit = data.unit;
     console.log(data.unit);
     if(data.type =='timer'){
@@ -142,40 +159,22 @@ export default {
                 this.options.series[0].data = filtered.map((item)=>{
                     return item.value;
                 });
+>>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
             }
+                
+        }
+
+        if(this.showList===false){//show chart
+        //filter points with a duration
+            let filtered = this.list.filter((item)=>item.duration!==null);
+            this.options.xAxis.data = filtered.map((item)=>item.date);
+            let lastValidY, lastValidX;
+            this.options.series[0].data = filtered.map((item)=>{
+                return item.duration;
+            });
         }
     }
-        if(data.type == 'numeric'){
-            console.log('please')
-            this.options.series[0].name = '# of '+ this.unit;
-            if(undefined!==data){
-                //Numeric
-                for(let i=0;i<data.records.length;i++){
-                    if(i===0){
-                        this.list[i] = {
-                            date: this.formatDate(data.records[i].timestamp),
-                            value: data.records[i].content
-                        };
-                    }
-                    else {
-                        this.list[i] = {
-                            date: this.formatDate(data.records[i].timestamp),
-                            value: data.records[i].content
-                        };
-                    } 
-                }
-                if(this.showList===false){//show chart
-                //filter points with a duration
-                    this.options.xAxis.data = this.list.map((item)=>item.date);
-                    let lastValidY, lastValidX;
-                    this.options.series[0].data = this.list.map((item)=>{
-                        return item.value;
-                    });
-                }
-                console.log(this.list);
-            }
-        }
-    }
+  }
 }
 </script>
 

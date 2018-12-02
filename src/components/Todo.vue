@@ -1,7 +1,7 @@
 <template>
 <v-touch>
   <div id='todo'>
-    <Layout back="/" color="#aed8a4" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':'Done'" v-bind:onClickRightButton="edit">
+    <Layout back="/" color="#F68002" v-bind:title="this.$route.params.title" type="3" style = "font-weight: bold" v-bind:textOnRight="this.editMode?'Save':'Done'" v-bind:onClickRightButton="edit">
       <div class="below-nav-bar wrapper">
         <div v-for="(todo,id) in todos" v-bind:key="id">
           <div style="width:100%; display:flex; flex-flow: row nowrap; justify-content: start; align-items:start;" >
@@ -176,7 +176,7 @@ export default {
   appearance: none;
   -webkit-appearance: none;
 	background-color: white;
-	border: 2px solid #aaaaaa;
+	border: 2px solid #ffd519;
   width: 1.6em;
   height: 1.5em;
 	padding: 0;
@@ -196,8 +196,8 @@ export default {
 } */
 
 .circular-checkbox:checked {
-	background-color: #aed8a4;
-	border: 2px solid #aed8a4;
+	background-color: #ffd519;
+	border: 2px solid #ffd519;
 	color: white;
   /* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1); */
 }
@@ -244,13 +244,13 @@ textarea {
 .add-icon{
   width:100%;
   height:100%;
-  border: 2px solid #aaaaaa;
+  border: 2px solid #ffd519;
   border-radius: 50%;
   background: white;
 }
 .add-icon::before{
   content: '';
-  color:#aed8a4;
+  color:#ffd519;
   display: block; 
   position: absolute ; 
   top: 50% ; 

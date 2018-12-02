@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+    <Layout color="#3252FC" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
       <b-container class="valueContainer indentationOneOf">
         <b-row align-v="center" class="valueCell">
             <b-form-input id="valueForm" size="lg" ref="myUnit" type="text" placeholder="Enter your unit"></b-form-input>
@@ -85,8 +85,7 @@ export default {
 
 #saveButton{
     width: 100%;
-    background-color: #99c58f;
-    border:none;
+    background-color: #01a76b;
     height:70px;
     font-size: 44px;
     text-align: center;
@@ -108,7 +107,7 @@ export default {
   margin-top: 20%;
   width: 100%;
   border-radius: 5px;
-  background-color: #99c58f;
+  background-color: #01a76b;
   color: white;
 }
 .dateDescription{

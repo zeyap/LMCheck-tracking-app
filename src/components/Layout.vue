@@ -1,6 +1,6 @@
 <template>
 <v-touch class="wrapper">
-  <div class="nav-bar shadowed">
+  <div class="nav-bar">
  <b-navbar class="nav-bar-body" toggleable="md" type="dark" v-bind:variant="this.variant">
    <div class="color-changeable-header" v-bind:style="this.color?('background:'+this.color):''"></div>
     <b-navbar-nav style="z-index:1">
