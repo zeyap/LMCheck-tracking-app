@@ -44,6 +44,8 @@ Because nothing shows after click on the “finish” button. User was confused 
 The animation on the graph list was fun to watch.
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/sleep-timer.jpg)
 
+*To-do List Tracking* -
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/todo.jpg)
 
 <a name="offline"></a>
 
@@ -51,7 +53,7 @@ The animation on the graph list was fun to watch.
 
 User Flow
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png)
+![](http://jackandcoke.herokuapp.com)
 
 Information acrchitecture
 
