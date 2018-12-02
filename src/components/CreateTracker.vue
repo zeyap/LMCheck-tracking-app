@@ -1,22 +1,12 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <Layout v-bind:title="title" type="0">
-=======
   <v-touch style="height:100vh" v-on:swiperight="router.push({path:`/`})">
     <!-- <Layout v-bind:title="title" type="0"> -->
->>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
       <b-container class="textBoxTop">
         <b-row class="justify-content-md-center">
           <b-col cols="12">
               <form>
-<<<<<<< HEAD
-                <input v-model="title" type="text" id="fname" name="fname" placeholder="Measurement Title">
-                <div v-if="errorMessage.length>0"><B>{{errorMessage}}</B></div>
-=======
                 <input v-model="title" type="text" id="fname" name="fname" placeholder="Please enter a measurement title">
                 <div v-if="errorMessage.length>0" style="color: #aaaaaa"><i>{{errorMessage}}</i></div>
->>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
               </form>
           </b-col>
         </b-row>
@@ -40,13 +30,8 @@
         </b-row>
       </b-container>
 
-<<<<<<< HEAD
-    </Layout>
-  </div>
-=======
     <!-- </Layout> -->
   </v-touch>
->>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
 </template>
 <script>
 import Layout from './Layout.vue';
@@ -123,26 +108,12 @@ export default {
 }
 .toDoIcon{
   height: 100%;
-<<<<<<< HEAD
-  background-color: #F68002;
-  border-radius: 4px;
-=======
   background-color: #aed8a4;
   border-radius: 4px 0 0 4px;
->>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
 
 }
 .numericIcon{
   height: 100%;
-<<<<<<< HEAD
-  background-color: #3252FC;
-  border-radius: 4px;
-}
-.timerIcon{
-  height: 100%;
-  background-color: #F6AF00;
-  border-radius: 4px;
-=======
   background-color: #e46983;
   border-radius: 4px 0 0 4px;
 }
@@ -150,7 +121,6 @@ export default {
   height: 100%;
   background-color: #99d9e8;
   border-radius: 4px 0 0 4px;
->>>>>>> ad178942b2dfde6d7f68b2e57ddbc0492aaebd04
   }
 
 .textDescription{
