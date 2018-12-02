@@ -42,7 +42,7 @@
 Almost everyone would click on the timer first then realized that they need to enter a title first then creating a corresponding tracker.
 Because nothing shows after click on the “finish” button. User was confused where did the data go to. Only under the hint, he clicked on the menu button and entered the view and graph list accordingly.
 The animation on the graph list was fun to watch.
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone5-testing & deployment/evaluation/sleep-timer.png)
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/sleep-timer.jpg)
 
 
 <a name="offline"></a>
@@ -64,4 +64,3 @@ Information acrchitecture
 ## Deploy
 
 [Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
-
