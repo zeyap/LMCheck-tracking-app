@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-touch style="height:100vh" v-on:swiperight="router.push({path:`/`})">
     <!-- <Layout v-bind:title="title" type="0"> -->
       <b-container class="textBoxTop">
         <b-row class="justify-content-md-center">
@@ -31,7 +31,7 @@
       </b-container>
 
     <!-- </Layout> -->
-  </div>
+  </v-touch>
 </template>
 <script>
 import Layout from './Layout.vue';
@@ -47,7 +47,8 @@ export default {
   data: function(){
     return {
       title: '',
-      errorMessage: ''
+      errorMessage: '',
+      router: this.$router
     }
   },
   methods:{
