@@ -35,14 +35,49 @@
 
 ## Evaluation
 
-*Sleeping Tracking* - The user initially was a little bit confused about the home page. The he noticed that there is a button on the right bottom corner.
+**Gym Tracking** 
+<div class=‘page-break’></div>
+
+*user tesing A*
+<div class=‘page-break’></div>
+
+*user tesing B*
+<div class=‘page-break’></div>
+
+
+**Sleeping Tracking** 
+<div class=‘page-break’></div>
+
+*user tesing A*
+<div class=‘page-break’></div>
+
+- The user initially was a little bit confused about the home page. The he noticed that there is a button on the right bottom corner.
 Almost everyone would click on the timer first then realized that they need to enter a title first then creating a corresponding tracker.
 Because nothing shows after click on the “finish” button. User was confused where did the data go to. Only under the hint, he clicked on the menu button and entered the view and graph list accordingly.
 The animation on the graph list was fun to watch.
+
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/sleep-timer.jpg)
 
-*To-do List Tracking* -
+*user tesing B*
+<div class=‘page-break’></div>
+
+
+
+**To-do List Tracking** 
+<div class=‘page-break’></div>
+
+*user tesing A*
+<div class=‘page-break’></div>
+
+- User felt very confident to create grocery list but she created tracker name after the app remind her.
+- User can easily figure out to hold and delete tracker at home page but she felt confused when she want to delete an item from the list. She tried to use "delete" button on keyboard to delete.
+- User thought overall the app was easy to use.
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/todo.jpg)
+
+*user tesing B*
+<div class=‘page-break’></div>
+
+
 
 <a name="offline"></a>
 
