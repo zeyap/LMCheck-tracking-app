@@ -50,4 +50,5 @@ The animation on the graph list was fun to watch.
 
 Offline is supported and the app is now deployed on the heroku.
 <div class=‘page-break’></div>
+
 [App Link](http://jackandcoke.herokuapp.com)
