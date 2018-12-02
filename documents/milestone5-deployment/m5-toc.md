@@ -9,13 +9,10 @@
 
 <div class=‘page-break’></div>
 
-[Offline Support](#offline)
+[Offline Support & Deployment](#offline)
 
 <div class=‘page-break’></div>
 
-[Deploy App](#deploy)
-
-<div class=‘page-break’></div>
 
 
 
@@ -49,20 +46,10 @@ The animation on the graph list was fun to watch.
 
 <a name="offline"></a>
 
-## Offline Support
+## Offline Support & Deployment
 
-User Flow
+Please click the link below
+[App Link](http://jackandcoke.herokuapp.com)
 
-![](http://jackandcoke.herokuapp.com)
-
-Information acrchitecture
-
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone4-implementation/InformationArchitecture.png)
 
 <div class=‘page-break’></div>
-
-<a name="deploy"></a>
-
-## Deploy
-
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
