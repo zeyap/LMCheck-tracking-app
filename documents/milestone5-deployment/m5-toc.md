@@ -41,6 +41,12 @@
 *user tesing A*
 <div class=‘page-break’></div>
 
+- The user was able to find a way into create tracker page, because there's a button on the corner (and no other choices), but the blank looking homepage made her hesitate for a while. 
+
+- The two steps (add unit & add record) in numeric page have very similar UI and the user tended to input unit again. Also, it does not always make sense to have a unit when doing numeric tracking. 
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/numeric.jpg)
+
 *user tesing B*
 <div class=‘page-break’></div>
 
