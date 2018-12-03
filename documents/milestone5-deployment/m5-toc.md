@@ -24,12 +24,12 @@
 
 | Team Member Name  | Effort |
 | ------------- | ------------- |
-| Sangmin Kim | Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  , Paper Prototyping, Brainstorming, Assemblred Paper Prototype  |
-| Zhiyu Mao  |  User Testing and Evaluation, CSS Styling, UI Design, Documentation and Write up, Usability Testing|
-| Zeya Peng  | Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming, Brainstorming, Assemblred Paper Prototype  |
-| Daniel Ra  | Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow, Brainstorming, Assemblred Paper Prototype |
-| Cynthia Yue  | Color Selection, Affinity Diagramming, Usability Testing, User Interface Design, CSS Styling Editing, Bootstrap Grid Implementation, Assemblred Paper Prototype, Documentation and Write up   |
-| Zidong Zhang  | App Icon creating, Presentation editing, Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Assemblred Paper Prototype, Affinity Diagramming  |
+| Sangmin Kim | Presentation preparation, Evaluation, Numeric measurement, Data Visualization, Design Thinking, Usability Testing, Prototyping, Affinity Diagramming  , Paper Prototyping, Brainstorming, Assemblred Paper Prototype  |
+| Zhiyu Mao  | Presentation preparation, Evaluation, User Testing and Evaluation, CSS Styling, UI Design, Documentation and Write up, Usability Testing|
+| Zeya Peng  | Presentation preparation, Evaluation, Deployment, Dashboard, Screen layout, To-do list functionality, Data storage, Overall Code Compilation, Design Thinking Contribution, Affinity Diagramming, Brainstorming, Assemblred Paper Prototype  |
+| Daniel Ra  | Presentation preparation, Evaluation, Timer functionality, General CSS Styling, General Design Thinking, Brainstorming, Usability Testing, Prototyping, Scenario Based Write up, Information Architecture, User Flow, Brainstorming, Assemblred Paper Prototype |
+| Cynthia Yue  | Presentation preparation, Evaluation, Color Selection, Affinity Diagramming, Usability Testing, User Interface Design, CSS Styling Editing, Bootstrap Grid Implementation, Assemblred Paper Prototype, Documentation and Write up   |
+| Zidong Zhang  | Presentation preparation, Evaluation, QR code creating, App Icon creating, Presentation editing, Debugging, Organizing documentation, Usability Testing, CSS Styling, Design Thinking General, Brainstorming, Paper Prototyping, Assemblred Paper Prototype, Affinity Diagramming  |
 
 <a name="evaluation"></a>
 
@@ -63,6 +63,7 @@
 - He also noted that unit page was strange at first, but understood it later as he discovered numeric measurement could track anything. 
 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/Gym(Chris).jpg)
+
 **Sleeping Tracking** 
 <div class=‘page-break’></div>
 
@@ -108,7 +109,11 @@ The animation on the graph list was fun to watch.
 
 ## Offline Support & Deployment
 
-Offline is supported and the app is now deployed on the heroku.
+Click on link or scan QR code to get the app.
+
 <div class=‘page-break’></div>
 
 [App Link](http://jackandcoke.herokuapp.com)
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/frame.png)
+
