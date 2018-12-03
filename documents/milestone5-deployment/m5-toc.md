@@ -82,7 +82,7 @@ The animation on the graph list was fun to watch.
 
 - The user suggests adding the function of deleting individual timer record, which we'll consider in the future. 
 
-Also he thinks our app's pretty easy to work on, and the color scheme looks relaxing.
+- He thinks our app's pretty easy to work on, and the color scheme looks relaxing.
 
 ![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/timer2.jpeg)
 
