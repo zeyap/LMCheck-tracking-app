@@ -53,7 +53,7 @@
 - The main issue that the user had was understanding Numeric Measurement. When he was asked to track number of pushups, he did not have a problem finding a path to create a tracker. But, he froze as he saw three options. He told me that he did not understand the meaning of Numeric Measurement, and did not have any option but to click numeric measurement as Timer and to-do-list are clearly not for counting pushups.
 - He also noted that unit page was strange at first, but understood it later as he discovered numeric measurement could track anything. 
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/Gym(Chris).jpeg)
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/Gym(Chris).jpg)
 **Sleeping Tracking** 
 <div class=‘page-break’></div>
 
