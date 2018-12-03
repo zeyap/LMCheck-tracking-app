@@ -45,7 +45,7 @@
 
 - The two steps (add unit & add record) in numeric page have very similar UI and the user tended to input unit again. Also, it does not always make sense to have a unit when doing numeric tracking. 
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/numeric.jpg)
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/numeric.png)
 
 *user tesing B*
 <div class=‘page-break’></div>
