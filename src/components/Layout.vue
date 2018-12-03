@@ -62,11 +62,12 @@ export default {
           errorMessage ='Title already exists for '+this.trackertype+' tracker';
         }else{
           validated= true;
+          Store.setName(this.trackertype,this.title,newname);
+          this.title = newname;
         }
       }
       //validate title
-      Store.setName(this.trackertype,this.title,newname);
-      this.title = newname;
+      
     },
     goBack: function(){
       if(this.back!==undefined){
