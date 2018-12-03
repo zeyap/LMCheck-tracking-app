@@ -83,6 +83,13 @@ The animation on the graph list was fun to watch.
 *user tesing B*
 <div class=‘page-break’></div>
 
+- User was able to understand the task of recording list of groceries.
+- He missed the title creation before creating a tracker, so he had to see the error sign(which he described as "unclear")
+- Without being told, he clicked a circle next to each grocery to cross out.
+- Deleting a tracker after shopping was unclear to him. He went into the tracker itself to delete assuming deleting function would be there. After spending a few minutes to find delete button, he was able to find it on the home pag; however, he said it would be better if there were a deleting button inside each tracker.
+- He was confused on a few minor functions, but he informed us that to-do-list function does what its job and it would get easier as users use the app.
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/todo(Matt).jpg)
 
 
 <a name="offline"></a>
