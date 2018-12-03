@@ -56,7 +56,7 @@ export default {
       let errorMessage = 'Rename your tracker';
       while(!validated){
         newname = window.prompt(errorMessage,this.title);
-        if(newname===null)return;
+        if(newname===null||newname===this.title)return;
         newname = newname.replace(/[\s]+/g,'_');
         if(newname!==this.title && Store.getTracker(this.trackertype,newname)!==undefined){
           errorMessage ='Title already exists for '+this.trackertype+' tracker';
