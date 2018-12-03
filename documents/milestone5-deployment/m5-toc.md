@@ -49,6 +49,15 @@
 
 *user tesing B*
 <div class=‘page-break’></div>
+- The user did not have any issues with initiating a creation of a new tracker; he navigated to add button and selected the correct tracking format seamlessly. 
+
+- The use experienced some issues with naming the new tracker. He selected the appropriate tracker format for the task given, but was confused when prompted to name the tracker. After naming the tracker, he expects the app to move on to the next step. The app requires to select (again) the correct tracking format after naming the app. The user was confused by this. 
+
+- Found the process of naming unit of measurement to be straightforward, but was confused about adding an actual value. Expects to be taken back to the homepage after entering a value. 
+
+- Was able to navigate to visualizations without any trouble. 
+
+![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone5-deployment/evaluation/gym.JPG)
 
 - The main issue that the user had was understanding Numeric Measurement. When he was asked to track number of pushups, he did not have a problem finding a path to create a tracker. But, he froze as he saw three options. He told me that he did not understand the meaning of Numeric Measurement, and did not have any option but to click numeric measurement as Timer and to-do-list are clearly not for counting pushups.
 - He also noted that unit page was strange at first, but understood it later as he discovered numeric measurement could track anything. 
