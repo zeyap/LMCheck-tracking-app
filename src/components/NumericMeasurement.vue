@@ -20,10 +20,13 @@
           <b-form-input id="valueForm" type="number" v-model="myInput" style="font-size: 1.7em; text-align: center; border-style: none;" placeholder="Enter your value"></b-form-input>
         </b-row>
       </b-container>
+      <b-container v-if="showAddedReminder">
+        <div style="padding: 30px 0 0 0;">New record added</div>
+      </b-container>
      <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
-        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="enterData()" id="init">SAVE</button></b-col>
+        <b-col cols="12" class="startDescription"><button style="background-color: #99c58f;" v-on:click="enterData()" id="init">ADD</button></b-col>
         </b-row>
       </b-container>
     </div>
@@ -53,7 +56,8 @@ export default {
       myInput:'',
       message:'',
       eachInput:[],
-      timeAdded:''
+      timeAdded:'',
+      showAddedReminder: false
     }
   },
   methods:{
@@ -73,7 +77,10 @@ export default {
       this.timeAdded = new Date();
       this.eachInput.push(new Record(this.timeAdded,this.myInput)); //need timestamp
       this.myInput = '';
-      console.log(this.eachInput);
+      this.showAddedReminder=true;
+      setTimeout(()=>{
+        this.showAddedReminder=false;
+      },1500)
       
     }
   },
