@@ -7,6 +7,9 @@
           <b-col cols="12 timerDescription"><h1><time>00:00:00</time></h1></b-col>
         </b-row>
       </b-container>
+      <b-container v-if="showAddedReminder">
+        <div style="padding: 30px 0 0 0;">New record added</div>
+      </b-container>
       <b-container class="timerButton">
         <div class="indentationTwoOff"></div>
         <b-row class="justify-content-md-center">
@@ -36,7 +39,8 @@ export default {
       endTime: '',
       started:false,
       endRecords:[],
-      isPaused: false
+      isPaused: false,
+      showAddedReminder: false
     }
   },
   mounted(){
@@ -79,7 +83,10 @@ export default {
     end: function(){
           this.endTime = new Date();
           this.endRecords.push(new Record(this.startTime,this.endTime,'end'));
-          // console.log(this.endRecords)
+          this.showAddedReminder=true;
+          setTimeout(()=>{
+            this.showAddedReminder=false;
+          },1500)
     },
     startTimer: function(){
       //a new timer with no history
