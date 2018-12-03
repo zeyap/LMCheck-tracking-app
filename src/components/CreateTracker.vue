@@ -55,16 +55,19 @@ export default {
     createTracker: function(type){
       if(this.title == '') {
         this.title="tracker-"+((Store.getTrackers()).length+1);
-        this.errorMessage = 'The tracker will use a default name';
-      } else {
-          this.title = this.title.replace(/[\s]+/g,'_');
-          if(Store.getTracker(type,this.title)!==undefined){
-            this.errorMessage='Title already exists for '+type+' tracker';
-            return;
-          }
-          this.$router.push({path:`/${type}/${this.title}`});
-          Store.addTracker(new Tracker(this.title,type));
+        let input= window.prompt('You can give your tracker a name!', this.title);
+        if(input!==undefined){
+          this.title = input;
+        }
       }
+      //validate title
+      this.title = this.title.replace(/[\s]+/g,'_');
+      if(Store.getTracker(type,this.title)!==undefined){
+        this.errorMessage='Title already exists for '+type+' tracker';
+        return;
+      }
+      this.$router.push({path:`/${type}/${this.title}`});
+      Store.addTracker(new Tracker(this.title,type));
     }
   },
   mounted(){

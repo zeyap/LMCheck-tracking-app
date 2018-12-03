@@ -44,13 +44,20 @@ const Store = (function(){
         save();
     }
 
+    var setName = (type,originalTitle,newTitle)=>{
+        let targetid = trackerDict[''+type+'#'+(originalTitle).toLowerCase()];
+        let target = _data[targetid];
+        target.title = newTitle;
+        trackerDict[''+type+'#'+(newTitle).toLowerCase()] = targetid;
+        delete trackerDict[''+type+'#'+(originalTitle).toLowerCase()];
+    }
+
     var updateNumTracker = (type, title, dataArray) =>{
         let target = _data[trackerDict[''+type+'#'+(title).toLowerCase()]];
         for(let i=0; i<dataArray.length; i++){
             target.records.push(dataArray[i]);
         }
         save();
-        console.log(target);
     }
 
     var deleteTracker = (type,title)=>{
@@ -79,7 +86,8 @@ const Store = (function(){
         getTracker,
         updateTracker,
         deleteTracker,
-        updateNumTracker
+        updateNumTracker,
+        setName
     }
 
 })();

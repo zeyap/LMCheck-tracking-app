@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout back="/" color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+    <Layout trackertype="numeric" back="/" color="#e46983" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     <div id="newNumericTracker" v-if="newNumeric">
         <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">

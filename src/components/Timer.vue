@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Layout back="/" color="#99d9e8" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
+    <Layout trackertype="timer" back="/" color="#99d9e8" v-bind:title="this.$route.params.title" type="1" v-bind:settingsList="['View List','View Chart']">
     
       <b-container class="timerCell indentationOneOf">
         <b-row class="justify-content-md-center indentationOneOff">

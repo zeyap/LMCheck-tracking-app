@@ -6,7 +6,7 @@
     <b-navbar-nav style="z-index:1">
       <b-nav-item v-on:click="goBack"><v-icon class="backBtn" v-show="this.leftText===undefined" name="angle-left"/>{{this.leftText||''}}</b-nav-item>
     </b-navbar-nav>
-    <b-navbar-brand class="nav-bar-title">{{showTitle(this.title)}}</b-navbar-brand>
+    <b-navbar-brand class="nav-bar-title" v-on:click="changeTitle()">{{showTitle(this.title)}}</b-navbar-brand>
 
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto" style="z-index:1">
@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import Store from '../js/Store';
 export default {
   name: 'Layout',
   props: {
@@ -36,7 +37,8 @@ export default {
     onClickRightButton: Function,
     back: String,
     leftText: String,
-    color: String
+    color: String,
+    trackertype:String
   },
   data:function(){
       return {
@@ -46,6 +48,25 @@ export default {
   methods:{
     showTitle: function(title){
       return title.replace(/[_]+/g,' ');
+    },
+    changeTitle:function(){
+      if(this.trackertype===undefined)return;
+      let validated = false;
+      let newname;
+      let errorMessage = 'Rename your tracker';
+      while(!validated){
+        newname = window.prompt(errorMessage,this.title);
+        if(newname===null)return;
+        newname = newname.replace(/[\s]+/g,'_');
+        if(newname!==this.title && Store.getTracker(this.trackertype,newname)!==undefined){
+          errorMessage ='Title already exists for '+this.trackertype+' tracker';
+        }else{
+          validated= true;
+        }
+      }
+      //validate title
+      Store.setName(this.trackertype,this.title,newname);
+      this.title = newname;
     },
     goBack: function(){
       if(this.back!==undefined){
