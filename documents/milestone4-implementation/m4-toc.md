@@ -43,28 +43,28 @@
 
 ## Scenario-based Design
 
-[User Interviews](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/interview.pdf)
+[User Interviews](https://github.com/zeyap/LMCheck-tracking-app/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/interview.pdf)
 
-[Persona Development & Festures List](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme)
+[Persona Development & Festures List](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme)
 
-[User Scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/scenarios.png)
+[User Scenarios](https://github.com/zeyap/LMCheck-tracking-app/blob/master/documents/milestone2-interview%2Cpersona%2Cproject%20theme/milestone2-documents/scenarios.png)
 
 **Paper prototype of our first design** 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-v2-components.png )
+![](https://github.com/zeyap/LMCheck-tracking-app/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-v2-components.png )
 
 <div class=‘page-break’></div>
 
 
 **Paper prototype and Pencil Wireframe of our second design**
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-FINAL-components.png )
+![](https://github.com/zeyap/LMCheck-tracking-app/raw/master/documents/milestone3-design/paper-prototype/paper-prototype-FINAL-components.png )
 
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 <div class=‘page-break’></div>
 
-[Updated personas](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/revisedContent)
+[Updated personas](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone3-design/revisedContent)
 
-[Updated user scenarios](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
+[Updated user scenarios](https://github.com/zeyap/LMCheck-tracking-app/blob/master/documents/milestone4-implementation/user_scenarios_revised.pdf)
 
 
 Changes addressed in this second version were made to the fitness tracker, nav bar, and data visualization. 
@@ -81,16 +81,16 @@ Changes addressed in this second version were made to the fitness tracker, nav b
 *Wireframes*
 <div class=‘page-break’></div>
 
-[wireframe phone](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
+[wireframe phone](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone3-design/wireframes/wireframes-phone)
 
-[wireframe web](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone3-design/wireframes/wireframes-web)
+[wireframe web](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone3-design/wireframes/wireframes-web)
 
-[See our milestone 3](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/README.md)
+[See our milestone 3](https://github.com/zeyap/LMCheck-tracking-app/blob/master/documents/milestone3-design/README.md)
 
 **High Fidelity Design 1**
 <div class=‘page-break’></div>
 
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid1/)
+[Click here for detail.](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone4-implementation/high_fid1/)
 
 
 High fidelity version incorporates a color palette based on a mood map created by our team. We searched for approprrate color choices that convey moods / adjectives users described in our interviews. For example, our interviewees used words such as "productive", "organized" and "improvement" to describe the process of tracking their activities. Different colors are used to represent different tracker formats. 
@@ -98,7 +98,7 @@ High fidelity version incorporates a color palette based on a mood map created b
 **High Fidelity Design 2**
 <div class=‘page-break’></div>
 
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/high_fid2/)
+[Click here for detail.](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone4-implementation/high_fid2/)
 
 
 After preliminary user testing, our team decided that our color scheme did not sufficiently separate each tracker created by the user. For example, a time based tracker has the same header color (blue) as a shopping list. We changed this to make the different colors representing each tracking format consistent throughout the app. This is useful when a user is switching from one scenario to another. For example, when a user exits a gym tracking scenario and enters a grocery list building scenario, different colors will be helpful in representing different scenarios. 
@@ -110,11 +110,11 @@ After preliminary user testing, our team decided that our color scheme did not s
 
 User Flow
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone3-design/workflow.png)
+![](https://github.com/zeyap/LMCheck-tracking-app/raw/master/documents/milestone3-design/workflow.png)
 
 Information acrchitecture
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/raw/master/documents/milestone4-implementation/InformationArchitecture.png)
+![](https://github.com/zeyap/LMCheck-tracking-app/raw/master/documents/milestone4-implementation/InformationArchitecture.png)
 
 <div class=‘page-break’></div>
 
@@ -122,7 +122,7 @@ Information acrchitecture
 
 ## Coding 
 
-[Click here for detail.](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/src/)
+[Click here for detail.](https://github.com/zeyap/LMCheck-tracking-app/tree/master/src/)
 
 
 <a name="test"></a>
@@ -130,15 +130,15 @@ Information acrchitecture
 
 ## Development Practices
 
-Since developers on our team have divided works, we work on the master branch for most of the time. There was a point when one of us was changing color throughout the web app, so we add a new branch and made pull request (https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/pull/1).
+Since developers on our team have divided works, we work on the master branch for most of the time. There was a point when one of us was changing color throughout the web app, so we add a new branch and made pull request (https://github.com/zeyap/LMCheck-tracking-app/pull/1).
 
 ## User Testing 
 
-[User testing notes - paper prototypes](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/user_testing_prototypes)
+[User testing notes - paper prototypes](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone4-implementation/user_testing_prototypes)
 
-[User testing notes - coded app](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/tree/master/documents/milestone4-implementation/user_testing_coded)
+[User testing notes - coded app](https://github.com/zeyap/LMCheck-tracking-app/tree/master/documents/milestone4-implementation/user_testing_coded)
 
-![](https://github.coecis.cornell.edu/info4340-fa2018/jack-and-coke-project/blob/master/documents/milestone3-design/userTesting/papertest.gif)
+![](https://github.com/zeyap/LMCheck-tracking-app/blob/master/documents/milestone3-design/userTesting/papertest.gif)
 
 
 
