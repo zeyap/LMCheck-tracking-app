@@ -1,5 +1,14 @@
 {
   "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/2020/let-me-check/(.*\\.[a-zA-Z0-9]+)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
